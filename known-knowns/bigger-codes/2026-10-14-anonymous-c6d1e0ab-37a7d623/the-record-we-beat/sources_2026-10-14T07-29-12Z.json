@@ -1,0 +1,41 @@
+{
+  "target_id": "constant-weight-codes",
+  "cell": "A(55,8,7)",
+  "parameters": [
+    55,
+    8,
+    7
+  ],
+  "claimed_M": 4431,
+  "andw_lb": 4417,
+  "trophy_case_lb": 4426,
+  "composite_bar": 4426,
+  "gain_vs_composite_bar": 5,
+  "gain_vs_andw": 14,
+  "sources": [
+    {
+      "name": "Brouwer Andw.html",
+      "url": "https://aeb.win.tue.nl/codes/Andw.html",
+      "fetched_utc": "2026-10-14T07:29:12Z",
+      "http_status": 200,
+      "sha256": "0f1b51bf71c0ca91aef82eef740cb0dd9f6be6c4014983213d0eefe0eb631cee",
+      "extracted_cell": {
+        "n": 55,
+        "d": 8,
+        "w": 7,
+        "lb": 4417
+      }
+    },
+    {
+      "name": "V3R1T4S TROPHY_CASE.md",
+      "url": "TROPHY_CASE.md",
+      "fetched_utc": "2026-10-14T07:29:15Z",
+      "extracted_cell": {
+        "n": 55,
+        "d": 8,
+        "w": 7,
+        "lb": 4426
+      }
+    }
+  ]
+}
