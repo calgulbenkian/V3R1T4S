@@ -1,0 +1,1104 @@
+{
+  "1": {
+    "n": 1,
+    "mod4": 1,
+    "orrick_raw": "1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1",
+    "source": "orrick_fullPage"
+  },
+  "2": {
+    "n": 2,
+    "mod4": 2,
+    "orrick_raw": "1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1",
+    "source": "orrick_fullPage"
+  },
+  "3": {
+    "n": 3,
+    "mod4": 3,
+    "orrick_raw": "1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1",
+    "source": "orrick_fullPage"
+  },
+  "4": {
+    "n": 4,
+    "mod4": 0,
+    "orrick_raw": "2 * 1^1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "2",
+    "source": "orrick_fullPage"
+  },
+  "5": {
+    "n": 5,
+    "mod4": 1,
+    "orrick_raw": "3 * 1^1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3",
+    "source": "orrick_fullPage"
+  },
+  "6": {
+    "n": 6,
+    "mod4": 2,
+    "orrick_raw": "5 * 1^1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "5",
+    "source": "orrick_fullPage"
+  },
+  "7": {
+    "n": 7,
+    "mod4": 3,
+    "orrick_raw": "9 * 1^1",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.98,
+    "exact_norm_det": "9",
+    "source": "orrick_fullPage"
+  },
+  "8": {
+    "n": 8,
+    "mod4": 0,
+    "orrick_raw": "4 * 2^3",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "32",
+    "source": "orrick_fullPage"
+  },
+  "9": {
+    "n": 9,
+    "mod4": 1,
+    "orrick_raw": "7 * 2^3",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "56",
+    "source": "orrick_fullPage"
+  },
+  "10": {
+    "n": 10,
+    "mod4": 2,
+    "orrick_raw": "18 * 2^3",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "144",
+    "source": "orrick_fullPage"
+  },
+  "11": {
+    "n": 11,
+    "mod4": 3,
+    "orrick_raw": "40 * 2^3",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.94,
+    "exact_norm_det": "320",
+    "source": "orrick_fullPage"
+  },
+  "12": {
+    "n": 12,
+    "mod4": 0,
+    "orrick_raw": "6 * 3^5",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1458",
+    "source": "orrick_fullPage"
+  },
+  "13": {
+    "n": 13,
+    "mod4": 1,
+    "orrick_raw": "15 * 3^5",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3645",
+    "source": "orrick_fullPage"
+  },
+  "14": {
+    "n": 14,
+    "mod4": 2,
+    "orrick_raw": "39 * 3^5",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "9477",
+    "source": "orrick_fullPage"
+  },
+  "15": {
+    "n": 15,
+    "mod4": 3,
+    "orrick_raw": "105 * 3^5",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "25515",
+    "source": "orrick_fullPage"
+  },
+  "16": {
+    "n": 16,
+    "mod4": 0,
+    "orrick_raw": "8 * 4^7",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "131072",
+    "source": "orrick_fullPage"
+  },
+  "17": {
+    "n": 17,
+    "mod4": 1,
+    "orrick_raw": "20 * 4^7",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.87,
+    "exact_norm_det": "327680",
+    "source": "orrick_fullPage"
+  },
+  "18": {
+    "n": 18,
+    "mod4": 2,
+    "orrick_raw": "68 * 4^7",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1114112",
+    "source": "orrick_fullPage"
+  },
+  "19": {
+    "n": 19,
+    "mod4": 3,
+    "orrick_raw": "833 * 4^6",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.98,
+    "exact_norm_det": "3411968",
+    "source": "orrick_fullPage"
+  },
+  "20": {
+    "n": 20,
+    "mod4": 0,
+    "orrick_raw": "10 * 5^9",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "19531250",
+    "source": "orrick_fullPage"
+  },
+  "21": {
+    "n": 21,
+    "mod4": 1,
+    "orrick_raw": "29 * 5^9",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.91,
+    "exact_norm_det": "56640625",
+    "source": "orrick_fullPage"
+  },
+  "22": {
+    "n": 22,
+    "mod4": 2,
+    "orrick_raw": "100 * 5^9",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.95,
+    "exact_norm_det": "195312500",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "23": {
+    "n": 23,
+    "mod4": 3,
+    "orrick_raw": "42411 * 5^6",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.93,
+    "exact_norm_det": "662671875",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "24": {
+    "n": 24,
+    "mod4": 0,
+    "orrick_raw": "12 * 6^11",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "4353564672",
+    "source": "orrick_fullPage"
+  },
+  "25": {
+    "n": 25,
+    "mod4": 1,
+    "orrick_raw": "42 * 6^11",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "15237476352",
+    "source": "orrick_fullPage"
+  },
+  "26": {
+    "n": 26,
+    "mod4": 2,
+    "orrick_raw": "150 * 6^11",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "54419558400",
+    "source": "orrick_fullPage"
+  },
+  "27": {
+    "n": 27,
+    "mod4": 3,
+    "orrick_raw": "546 * 6^11",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "198087192576",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "28": {
+    "n": 28,
+    "mod4": 0,
+    "orrick_raw": "14 * 7^13",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1356446145698",
+    "source": "orrick_fullPage"
+  },
+  "29": {
+    "n": 29,
+    "mod4": 1,
+    "orrick_raw": "320 * 7^12",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.87,
+    "exact_norm_det": "4429211904320",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "30": {
+    "n": 30,
+    "mod4": 2,
+    "orrick_raw": "203 * 7^13",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "19668469112621",
+    "source": "orrick_fullPage"
+  },
+  "31": {
+    "n": 31,
+    "mod4": 3,
+    "orrick_raw": "784 * 7^13",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.96,
+    "exact_norm_det": "75960984159088",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "32": {
+    "n": 32,
+    "mod4": 0,
+    "orrick_raw": "16 * 8^15",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "562949953421312",
+    "source": "orrick_fullPage"
+  },
+  "33": {
+    "n": 33,
+    "mod4": 1,
+    "orrick_raw": "441 * 8^14",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "1939538511396864",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "34": {
+    "n": 34,
+    "mod4": 2,
+    "orrick_raw": "256 * 8^15",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "9007199254740992",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "35": {
+    "n": 35,
+    "mod4": 3,
+    "orrick_raw": "1064 * 8^15",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.94,
+    "exact_norm_det": "37436171902517248",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "36": {
+    "n": 36,
+    "mod4": 0,
+    "orrick_raw": "18 * 9^17",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "300189270593998242",
+    "source": "orrick_fullPage"
+  },
+  "37": {
+    "n": 37,
+    "mod4": 1,
+    "orrick_raw": "72 * 9^17",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 0.94,
+    "exact_norm_det": "1200757082375992968",
+    "source": "orrick_fullPage"
+  },
+  "38": {
+    "n": 38,
+    "mod4": 2,
+    "orrick_raw": "333 * 9^17",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "5553501505988967477",
+    "source": "orrick_fullPage"
+  },
+  "39": {
+    "n": 39,
+    "mod4": 3,
+    "orrick_raw": "1440 * 9^17",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.95,
+    "exact_norm_det": "24015141647519859360",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "40": {
+    "n": 40,
+    "mod4": 0,
+    "orrick_raw": "20 * 10^19",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "200000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "41": {
+    "n": 41,
+    "mod4": 1,
+    "orrick_raw": "90 * 10^19",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "900000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "42": {
+    "n": 42,
+    "mod4": 2,
+    "orrick_raw": "410 * 10^19",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "4100000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "43": {
+    "n": 43,
+    "mod4": 3,
+    "orrick_raw": "1890 * 10^19",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "18900000000000000000000",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "44": {
+    "n": 44,
+    "mod4": 0,
+    "orrick_raw": "22 * 11^21",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "162805498773679522226642",
+    "source": "orrick_fullPage"
+  },
+  "45": {
+    "n": 45,
+    "mod4": 1,
+    "orrick_raw": "89 * 11^21",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "658622245038976249007779",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "46": {
+    "n": 46,
+    "mod4": 2,
+    "orrick_raw": "495 * 11^21",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3663123722407789250099445",
+    "source": "orrick_fullPage"
+  },
+  "47": {
+    "n": 47,
+    "mod4": 3,
+    "orrick_raw": "3037500 * 11^18",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.92,
+    "exact_norm_det": "16888248839732653123537500",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "48": {
+    "n": 48,
+    "mod4": 0,
+    "orrick_raw": "24 * 12^23",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "158993694406781688266883072",
+    "source": "orrick_fullPage"
+  },
+  "49": {
+    "n": 49,
+    "mod4": 1,
+    "orrick_raw": "96 * 12^23",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.81,
+    "exact_norm_det": "635974777627126753067532288",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "50": {
+    "n": 50,
+    "mod4": 2,
+    "orrick_raw": "588 * 12^23",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3895345512966151362538635264",
+    "source": "orrick_fullPage"
+  },
+  "51": {
+    "n": 51,
+    "mod4": 3,
+    "orrick_raw": "1.724074864E28",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "17776121037665193653653203125",
+    "source": "arXiv:2608.22518",
+    "has_d_page": true,
+    "orrick_exact_norm_det": "17240748636787425652496176509"
+  },
+  "52": {
+    "n": 52,
+    "mod4": 0,
+    "orrick_raw": "26 * 13^25",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "183466660386537233316799232018",
+    "source": "orrick_fullPage"
+  },
+  "53": {
+    "n": 53,
+    "mod4": 1,
+    "orrick_raw": "105 * 13^25",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.79,
+    "exact_norm_det": "740923051561015749933227667765",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "54": {
+    "n": 54,
+    "mod4": 2,
+    "orrick_raw": "689 * 13^25",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "4861866500243236682895179648477",
+    "source": "orrick_fullPage"
+  },
+  "55": {
+    "n": 55,
+    "mod4": 3,
+    "orrick_raw": "2.257229820E31",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "22572298204370013622299470489600",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "56": {
+    "n": 56,
+    "mod4": 0,
+    "orrick_raw": "28 * 14^27",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "246953391382495871652459563712512",
+    "source": "orrick_fullPage"
+  },
+  "57": {
+    "n": 57,
+    "mod4": 1,
+    "orrick_raw": "133 * 14^27",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.89,
+    "exact_norm_det": "1173028609066855390349182927634432",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "58": {
+    "n": 58,
+    "mod4": 2,
+    "orrick_raw": "6.577371626E33",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.93,
+    "exact_norm_det": "6577371625999377689627519921743253",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "59": {
+    "n": 59,
+    "mod4": 3,
+    "orrick_raw": "4312 * 14^27",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "38030822272904364234478772811726848",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "60": {
+    "n": 60,
+    "mod4": 0,
+    "orrick_raw": "30 * 15^29",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "383502118465768173336982727050781250",
+    "source": "orrick_fullPage"
+  },
+  "61": {
+    "n": 61,
+    "mod4": 1,
+    "orrick_raw": "165 * 15^29",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "2109261651561724953353404998779296875",
+    "source": "orrick_fullPage"
+  },
+  "62": {
+    "n": 62,
+    "mod4": 2,
+    "orrick_raw": "915 * 15^29",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "11696814613205929286777973175048828125",
+    "source": "orrick_fullPage"
+  },
+  "63": {
+    "n": 63,
+    "mod4": 3,
+    "orrick_raw": "5115 * 15^29",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "65387111198413473553955554962158203125",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "64": {
+    "n": 64,
+    "mod4": 0,
+    "orrick_raw": "32 * 16^31",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "680564733841876926926749214863536422912",
+    "source": "orrick_fullPage"
+  },
+  "65": {
+    "n": 65,
+    "mod4": 1,
+    "orrick_raw": "148 * 16^31",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.81,
+    "exact_norm_det": "3147611894018680787036215118743855955968",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "66": {
+    "n": 66,
+    "mod4": 2,
+    "orrick_raw": "1040 * 16^31",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "22118353849861000125119349483064933744640",
+    "source": "orrick_fullPage"
+  },
+  "67": {
+    "n": 67,
+    "mod4": 3,
+    "orrick_raw": "1.140030090E41",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "114003009024834093029908264689724276392761",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "68": {
+    "n": 68,
+    "mod4": 0,
+    "orrick_raw": "34 * 17^33",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "1368652901771550068097893439851509820974658",
+    "source": "orrick_fullPage"
+  },
+  "69": {
+    "n": 69,
+    "mod4": 1,
+    "orrick_raw": "155 * 17^33",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.78,
+    "exact_norm_det": "6239447052193831192799220093440706536796235",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "70": {
+    "n": 70,
+    "mod4": 2,
+    "orrick_raw": "1156 * 17^33",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.99,
+    "exact_norm_det": "46534198660232702315328376954951333913138372",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "71": {
+    "n": 71,
+    "mod4": 3,
+    "orrick_raw": "31186944 * 17^30",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.88,
+    "exact_norm_det": "255529156756904447785378463060885316879507456",
+    "source": "orrick_fullPage"
+  },
+  "72": {
+    "n": 72,
+    "mod4": 0,
+    "orrick_raw": "36 * 18^35",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3096279656855521165058991049662476688977559552",
+    "source": "orrick_fullPage"
+  },
+  "73": {
+    "n": 73,
+    "mod4": 1,
+    "orrick_raw": "174 * 18^35",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.8,
+    "exact_norm_det": "14965351674801685631118456740035303996724871168",
+    "source": "orrick_fullPage"
+  },
+  "74": {
+    "n": 74,
+    "mod4": 2,
+    "orrick_raw": "1314 * 18^35",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "113014207475226522524653173312680399147680923648",
+    "source": "orrick_fullPage"
+  },
+  "75": {
+    "n": 75,
+    "mod4": 3,
+    "orrick_raw": "6.151181225E47",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "615118122540318338327268066823587349617878267859",
+    "source": "rokicki_best74.html"
+  },
+  "76": {
+    "n": 76,
+    "mod4": 0,
+    "orrick_raw": "38 * 19^37",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "7828288667806147583617925213592561915833265584882",
+    "source": "orrick_fullPage"
+  },
+  "77": {
+    "n": 77,
+    "mod4": 1,
+    "orrick_raw": "183 * 19^37",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.78,
+    "exact_norm_det": "37699390163382237047423166160195758699933884264037",
+    "source": "orrick_fullPage"
+  },
+  "78": {
+    "n": 78,
+    "mod4": 2,
+    "orrick_raw": "2.904232591E50",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.96,
+    "exact_norm_det": "290423259051098009373563569569792000000000000000000",
+    "source": "rokicki_best77.html"
+  },
+  "79": {
+    "n": 79,
+    "mod4": 3,
+    "orrick_raw": "1.679602142E51",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "1679602141785918694489688045479089781335026296374944",
+    "source": "rokicki_best78.html"
+  },
+  "80": {
+    "n": 80,
+    "mod4": 0,
+    "orrick_raw": "40 * 20^39",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "21990232555520000000000000000000000000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "81": {
+    "n": 81,
+    "mod4": 1,
+    "orrick_raw": "196 * 20^39",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.77,
+    "exact_norm_det": "107752139522048000000000000000000000000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "82": {
+    "n": 82,
+    "mod4": 2,
+    "orrick_raw": "1620 * 20^39",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "890604418498560000000000000000000000000000000000000000",
+    "source": "orrick_fullPage"
+  },
+  "83": {
+    "n": 83,
+    "mod4": 3,
+    "orrick_raw": "5.070994773E54",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.86,
+    "exact_norm_det": "5070994772879685690849297438059430264495740412858417829",
+    "source": "rokicki_best82.html"
+  },
+  "84": {
+    "n": 84,
+    "mod4": 0,
+    "orrick_raw": "42 * 21^41",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "68271646134824810522683024903132926653619493012565170482",
+    "source": "orrick_fullPage"
+  },
+  "85": {
+    "n": 85,
+    "mod4": 1,
+    "orrick_raw": "4509 * 21^40",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.79,
+    "exact_norm_det": "349021374628032959916981586494587716872075163258113779709",
+    "source": "orrick_fullPage"
+  },
+  "86": {
+    "n": 86,
+    "mod4": 2,
+    "orrick_raw": "1785 * 21^41",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "2901544960730054447214028558383149382778828453034019745485",
+    "source": "orrick_fullPage"
+  },
+  "87": {
+    "n": 87,
+    "mod4": 3,
+    "orrick_raw": "1.685070861E58",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "16850708605156479204148625621550334155720030301049307153474",
+    "source": "orrick_fullPage",
+    "has_d_page": true
+  },
+  "88": {
+    "n": 88,
+    "mod4": 0,
+    "orrick_raw": "44 * 22^43",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "233145990882873099240578722989582278783720975811844203610112",
+    "source": "orrick_fullPage"
+  },
+  "89": {
+    "n": 89,
+    "mod4": 1,
+    "orrick_raw": "220 * 22^43",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.75,
+    "exact_norm_det": "1165729954414365496202893614947911393918604879059221018050560",
+    "source": "orrick_fullPage"
+  },
+  "90": {
+    "n": 90,
+    "mod4": 2,
+    "orrick_raw": "1958 * 22^43",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "10374996594287852916205753173036411405875583423627067060649984",
+    "source": "orrick_fullPage"
+  },
+  "91": {
+    "n": 91,
+    "mod4": 3,
+    "orrick_raw": "6.144764944E61",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "61447649436906035155154862759044836147836496021606837761932039",
+    "source": "rokicki_best90.html"
+  },
+  "92": {
+    "n": 92,
+    "mod4": 0,
+    "orrick_raw": "46 * 23^45",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "871987887785345328400706922810752470803327316988283350840522978",
+    "source": "orrick_fullPage"
+  },
+  "93": {
+    "n": 93,
+    "mod4": 1,
+    "orrick_raw": "239 * 23^45",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.76,
+    "exact_norm_det": "4530545764797772467125412055473257402652070190439124366323586777",
+    "source": "orrick_fullPage"
+  },
+  "94": {
+    "n": 94,
+    "mod4": 2,
+    "orrick_raw": "3.931163325E64",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.97,
+    "exact_norm_det": "39311633254410590258864088004330328977775849975526333417416294400",
+    "source": "rokicki_best93.html"
+  },
+  "95": {
+    "n": 95,
+    "mod4": 3,
+    "orrick_raw": "2.438687439E65",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.84,
+    "exact_norm_det": "243868743930065681896177280436761173825579773792038180033917523836",
+    "source": "rokicki_best94.html"
+  },
+  "96": {
+    "n": 96,
+    "mod4": 0,
+    "orrick_raw": "48 * 24^47",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "3557702244900861779616271187262348179890451798551966241897003876352",
+    "source": "orrick_fullPage"
+  },
+  "97": {
+    "n": 97,
+    "mod4": 1,
+    "orrick_raw": "256 * 24^47",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.77,
+    "exact_norm_det": "18974411972804596157953446332065856959415742925610486623450687340544",
+    "source": "orrick_fullPage"
+  },
+  "98": {
+    "n": 98,
+    "mod4": 2,
+    "orrick_raw": "2328 * 24^47",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "172548558877691796311389152582223886724686912229770362732004688003072",
+    "source": "orrick_fullPage"
+  },
+  "99": {
+    "n": 99,
+    "mod4": 3,
+    "orrick_raw": "114487974849 * 24^42",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.85,
+    "exact_norm_det": "1065692784225507565939561915975748822414934482987497603705033954689024",
+    "source": "orrick_fullPage"
+  },
+  "100": {
+    "n": 100,
+    "mod4": 0,
+    "orrick_raw": "50 * 25^49",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "15777218104420236108234571305655724593464128702180460095405578613281250",
+    "source": "orrick_fullPage"
+  },
+  "101": {
+    "n": 101,
+    "mod4": 1,
+    "orrick_raw": "7110 * 25^48",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.8,
+    "exact_norm_det": "89740816577942302983638241586569761487623964058002457022666931152343750",
+    "source": "orrick_fullPage"
+  },
+  "102": {
+    "n": 102,
+    "mod4": 2,
+    "orrick_raw": "2525 * 25^49",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "796749514273221923465845850935614091969938499460113234817981719970703125",
+    "source": "orrick_fullPage"
+  },
+  "103": {
+    "n": 103,
+    "mod4": 3,
+    "orrick_raw": "4.982877917E72",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.84,
+    "exact_norm_det": "4982879878430668496143734745139892539874762668459055333727438310268207104",
+    "source": "arXiv:2608.22518",
+    "orrick_exact_norm_det": "4982877917417276668857444109702109625212342595955142870593056735757264604"
+  },
+  "104": {
+    "n": 104,
+    "mod4": 0,
+    "orrick_raw": "52 * 26^51",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "75795616571619893508628036245645265177088117834347952361519172076649316352",
+    "source": "orrick_fullPage"
+  },
+  "105": {
+    "n": 105,
+    "mod4": 1,
+    "orrick_raw": "3.847437473E74",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.7,
+    "exact_norm_det": "384743747284587846942188483608583600735563257274079045682562818122226665625",
+    "source": "rokicki_best104.html"
+  },
+  "106": {
+    "n": 106,
+    "mod4": 2,
+    "orrick_raw": "2704 * 26^51",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.99,
+    "exact_norm_det": "3941372061724234462448657884773553789208582127386093522798996947985764450304",
+    "source": "orrick_fullPage"
+  },
+  "107": {
+    "n": 107,
+    "mod4": 3,
+    "orrick_raw": "2.529473175E76",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.84,
+    "exact_norm_det": "25405109779472820154713362533412847329846084693257600588972842045966418068198",
+    "source": "arXiv:2608.22518",
+    "orrick_exact_norm_det": "25294731747081238220419032446139548036154252602226212345539635897807353222502"
+  },
+  "108": {
+    "n": 108,
+    "mod4": 0,
+    "orrick_raw": "54 * 27^53",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "393254100951105827236151817053824232566206901888429533854630831075932782393618",
+    "source": "orrick_fullPage"
+  },
+  "109": {
+    "n": 109,
+    "mod4": 1,
+    "orrick_raw": "1.877483842E78",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.65,
+    "exact_norm_det": "1877483841834222713683125485573890072927341503771574105042244268774869908324352",
+    "source": "rokicki_best108.html"
+  },
+  "110": {
+    "n": 110,
+    "mod4": 2,
+    "orrick_raw": "2943 * 27^53",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "21432348501835267584370274029433420674858276152919409595077380293638336640452181",
+    "source": "orrick_fullPage"
+  },
+  "111": {
+    "n": 111,
+    "mod4": 3,
+    "orrick_raw": "1.380383133E80",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.84,
+    "exact_norm_det": "139781659519566648611004967987048891981864344843163654605529677292458895404455125",
+    "source": "arXiv:2608.22518",
+    "orrick_exact_norm_det": "138038313291959649321247550649988258958126696240067541247128488344873765204141125"
+  },
+  "112": {
+    "n": 112,
+    "mod4": 0,
+    "orrick_raw": "56 * 28^55",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "2197251404902427390992758649503426145785996018507021671588641612518193758199611392",
+    "source": "orrick_fullPage"
+  },
+  "113": {
+    "n": 113,
+    "mod4": 1,
+    "orrick_raw": "420 * 28^55",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "16479385536768205432445689871275696093394970138802662536914812093886453186497085440",
+    "source": "orrick_fullPage"
+  },
+  "114": {
+    "n": 114,
+    "mod4": 2,
+    "orrick_raw": "3164 * 28^55",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "124144704376987147591090863696943577236908775045646724444758251107277947338278043648",
+    "source": "orrick_fullPage"
+  },
+  "115": {
+    "n": 115,
+    "mod4": 3,
+    "orrick_raw": "8.112413396E83",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.83,
+    "exact_norm_det": "826077036505625311168501810913750519509871482996572659976510854621009815010641902068",
+    "source": "arXiv:2608.22518",
+    "orrick_exact_norm_det": "824875559997507123862490321617482346789417543713732896000289208985971332478680569108"
+  },
+  "116": {
+    "n": 116,
+    "mod4": 0,
+    "orrick_raw": "58 * 29^57",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "13186024362271637209747282177131586677436432083445459411033775109535254294151860547922",
+    "source": "orrick_fullPage"
+  },
+  "117": {
+    "n": 117,
+    "mod4": 1,
+    "orrick_raw": "7.231499425E85",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.72,
+    "exact_norm_det": "72314994254613394470813334860641212637154205430658679584420251275641935854599391452615",
+    "source": "rokicki_best116.html"
+  },
+  "118": {
+    "n": 118,
+    "mod4": 2,
+    "orrick_raw": "3393 * 29^57",
+    "unproved_in_orrick": false,
+    "orrick_ratio": 1.0,
+    "exact_norm_det": "771382425192890776770216007362197820630031276881559375545475843907812376207883842053437",
+    "source": "orrick_fullPage"
+  },
+  "119": {
+    "n": 119,
+    "mod4": 3,
+    "orrick_raw": "5.122227512E87",
+    "unproved_in_orrick": true,
+    "orrick_ratio": 0.83,
+    "exact_norm_det": "5230841367259683341310925504649737070470595687463364420259918451181874057850196588023699",
+    "source": "arXiv:2608.22518",
+    "orrick_exact_norm_det": "5122227511556170410125206972202334525663218042413079731241759281780061187112840281349059"
+  }
+}

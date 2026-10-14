@@ -1,0 +1,20 @@
+{
+  "target_id": "hadamard-maxdet-records",
+  "cell": "n=49(p2)",
+  "order_n": 49,
+  "claimed_normalized_value": "768469522966111493289934848",
+  "standing_record_normalized_value": "635974777627126753067532288",
+  "sources": [
+    {
+      "name": "Math-AI-Caltech/hadamard-maxdet",
+      "url": "https://raw.githubusercontent.com/Math-AI-Caltech/hadamard-maxdet/main/README.md",
+      "fetched_utc": "2026-10-14T08:11:00Z",
+      "http_status": 200,
+      "sha256": "7b6160e37a372a61bd202337d4160255529058958308d427189289cf5a553463",
+      "extracted_cell": {
+        "n": 49,
+        "value": "635974777627126753067532288"
+      }
+    }
+  ]
+}
