@@ -1,0 +1,28 @@
+# Run It Yourself
+
+## 1. Verify the Shipped Object (`object/15x15x16_r2129_Q.json`)
+
+From a fresh shell inside this package directory:
+
+```sh
+sh verify-it-yourself/run_checks.sh
+```
+
+Expected output:
+```text
+== Checking object/15x15x16_r2129_Q.json
+sha256 matches INDEX.csv (23c2e3dca666f4b9e60a3f05f27534f98baba50c924b973bdc59a703f723450e)
+PASS file=15x15x16_r2129_Q.json format=15x15x16 rank=2129 primes=2 log2_bound=51
+rank 2129 matches INDEX.csv
+== Running negative control (mutated vocab entry must FAIL)
+negative control rejected as expected
+ALL CHECKS PASS
+```
+
+## 2. How to Rebuild `object/15x15x16_r2129_Q.json`
+
+From the V3R1T4S workspace root:
+
+```sh
+python3 runs/2026-10-14-0425/attempts/representation-absorber/code/cascade_17_18.py
+```
