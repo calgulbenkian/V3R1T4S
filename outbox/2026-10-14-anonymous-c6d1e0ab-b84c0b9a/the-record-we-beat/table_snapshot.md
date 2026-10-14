@@ -1,0 +1,11 @@
+# The Record We Beat — `[157, 11, 99]_4` Linear Code
+
+## Live Reference Source
+- **Table URL**: `http://www.codetables.de/BKLC/BKLC.php?q=4&n=157&k=11`
+- **Bulk Table URL**: `http://www.codetables.de/BKLC/Tables.php?q=4&n0=1&n1=256&k0=1&k1=256`
+- **UTC Fetch Time**: `2026-10-14T10:24:01Z` (`HTTP/1.1 200 OK`)
+- **SHA-256 of Bulk Table (`data/bklc_q4.txt`)**: `a4ff14cada7375b909baa6e23ec895c046fbfbd844d79136996ba17fa444a234`
+
+## Standing Record vs. Our Construction
+- **Standing `codetables.de` Interval for `(4, 157, 11)`**: `[98, 108]` (`d_lower = 98`)
+- **Our Verified Code (`object/win_q4_n157_k11_d99.json`)**: `[157, 11, 99]_4` (`d = 99`, `A_99 = 1428`, strict improvement of `+1`)
