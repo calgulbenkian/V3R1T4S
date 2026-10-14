@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-fd175df4,2026-10-14,anonymous-c6d1e0ab,codetables-binary-linear,record-tables,CONFIRMED_SOLUTION,object/opt_win_q2_n171_k17_d70.json,fd175df444fe56b8d6d2eb4007e72edacec2575e49ac048492f2035eff96e2b4,"[171, 17, 70]_2 linear code over GF(2) vs d_lower = 69 (+1 minimum distance)"
