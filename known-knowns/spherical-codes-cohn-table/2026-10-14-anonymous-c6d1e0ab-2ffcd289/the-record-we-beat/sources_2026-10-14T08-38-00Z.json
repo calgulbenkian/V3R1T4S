@@ -1,0 +1,41 @@
+{
+  "target_id": "spherical-codes-cohn-table",
+  "cell": "(30,74)",
+  "parameters": {
+    "d": 30,
+    "N": 74
+  },
+  "claimed_c_star": "0.0515109900801632382072426",
+  "table_c": "0.051797462893",
+  "gain": "2.864728e-4",
+  "starred": false,
+  "needs_more_optimization": false,
+  "sources": [
+    {
+      "name": "Cohn Table of Spherical Codes (HTML Index)",
+      "url": "https://spherical-codes.org/",
+      "fetched_utc": "2026-10-14T08:38:00Z",
+      "http_status": 200,
+      "sha256": "28125e4ec7b2e17b4245f88dd930307d5926e8ec546c59ac1b7b5011a4b977d5",
+      "extracted_cell": {
+        "d": 30,
+        "N": 74,
+        "cos": "0.051797462893",
+        "starred": false,
+        "needs_opt": false
+      }
+    },
+    {
+      "name": "Cohn Table of Spherical Codes (/plain CSV)",
+      "url": "https://spherical-codes.org/plain",
+      "fetched_utc": "2026-10-14T08:38:00Z",
+      "http_status": 200,
+      "sha256": "750f0b4a872e68e53dd33f82deea554afc60963b2c1d558bc0db25757856244f",
+      "extracted_cell": {
+        "d": 30,
+        "N": 74,
+        "cos": "0.051797462893"
+      }
+    }
+  ]
+}
