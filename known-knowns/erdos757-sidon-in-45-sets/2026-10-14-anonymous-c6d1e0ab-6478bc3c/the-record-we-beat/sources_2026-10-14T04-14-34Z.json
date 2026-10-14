@@ -1,0 +1,32 @@
+{
+  "target_id": "erdos757-sidon-in-45-sets",
+  "claim_level": "partial_win_claim",
+  "partial_win_id": "p1",
+  "our_n": 21,
+  "our_s": 12,
+  "our_ratio": "4/7",
+  "sources": {
+    "arxiv_2602_23282": {
+      "url": "https://arxiv.org/html/2602.23282",
+      "fetched_utc": "2026-10-14T04:14:34Z",
+      "http_status": 200,
+      "sha256": "d1aace4ca6e952deda0f2dbad7336e7e539b74c2e83eaef5a1954c2c1bd6bc29",
+      "best_ratio": "4/7",
+      "known_witness_sizes": "14k"
+    },
+    "erdosproblems_757": {
+      "url": "https://www.erdosproblems.com/757",
+      "fetched_utc": "2026-10-14T04:14:35Z",
+      "http_status": 200,
+      "sha256": "a870db664b368e2cfe99f1823ce790d1c561e3ee5f86b5ac7aa3e2f88ec7d48b",
+      "best_ratio": "4/7"
+    },
+    "teorth_5b": {
+      "url": "https://teorth.github.io/optimizationproblems/constants/5b.html",
+      "fetched_utc": "2026-10-14T04:14:36Z",
+      "http_status": 200,
+      "sha256": "c8fdf1c39dd9299201ab433554e909efa08ccb8c99df859e6a2fe3cd3d6330dc",
+      "best_ratio": "4/7"
+    }
+  }
+}
