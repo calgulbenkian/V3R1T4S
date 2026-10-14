@@ -1,0 +1,55 @@
+{
+  "target_id": "fmm-ternary-integer-ring-upgrade",
+  "cell": "4x13x15_ZT",
+  "format": [
+    4,
+    13,
+    15
+  ],
+  "claimed_class": "ZT",
+  "claimed_rank": 535,
+  "minimum_bar_in_class": 536,
+  "overall_best_rank": 520,
+  "margin": -1,
+  "sources": [
+    {
+      "name": "dronperminov/FastMatrixMultiplication README.md",
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md",
+      "fetched_utc": "2026-10-14T06:14:29Z",
+      "http_status": 200,
+      "sha256": "7b0761ecc0fa1988cb2ef0efeca503af974eeb6ade76d30629308ebba7e78341",
+      "extracted_cell": {
+        "ZT": 536,
+        "Z": 536,
+        "Q": 520
+      }
+    },
+    {
+      "name": "dronperminov/FastMatrixMultiplication schemes/status.json",
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/status.json",
+      "fetched_utc": "2026-10-14T06:14:30Z",
+      "http_status": 200,
+      "sha256": "b9b86c506ef4826220e5479569c6a84eaa720b703f73b705c043a3c90b463311",
+      "extracted_cell": {
+        "ZT": 536,
+        "Z": 536,
+        "Q": 520
+      }
+    },
+    {
+      "name": "sedoglavic/fmm_digest fmm_sota.json",
+      "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+      "fetched_utc": "2026-10-14T06:14:31Z",
+      "http_status": 200,
+      "sha256": "d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1",
+      "extracted_cell": {
+        "format": [
+          4,
+          13,
+          15
+        ],
+        "rank": 520
+      }
+    }
+  ]
+}
