@@ -1,0 +1,41 @@
+{
+  "target_id": "constant-weight-codes",
+  "cell": "A(27,8,10)",
+  "parameters": [
+    27,
+    8,
+    10
+  ],
+  "claimed_M": 1740,
+  "andw_lb": 1728,
+  "trophy_case_lb": 1737,
+  "composite_bar": 1737,
+  "gain_vs_composite_bar": 3,
+  "gain_vs_andw": 12,
+  "sources": [
+    {
+      "name": "Brouwer Andw.html",
+      "url": "https://aeb.win.tue.nl/codes/Andw.html",
+      "fetched_utc": "2026-10-14T07:29:12Z",
+      "http_status": 200,
+      "sha256": "0f1b51bf71c0ca91aef82eef740cb0dd9f6be6c4014983213d0eefe0eb631cee",
+      "extracted_cell": {
+        "n": 27,
+        "d": 8,
+        "w": 10,
+        "lb": 1728
+      }
+    },
+    {
+      "name": "V3R1T4S TROPHY_CASE.md",
+      "url": "TROPHY_CASE.md",
+      "fetched_utc": "2026-10-14T07:29:15Z",
+      "extracted_cell": {
+        "n": 27,
+        "d": 8,
+        "w": 10,
+        "lb": 1737
+      }
+    }
+  ]
+}
