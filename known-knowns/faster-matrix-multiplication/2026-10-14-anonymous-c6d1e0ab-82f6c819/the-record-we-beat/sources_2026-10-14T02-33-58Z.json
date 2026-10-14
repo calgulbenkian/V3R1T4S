@@ -1,0 +1,74 @@
+{
+  "target_id": "fmm-catalogue-small-format-rank",
+  "cell": "13x14x15",
+  "claimed_rank": 1646,
+  "claimed_ring": "Q",
+  "minimum_bar_across_all_sources": 1681,
+  "margin": -35,
+  "sources": [
+    {
+      "name": "sedoglavic/fmm_digest fmm_sota.json",
+      "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+      "fetched_utc": "2026-10-14T02:33:58Z",
+      "http_status": 200,
+      "sha256": "d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1",
+      "extracted_cell": {
+        "format": [
+          13,
+          14,
+          15
+        ],
+        "rank": 1681,
+        "exponent": 2.811011
+      }
+    },
+    {
+      "name": "Lille per-format page 13x14x15.html",
+      "url": "https://fmm.univ-lille.fr/13x14x15.html",
+      "fetched_utc": "2026-10-14T02:34:05Z",
+      "http_status": 200,
+      "sha256": "d2a562a11c213effc7df98468757cda923925f248fab408ed38c485039851158",
+      "extracted_cell": {
+        "format": "13x14x15",
+        "rank": 1681
+      }
+    },
+    {
+      "name": "dronperminov/FastMatrixMultiplication README.md",
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md",
+      "fetched_utc": "2026-10-14T02:34:09Z",
+      "http_status": 200,
+      "sha256": "7b0761ecc0fa1988cb2ef0efeca503af974eeb6ade76d30629308ebba7e78341",
+      "extracted_cell": {
+        "format": "13x14x15",
+        "ZT": 1681,
+        "Z": 1681,
+        "Q": 1681,
+        "min": 1681
+      }
+    },
+    {
+      "name": "MerlijnW70/fmm-schemes SHA256SUMS",
+      "url": "https://raw.githubusercontent.com/MerlijnW70/fmm-schemes/main/SHA256SUMS",
+      "fetched_utc": "2026-10-14T02:34:09Z",
+      "http_status": 200,
+      "sha256": "de848328881cf69cbe2a8d8309e04d94826cf1431b5b39e81db63f95af58a3fd",
+      "extracted_cell": {
+        "format": "13x14x15",
+        "rank": null
+      }
+    },
+    {
+      "name": "solven-eu/matmulcatalog COVERAGE.md",
+      "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md",
+      "fetched_utc": "2026-10-14T02:34:09Z",
+      "http_status": 200,
+      "sha256": "c2a9bd929b477acb44d4f92aa8055a0c26eab3c33121c0734be650c5c86254b7",
+      "extracted_cell": {
+        "format": "13,14,15",
+        "F2": 1681,
+        "R_Q_Z": 1681
+      }
+    }
+  ]
+}
