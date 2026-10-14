@@ -1,0 +1,44 @@
+{
+  "target_id": "covering-designs-record",
+  "cell": "C(38,16,3)",
+  "parameters": {
+    "v": 38,
+    "k": 16,
+    "t": 3,
+    "m": 3
+  },
+  "claimed_b": 25,
+  "coveringrepository_b": 26,
+  "zenodo_v1_2_b": 26,
+  "ljcr_github_b": 27,
+  "schonheim_lb": 19,
+  "gain_blocks": 1,
+  "sources": [
+    {
+      "name": "La Jolla Covering Repository (Zenodo 10.5281/zenodo.10779736 v1.2)",
+      "url": "https://zenodo.org/api/records/19735294/files/coverdata.json/content",
+      "fetched_utc": "2026-10-14T08:01:00Z",
+      "http_status": 200,
+      "sha256": "9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87",
+      "extracted_cell": {
+        "v": 38,
+        "k": 16,
+        "t": 3,
+        "size": 26
+      }
+    },
+    {
+      "name": "coveringrepository.com",
+      "url": "https://coveringrepository.com/systems.aspx",
+      "fetched_utc": "2026-10-14T08:01:00Z",
+      "http_status": 200,
+      "sha256": "0cf7adf53f60b57da43d0f978bf180d9f704c50913ef184fbd68380d9996fb91",
+      "extracted_cell": {
+        "v": 38,
+        "k": 16,
+        "t": 3,
+        "b": 26
+      }
+    }
+  ]
+}
