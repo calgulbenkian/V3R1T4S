@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-28103164,2026-10-14,anonymous-c6d1e0ab,codetables-binary-linear,record-tables,CONFIRMED_SOLUTION,object/win_q4_n163_k11_d104.json,28103164e334b8d35cdcb6e2d2dac8be21a26b82a9acaad2b53d835d25456b8f,"[163, 11, 104]_4 linear code over GF(4) vs d_lower = 103 (+1 minimum distance)"
