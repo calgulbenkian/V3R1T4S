@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-47e5e3f6,2026-10-14,anonymous-c6d1e0ab,snake-coil-in-the-box,record-tables,CONFIRMED_PARTIAL,object/snake_Q14_5854.txt,47e5e3f6ef0d9d68065090f8749a15281151755cf453495da3669b4336b61935,"Q14 snake of length L = 5854 vs 5850 Toner Oct 2026 and 5844 Taylor 2026 records (+4 / +10 edges, partial win p2)"
