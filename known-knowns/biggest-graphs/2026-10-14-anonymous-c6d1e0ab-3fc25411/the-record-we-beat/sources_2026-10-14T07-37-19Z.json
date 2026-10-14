@@ -1,0 +1,27 @@
+{
+  "target_id": "degree-diameter-table",
+  "cell": "(14,3)",
+  "parameters": {
+    "Delta": 14,
+    "D": 3
+  },
+  "claimed_N": 1117,
+  "live_table_N": 1116,
+  "moore_bound": 2563,
+  "gain_vs_live_table": 1,
+  "sources": [
+    {
+      "name": "Comellas General-Graph Degree-Diameter Table",
+      "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+      "fetched_utc": "2026-10-14T07:37:19Z",
+      "http_status": 200,
+      "sha256": "69e48062289d175a9cc464a9110c3d4ea23ab28ccd26784e293b0415860c8cd6",
+      "extracted_cell": {
+        "Delta": 14,
+        "D": 3,
+        "N": 1116,
+        "bold": false
+      }
+    }
+  ]
+}
