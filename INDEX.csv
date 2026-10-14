@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-17ad9561,2026-10-14,anonymous-c6d1e0ab,packomania-scu-spheres-in-cube,sphere-packing-and-geometry,CONFIRMED_SOLUTION,object/scu1596.txt,17ad9561bd7a7f216eac6525ed3ed67de13668b78707c2187c5421ae4f40d589,"scu N = 1596 sphere-in-cube packing r* = 0.045873685240229747068212434815 vs 0.045385736359615385798733074995 (Michael Goldberg, +4.879489e-04)"
