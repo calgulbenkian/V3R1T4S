@@ -1,0 +1,32 @@
+# Verification Receipts — `2026-10-14-anonymous-c6d1e0ab-88a8597a`
+
+## Command
+```bash
+bash verify-it-yourself/run_checks.sh
+```
+
+## Exact Output
+```text
+{
+  "mode": "controlled_carry_block_finite",
+  "B": 21700,
+  "q": 25879,
+  "k": 2,
+  "m": 1,
+  "ell": 10000000000000000,
+  "N_digits": 20000000000000000,
+  "mask_size": 6641,
+  "mask_sum": 110153923,
+  "n0": 32819948656,
+  "nh": 0,
+  "L": 98800205183398657643,
+  "theta_finite_lower_50d": "1.19298973462186362590382529754753993070825527359705",
+  "theta_finite_lower_8d": "1.19298973",
+  "beats_finite_record_1_19102809": true,
+  "beats_finite_record_by_1e7": true,
+  "beats_limit_record_1_19519192": false,
+  "methods_agree": true,
+  "file": "object/best_k2_finite_cert.json"
+}
+PASS: ghr-sum-difference-c3a best_k2_finite_cert.json C_3a >= 1.19298973 verified
+```

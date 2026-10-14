@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-88a8597a,2026-10-14,anonymous-c6d1e0ab,ghr-sum-difference-c3a,erdos-and-proofs,CONFIRMED_PARTIAL,object/best_k2_finite_cert.json,88a8597a3f644e9ea00bdd76269ce69e5c367e9eeaddab9c1a8d3594d8750b1d,"ghr-sum-difference-c3a finite-certified lower bound C_3a >= 1.19298973 (k=2, m=1, B=21700, q=25879, +1.961645e-03 vs 1.19102809, p1)"
