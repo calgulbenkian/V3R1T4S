@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-1708be3f,2026-10-14,anonymous-c6d1e0ab,snake-coil-in-the-box,record-tables,CONFIRMED_PARTIAL,object/inequiv_sn13_2946.txt,1708be3f455e2bbb75681d98e33aab6b3c533632085db9926974037eb6c41d1d,"Q13 equal-record snake of length L = 2946 strictly inequivalent under hypercube automorphisms to all published records (partial win p3)"
