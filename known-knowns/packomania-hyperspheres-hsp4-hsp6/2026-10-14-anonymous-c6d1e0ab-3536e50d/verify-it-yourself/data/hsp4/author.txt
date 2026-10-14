@@ -1,0 +1,299 @@
+2 unknown
+3 unknown
+4 unknown
+5 unknown
+6 unknown
+7 unknown
+8 unknown
+9 A. L. Mackay
+10 unknown
+11 A. L. Mackay
+12 unknown
+13 A. L. Mackay
+14 A. L. Mackay
+15 A. L. Mackay
+16 A. L. Mackay
+17 A. L. Mackay
+18 A. L. Mackay
+19 A. L. Mackay
+20 A. L. Mackay
+21 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+22 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+23 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+24 unknown
+25 A. L. Mackay
+26 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+27 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+28 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+29 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+30 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+31 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+32 Eckard Specht
+33 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+34 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+35 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+36 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+37 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+38 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+39 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+40 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+41 Eckard Specht
+42 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+43 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+44 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+45 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+46 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+47 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+48 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+49 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+50 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+51 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+52 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+53 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+54 Eckard Specht
+55 N. J. A. Sloane, R. H. Hardin, W. D. Smith
+56 Eckard Specht
+57 Eckard Specht
+58 Eckard Specht
+59 Eckard Specht
+60 Eckard Specht
+61 Eckard Specht
+62 Eckard Specht
+63 Eckard Specht
+64 Eckard Specht
+65 Eckard Specht
+66 Eckard Specht
+67 Eckard Specht
+68 Eckard Specht
+69 Eckard Specht
+70 Eckard Specht
+71 Eckard Specht
+72 Eckard Specht
+73 Eckard Specht
+74 Eckard Specht
+75 Eckard Specht
+76 Eckard Specht
+77 Eckard Specht
+78 Eckard Specht
+79 Eckard Specht
+80 Eckard Specht
+81 Eckard Specht
+82 Eckard Specht
+83 Eckard Specht
+84 Eckard Specht
+85 Eckard Specht
+86 Eckard Specht
+87 Eckard Specht
+88 Eckard Specht
+89 Eckard Specht
+90 Eckard Specht
+91 Eckard Specht
+92 Eckard Specht
+93 Eckard Specht
+94 Eckard Specht
+95 Eckard Specht
+96 Eckard Specht
+97 Eckard Specht
+98 Eckard Specht
+99 Eckard Specht
+100 Eckard Specht
+101 Eckard Specht
+102 Eckard Specht
+103 Eckard Specht
+104 Eckard Specht
+105 Eckard Specht
+106 Eckard Specht
+107 Eckard Specht
+108 Eckard Specht
+109 Eckard Specht
+110 Eckard Specht
+111 Eckard Specht
+112 Eckard Specht
+113 Eckard Specht
+114 Eckard Specht
+115 Eckard Specht
+116 Eckard Specht
+117 Eckard Specht
+118 Eckard Specht
+119 Eckard Specht
+120 Eckard Specht
+121 unknown
+122 Eckard Specht
+123 Eckard Specht
+124 Eckard Specht
+125 Eckard Specht
+126 Eckard Specht
+127 Eckard Specht
+128 Eckard Specht
+129 Eckard Specht
+130 Eckard Specht
+131 Eckard Specht
+132 Eckard Specht
+133 Eckard Specht
+134 Eckard Specht
+135 Eckard Specht
+136 Eckard Specht
+137 Eckard Specht
+138 Eckard Specht
+139 Eckard Specht
+140 Eckard Specht
+141 Eckard Specht
+142 Eckard Specht
+143 Eckard Specht
+144 Eckard Specht
+145 Eckard Specht
+146 Eckard Specht
+147 Eckard Specht
+148 Eckard Specht
+149 Eckard Specht
+150 Eckard Specht
+151 Eckard Specht
+152 Eckard Specht
+153 Eckard Specht
+154 Eckard Specht
+155 Eckard Specht
+156 Eckard Specht
+157 Eckard Specht
+158 Eckard Specht
+159 Eckard Specht
+160 Eckard Specht
+161 Eckard Specht
+162 Eckard Specht
+163 Eckard Specht
+164 Eckard Specht
+165 Eckard Specht
+166 Eckard Specht
+167 Eckard Specht
+168 Eckard Specht
+169 Eckard Specht
+170 Eckard Specht
+171 Eckard Specht
+172 Eckard Specht
+173 Eckard Specht
+174 Eckard Specht
+175 Eckard Specht
+176 Eckard Specht
+177 Eckard Specht
+178 Eckard Specht
+179 Eckard Specht
+180 Eckard Specht
+181 Eckard Specht
+182 Eckard Specht
+183 Eckard Specht
+184 Eckard Specht
+185 Eckard Specht
+186 Eckard Specht
+187 Eckard Specht
+188 Eckard Specht
+189 Eckard Specht
+190 Eckard Specht
+191 Eckard Specht
+192 Eckard Specht
+193 Eckard Specht
+194 Eckard Specht
+195 Eckard Specht
+196 Eckard Specht
+197 Eckard Specht
+198 Eckard Specht
+199 Eckard Specht
+200 Eckard Specht
+201 Eckard Specht
+202 Eckard Specht
+203 Eckard Specht
+204 Eckard Specht
+205 Eckard Specht
+206 Eckard Specht
+207 Eckard Specht
+208 Eckard Specht
+209 Eckard Specht
+210 Eckard Specht
+211 Eckard Specht
+212 Eckard Specht
+213 Eckard Specht
+214 Eckard Specht
+215 Eckard Specht
+216 Eckard Specht
+217 Eckard Specht
+218 Eckard Specht
+219 Eckard Specht
+220 Eckard Specht
+221 Eckard Specht
+222 Eckard Specht
+223 Eckard Specht
+224 Eckard Specht
+225 Eckard Specht
+226 Eckard Specht
+227 Eckard Specht
+228 Eckard Specht
+229 Eckard Specht
+230 Eckard Specht
+231 Eckard Specht
+232 Eckard Specht
+233 Eckard Specht
+234 Eckard Specht
+235 Eckard Specht
+236 Eckard Specht
+237 Eckard Specht
+238 Eckard Specht
+239 Eckard Specht
+240 Eckard Specht
+241 Eckard Specht
+242 Eckard Specht
+243 Eckard Specht
+244 Eckard Specht
+245 Eckard Specht
+246 Eckard Specht
+247 Eckard Specht
+248 Eckard Specht
+249 Eckard Specht
+250 Eckard Specht
+251 Eckard Specht
+252 Eckard Specht
+253 Eckard Specht
+254 Eckard Specht
+255 Eckard Specht
+256 Eckard Specht
+257 Eckard Specht
+258 Eckard Specht
+259 Eckard Specht
+260 Eckard Specht
+261 Eckard Specht
+262 Eckard Specht
+263 Eckard Specht
+264 Eckard Specht
+265 Eckard Specht
+266 Eckard Specht
+267 Eckard Specht
+268 Eckard Specht
+269 Eckard Specht
+270 Eckard Specht
+271 Eckard Specht
+272 Eckard Specht
+273 Eckard Specht
+274 Eckard Specht
+275 Eckard Specht
+276 Eckard Specht
+277 Eckard Specht
+278 Eckard Specht
+279 Eckard Specht
+280 Eckard Specht
+281 Eckard Specht
+282 Eckard Specht
+283 Eckard Specht
+284 Eckard Specht
+285 Eckard Specht
+286 Eckard Specht
+287 Eckard Specht
+288 Eckard Specht
+289 Eckard Specht
+290 Eckard Specht
+291 Eckard Specht
+292 Eckard Specht
+293 Eckard Specht
+294 Eckard Specht
+295 Eckard Specht
+296 Eckard Specht
+297 Eckard Specht
+298 Eckard Specht
+299 Eckard Specht
+300 Eckard Specht

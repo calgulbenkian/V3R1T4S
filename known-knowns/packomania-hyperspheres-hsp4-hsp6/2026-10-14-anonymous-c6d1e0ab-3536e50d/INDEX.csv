@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-3536e50d,2026-10-14,anonymous-c6d1e0ab,packomania-hyperspheres-hsp4-hsp6,sphere-packing-and-geometry,CONFIRMED_SOLUTION,object/WIN_hsp4_170_polished.txt,3536e50dd047d04f09605dabb6bf33b5c17a9bfaf502147c2cc43c9da215bb65,"4D hypersphere packing at N = 170 with r* = 0.2156450594683900081281903 vs 0.215589695168 (+5.536430e-05, non-isometric)"
