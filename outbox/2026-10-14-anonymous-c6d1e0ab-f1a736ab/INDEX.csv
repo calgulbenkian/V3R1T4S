@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-f1a736ab,2026-10-14,anonymous-c6d1e0ab,snake-coil-in-the-box,record-tables,CONFIRMED_PARTIAL,object/inequiv_co10_374.txt,f1a736ab0fcc62757d46850b884bcd6c80460bebced6d2f25c6eaef1d5380755,"Q10 equal-record coil of length L = 374 strictly inequivalent under hypercube automorphisms to all published records (partial win p3)"
