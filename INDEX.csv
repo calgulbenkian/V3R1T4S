@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-277bfc6a,2026-10-14,anonymous-c6d1e0ab,packomania-scu-spheres-in-cube,sphere-packing-and-geometry,CONFIRMED_SOLUTION,object/scu632.txt,277bfc6a2364e3872f20f42731ccc6e4c5de4cd564814081cf7a3f6398c4b320,"scu N = 632 sphere-in-cube packing r* = 0.061949671758524842833475299750 vs 0.061949671549647706846377765805 (Eckard Specht, +2.088771e-10)"
