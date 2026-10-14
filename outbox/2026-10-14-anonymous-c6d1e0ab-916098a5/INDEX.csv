@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-916098a5,2026-10-14,anonymous-c6d1e0ab,snake-coil-in-the-box,record-tables,CONFIRMED_PARTIAL,object/sym_coil_Q13_2870.txt,916098a5643395c31ff6ee83b41ba473c9c177fda1b1a6e52689f9ce1ce66eea,"Q13 symmetric coil of length L = 2870 vs 2830 live minortriad.com record (+40 edges, partial win p1)"
