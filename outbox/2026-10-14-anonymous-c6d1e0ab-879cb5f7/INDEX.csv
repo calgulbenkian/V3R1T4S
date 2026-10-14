@@ -1,0 +1,2 @@
+submission_id,date,contributor,target_id,category,status,object_path,object_sha256,summary
+2026-10-14-anonymous-c6d1e0ab-879cb5f7,2026-10-14,anonymous-c6d1e0ab,cage-upper-bounds,record-tables,CONFIRMED_PARTIAL,object/mixed_z2_r8_g6_N234.json,879cb5f756b16355b5afb9eb6c9f182e43eccccebd7849cf395070822a051229,"[2, 8; 6]-mixed graph on N = 234 vertices vs 252 in arXiv:2506.20003 Table 1 (-18 vertices, partial win p2)"
