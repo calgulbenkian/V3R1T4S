@@ -1,0 +1,42 @@
+{
+  "target_id": "fmm-catalogue-small-format-rank",
+  "cell": "15x15x17",
+  "format": [
+    15,
+    15,
+    17
+  ],
+  "claimed_rank": 2257,
+  "claimed_ring": "Q",
+  "sota_bar": 2320,
+  "lille_bar": 2320,
+  "minimum_bar": 2320,
+  "margin_vs_sota": -63,
+  "margin_vs_minimum_bar": -63,
+  "sources": [
+    {
+      "name": "sedoglavic/fmm_digest fmm_sota.json",
+      "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+      "fetched_utc": "2026-10-14T06:19:43Z",
+      "http_status": 200,
+      "sha256": "d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1",
+      "extracted_cell": {
+        "format": [
+          15,
+          15,
+          17
+        ],
+        "rank": 2320
+      }
+    },
+    {
+      "name": "fmm.univ-lille.fr 15x15x17.html",
+      "url": "https://fmm.univ-lille.fr/15x15x17.html",
+      "fetched_utc": "2026-10-14T06:19:50Z",
+      "http_status": 200,
+      "extracted_cell": {
+        "rank": 2320
+      }
+    }
+  ]
+}
