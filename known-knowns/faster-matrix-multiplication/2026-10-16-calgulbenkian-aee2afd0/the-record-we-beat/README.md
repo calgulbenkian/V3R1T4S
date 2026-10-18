@@ -23,7 +23,7 @@ The reference count comes from Perminov's file https://raw.githubusercontent.com
 | Source | What it says for 4x5x6 at rank 90 | Our value |
 |---|---|---|
 | Perminov, arXiv:2512.13365 Table 1 | 380 (same convention) | 348 |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 456-90*      771         384        366       0.2, 0.19, 0.01         - / 456-90      1,082     418            404      678    62.7      0.14 , 0.02 , 0.08 / 456-90    1,082     421             408       674    62.3      0.14, 0.08, 0.02 / 456-90    1,049     406             398       651    62.1        0, 0.02, 0.04 | 348 |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | lowest count listed for 456-90 over Z: 366 (Table 3.3, ternary coefficients; the row is marked * because the scheme is ternary by Kemper's modification, naive 771, a different and sparser rank-90 scheme than Perminov's), below the reference 380; 348 is below it. Over Z2 the lowest is 358 (Table 3.6, not comparable); author's reading of a hand-downloaded PDF | 348 |
 | V3R1T4S open pull requests on this target | none | 348 |
 | V3R1T4S TROPHY_CASE.md | no row for this target | 348 |
 
