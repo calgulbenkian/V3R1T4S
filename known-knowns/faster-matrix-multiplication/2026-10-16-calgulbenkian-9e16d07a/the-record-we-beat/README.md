@@ -23,7 +23,7 @@ The reference count comes from Perminov's file https://raw.githubusercontent.com
 | Source | What it says for 5x5x5 at rank 93 | Our value |
 |---|---|---|
 | Perminov, arXiv:2512.13365 Table 1 | 383 (same convention) | 332 |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 555-93       846         401        387       0.01, 0.2, 0.08         - / 555-93      1,031     450            427      604    58.6      0.15, 0.15, 0.01 / 555-93      1,013     442            425      588    58.0       0.18, 0.14, 0.08 / 555-93      1,013         438       417       596    58.5      0.16, 0.16, 0.02 | 332 |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | lowest count listed for 555-93: 387 over Z (Table 3.3); 384 over Z2 (Table 3.6, not comparable); author's reading of a hand-downloaded PDF | 332 |
 | V3R1T4S open pull requests on this target | PR #186 (Gutierrez and DrZuzzjen, merged 2026-10-15): 358 under the same convention | 332 |
 | V3R1T4S TROPHY_CASE.md | no row for this target | 332 |
 
