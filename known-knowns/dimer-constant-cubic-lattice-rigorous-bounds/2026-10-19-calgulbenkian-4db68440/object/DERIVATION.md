@@ -31,7 +31,7 @@ credit for 0.7862023450 is as FKLM state it.) FKLM also state the lower bound h_
 
 (E0) For all m,n >= 2:  h3 <= (1/(mn)) log rho(T^MD_{m,n}),  where T^MD is defined in section 3.
 
-Consequence used by the claim: h3 <= (1/9) log max_U (T^MD x)_U / x_U for any positive vector x, at (m,n) = (3,3)
+Consequence used by the claim: h3 <= (1/20) log max_U (T^MD x)_U / x_U for any positive vector x, at (m,n) = (5,4)
 (Collatz-Wielandt: Horn and Johnson, Matrix Analysis, Thm 8.1.26, for a nonnegative matrix and a positive vector).
 
 ## 3. The matrix (the monomer-dimer analogue of He's definition)
@@ -42,8 +42,8 @@ set of vertices of a layer already matched by a dimer coming from the layer belo
     T^MD[U,W] := sum over S subset of (V minus U) of per A[S, W]      (per A[S,W] = 0 unless |S| = |W|),
 
 i.e. the vertices of the layer outside U are each either a monomer or matched upward (the set S), and W is the set of
-vertices of the next layer hit by those dimers. The full matrix has 2^{mn} rows; at (3,3) it has 512 rows and the
-checker builds it entirely (no symmetry reduction is needed for validity).
+vertices of the next layer hit by those dimers. The full matrix has 2^{mn} rows; at (5,4) it has 1048576 rows and the
+checker applies it entirely (no symmetry reduction is needed for validity).
 
 He's definitions of V, D, A (He, Section 2; quoted)
 
@@ -58,7 +58,7 @@ He's definitions of V, D, A (He, Section 2; quoted)
 
 ## 4. The proof of (E0), step by step
 
-(E1) Trace identity. Let T_{m,n,l} = Z^3 / <m(e1-e3), n(e2-e3), l e3> be He's quotient graph (simple, 6-regular,
+(E1) Trace identity. Let T_{m,n,l} = Z^3 / span(m(e1-e3), n(e2-e3), l e3) be He's quotient graph (simple, 6-regular,
 bipartite for m,n >= 2 and even l >= 4; He, quoted in the main-win folder's DERIVATION). Under He's isomorphism
 [x] -> ((x1 mod m, x2 mod n), x1+x2+x3 mod l) every edge joins height k to height k+1 with biadjacency A. A matching
 of T_{m,n,l} (not necessarily perfect) determines, for every height k, the set U_k of vertices of layer k matched to
@@ -82,7 +82,7 @@ quoted in the main-win DERIVATION). Hypotheses are therefore the same as for the
 
 (E3) Box inside the torus. Let Phi(G) be the number of all matchings of G. If G' is a spanning subgraph of G then every
 matching of G' is a matching of G, so Phi(G') <= Phi(G). The box with sides (2^p m, 2^p n, 2^p) is a spanning subgraph
-of the rectangular torus Z^3/<2^p m e1, 2^p n e2, 2^p e3> = T_{2^p m,2^p n,2^p} (p >= 2; the lattice equals He's
+of the rectangular torus Z^3/span(2^p m e1, 2^p n e2, 2^p e3) = T_{2^p m,2^p n,2^p} (p >= 2; the lattice equals He's
 Lambda_{2^p m,2^p n,2^p}). Hence Phi(box) <= Phi(T_{2^p m,2^p n,2^p}) <= Phi(T_{m,n,2^p})^{2^{2p}} by (E2) applied 2p times
 (l = 2^p >= 4 even at every step), and Phi(T_{m,n,2^p}) = tr(T^MD^{2^p}) <= 2^{mn} rho(T^MD)^{2^p}.
 
@@ -96,17 +96,18 @@ satisfy FKLM's m_n -> infinity requirement.)
 
 The steps that are not in He's paper: the definition of T^MD and the trace identity (E1), the use of the theorem at
 t = 1 (E2), and the comparison of Phi with the entropy of FKLM (E4). (E3) is He's argument verbatim for a different
-count. There is no symmetry compression in the verification: the checker uses the entire 512 x 512 matrix and
-expands the shipped vector (given on orbits of translations and the coordinate swap) to all 512 states, so the
+count. There is no symmetry compression in the verification: the checker applies the entire 1048576 x 1048576 matrix (never stored, applied row by row through a dynamic program) and
+expands the shipped vector (given on the 52488 orbits of the 20 translations of Z/5 x Z/4; the swap is not a symmetry as 5 differs from 4) to all 1048576 states, so the
 validity of the bound does not depend on any symmetry claim.
 
 ## 5. The exact inequality checked
 
-For the shipped positive integer vector x (44 orbit values, expanded to 512 states) the checker computes
+For the shipped positive integer vector x (52488 orbit values, expanded to 1048576 states) the checker computes
 (T^MD x)_U for every state U and the maximum of (T^MD x)_U / x_U by cross multiplication. Result:
-731051554747087 / 618837374495, whose logarithm divided by 9 is 0.78604408300... (just above 0.7860440830; rounded
-outward the claimed bound is h3 <= 0.7860441). Collatz-Wielandt hypotheses: T^MD is nonnegative (integer entries) and
-x is positive. The value is smaller than FKLM's comparator 0.7862023450 by 1.58e-4.
+1891821269973664 / 281869529 (= 6711691.315784843...), whose logarithm divided by 20 is 0.785968076808533...
+(rounded outward: 0.785968076809 at 12 places; the claimed bound is h3 <= 0.7859681 at 7 places). Collatz-Wielandt
+hypotheses: T^MD is nonnegative (integer entries) and x is positive. The value is smaller than FKLM's comparator
+0.7862023450 by 2.34e-4.
 
 ## 6. Provenance of the idea
 

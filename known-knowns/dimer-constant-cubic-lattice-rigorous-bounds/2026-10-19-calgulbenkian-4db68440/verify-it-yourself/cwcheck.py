@@ -341,7 +341,7 @@ def cmd_mdcert(dims, path):
 
 # ---------------------------------------------------------------- brute-force trace check
 def quotient_graph(dims_r, l):
-    """vertices of Z^d / Lambda, Lambda = <m_j (e_j - e_d), l e_d>, via the triangular reduction"""
+    """vertices of Z^d / Lambda, Lambda = span(m_j (e_j - e_d), l e_d), via the triangular reduction"""
     r = len(dims_r)
     d = r + 1
 
