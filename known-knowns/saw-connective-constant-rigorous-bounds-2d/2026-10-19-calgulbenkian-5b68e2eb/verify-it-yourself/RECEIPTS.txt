@@ -1,0 +1,35 @@
+== reassemble object/states_part_*.bin and check the whole first
+whole object sha256 matches (5b68e2eb7517096965e583cc68cddb13978e8959b8a0a7a218d08ad10a2dfee7)
+== each part against object/SHA256_PARTS.txt
+all parts match
+== negative controls (first 3000 states only)
+negative control 1 (a vector entry set to 1) rejected as expected
+negative control 2 (a seed state removed) rejected as expected
+== full check: rebuild all transitions, subset-inclusion on each, exact ratio (about 10 minutes)
+ok   lattice: adjacency symmetric and 3-regular; the 8 symmetries about the origin and translations by 3Z^2 are automorphisms (window +-9)
+states read: 2750336, bytes 37215863, load 25s
+ok   all test-vector entries are positive integers (min 1000000, max 10000000000000)
+ok   both seed states (square edge, octagon edge) are in the list
+ok   all directed edges in window +-12 reduce to the two seed states (2 classes)
+ok   all vertices in the window are equivalent under the symmetry group (vertex-transitive): 1 class
+   ... 250000 states, 47s
+   ... 500000 states, 75s
+   ... 750000 states, 103s
+   ... 1000000 states, 135s
+   ... 1250000 states, 182s
+   ... 1500000 states, 283s
+   ... 1750000 states, 356s
+   ... 2000000 states, 425s
+   ... 2250000 states, 510s
+   ... 2500000 states, 596s
+   ... 2750000 states, 646s
+transitions rebuilt 4420718, with more than one candidate 1510053, using a candidate other than the plain suffix 643304, max candidates 10
+ok   every candidate target is in the state list (missing: 0)
+ok   subset-inclusion invariant holds on all 4420718 chosen transitions (failures: 0)
+exact max (P x)_i / x_i = 6792410744 / 3715467520 = 849051343/464433440 = 1.828144293400  (state index 2618199)
+ok   bound 849051343/464433440 < 1.82926 - 2e-6 (exact rational comparison)
+ok   state count 2750336
+elapsed 646 s
+PASS
+ALL CHECKS PASS
+sh verify-it-yourself/run_checks.sh  469.61s user 19.49s system 67% cpu 12:04.14 total
