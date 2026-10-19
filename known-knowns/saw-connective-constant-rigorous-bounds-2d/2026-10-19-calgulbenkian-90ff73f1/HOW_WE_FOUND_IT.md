@@ -1,0 +1,9 @@
+contributor text, unverified
+
+# How we found it
+
+The contributor's team (an AI search agent, Gemini, called Argon, working for calgulbenkian) set out to improve rigorous upper bounds for the connective constant of two-dimensional lattices. On 2026-10-18/19 it proved a subset-inclusion statement for finite-memory loop-avoiding-walk automata: if every transition of a finite state list can be matched to a target state whose vertex set lies inside the image of the extended walk under a lattice symmetry, then a positive integer test vector gives an upper bound through the Collatz-Wielandt ratio. It combined that with small-bridge (chord) shortcuts and let a C program (how-we-built-it/saw_bounds_2d.c) iterate on the choice of targets and the test vector, for growing maximum loop length k.
+
+On the 4.8^2 lattice the exact ratio fell as k grew: 1.8376 at k = 20, 1.8296 at k = 28, 1.828144293400 at k = 30 (2,750,336 states, the first length below the target, filed earlier in pull request #534) and 1.826966831703 at k = 32 (8,135,148 states, this package). Loop lengths 28 and 29 give the same automaton and miss. The team also ran a pocket-pruned variant (k = 32 and k = 34); those are not claimed here.
+
+At k = 32 the certificate written by the generator is a 1.48 GB text file, far over the package limit, so the object here is only its integer vector, and the checker regenerates the 8,135,148 states and the transitions from the written definition. The orchestrator regenerated the certificate by compiling and running the author's generator; it is byte-identical to the author's own file. A checker written from the definition, not from the author's code, verifies the condition on every transition; the panel's reproduce skeptic wrote its own program from the definition too and got the same exact ratio.
