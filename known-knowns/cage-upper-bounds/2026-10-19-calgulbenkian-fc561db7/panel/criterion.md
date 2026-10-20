@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
-Method. I read the claim folder and the saved paper excerpt, wrote my own checker (Python for the degree and simplicity tests, a C program for exhaustive short-cycle search), and fetched once the live paper page https://arxiv.org/html/2506.20003 (2026-10-19T05:28:03Z, HTTP 200, sha256 1b1cc422cd10a41255b96a03e4a544a5d337ddbfa0aa3759907e1be647f02537, identical to the folder's hash) to quote definitions in full. Output is saved as mz2_all.txt under criterion_ws/ in the group folder.
+Method. I read the package folder and the saved paper excerpt, wrote my own checker (Python for the degree and simplicity tests, a C program for exhaustive short-cycle search), and fetched once the live paper page https://arxiv.org/html/2506.20003 (2026-10-19T05:28:03Z, HTTP 200, sha256 1b1cc422cd10a41255b96a03e4a544a5d337ddbfa0aa3759907e1be647f02537, identical to the folder's hash) to quote definitions in full. Its output is not shipped in this package.
 
 Target and win text. Target cage-upper-bounds, partial win p2: 'A graph strictly beating a live entry of the separate girth-diameter cage table (arXiv 2511.21144) or the mixed-cage table (arXiv 2506.20003), verified exactly against that table's own definition; logged as a partial win, never as a cage record.' The main criterion explicitly says mixed cages do not count, so only p2 can apply.
 
@@ -14,14 +14,14 @@ So the forward-arc convention is the table's own definition, and the claim's sta
 
 Clauses, checked:
 1. Valid [2,7;6]-mixed graph on 184 vertices: MET. Every vertex has 7 edges, 2 in-arcs and 2 out-arcs (exact degree counts); no loops, no parallel edges, no parallel or antiparallel arcs, no arc and edge on the same pair; the underlying graph is connected.
-2. No cycle of length 2, 3, 4 or 5 under the forward-arc convention: MET. Exhaustive search of all simple closed walks of length up to 6 from every start vertex (edges both ways, arcs forward only) finds none of length 2 to 5 and finds cycles of length 6 (so the girth is exactly 6). See mz2_all.txt.
-3. Direction-blind check (for completeness): shortest cycle 4 for all four cells, as the claim itself states; this reading does not apply.
+2. No cycle of length 2, 3, 4 or 5 under the forward-arc convention: MET. Exhaustive search of all simple closed walks of length up to 6 from every start vertex (edges both ways, arcs forward only) finds none of length 2 to 5 and finds cycles of length 6 (so the girth is exactly 6). See my checker's output (not shipped).
+3. Direction-blind check (for completeness): shortest cycle 4 for this object, as the claim itself states; this reading does not apply.
 4. Strictly below the live entry: MET. The live Table 1 row for [2,7;6] has lower bound 123 (marked as conditional on a conjecture) and upper bound 196, listed with reference [6], an earlier paper of the same authors. 184 < 196, and 184 > 123.
 5. p2 'logged as a partial win, never as a cage record': accepted as the only claim made. This is not a (k,g)-cage record for a regular undirected graph.
 
 Hidden quantifiers and null models. The comparison is to the table's own listed upper bound for one row, not to any cage table. The object is a constructive upper bound; the conditional lower bound does not constrain it. No requirement of exact girth beyond 6 is hidden. I did not check whether a newer source improves the row (novelty role).
 
-Open questions in CLAIM.md that concern this role.
+Open questions in the claim record (not shipped) that concern this role.
 - Which cycle convention does the table use? Answer: forward-arc, as argued above, with the quotes.
 - Does a smaller upper bound with an explicit graph meet p2 ('strictly beating a live entry ... verified exactly against that table's own definition')? Answer: yes; it is an explicit graph, verified exactly under the table's definition, smaller than the listed entry.
 - Is the conjectural lower bound 123* relevant? Answer: no. It is a lower bound conditional on a conjecture about directed cages; the object lies above it and it does not affect an upper-bound entry.
