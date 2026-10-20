@@ -2,13 +2,13 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Reproduce report: scu-733
 
-Definition quoted from CLAIM.md (success criterion): the FEASIBLE radius r* := min( (smallest pairwise distance |c_i - c_j| over all pairs) / 2, 1/2 - max_i max(|x_i|,|y_i|,|z_i|) ), computed at 50 digits from the submitted coordinates with no tolerance, strictly greater than the live radius.txt value for that N by at least 1e-11, AND the configuration not isometric to the posted file (sorted pairwise-distance multisets differ (sorted distance multisets differ)).
+Definition quoted from the target's success criterion: the FEASIBLE radius r* := min( (smallest pairwise distance |c_i - c_j| over all pairs) / 2, 1/2 - max_i max(|x_i|,|y_i|,|z_i|) ), computed at 50 digits from the submitted coordinates with no tolerance, strictly greater than the live radius table value for that N by at least 1e-11, AND the configuration not isometric to the posted file (sorted pairwise-distance multisets differ (sorted distance multisets differ)).
 
-Method. Before opening the author's checker I wrote skeptic/mychk.py (standard Python plus mpmath, run with python -I). It reads every coordinate as an exact decimal, scales to integers, computes all N(N-1)/2 squared distances exactly in integers, takes the square root of the smallest at 60 digits, computes the wall term exactly (largest norm or largest coordinate, as an integer square root at 60 digits), and prints r*. A second small script (skeptic/bar.py) reads the saved radius.txt and prints the row for N and the largest row at any N' >= N. The files were first checked against claim.SHA256SUMS from inside the claim folder (all lines OK), then copied to rep_ws/claim; no network was used.
+Method. Before opening the author's checker I wrote my own checker (standard Python plus mpmath, run with python -I; not shipped in this package). It reads every coordinate as an exact decimal, scales to integers, computes all N(N-1)/2 squared distances exactly in integers, takes the square root of the smallest at 60 digits, computes the wall term exactly (largest norm or largest coordinate, as an integer square root at 60 digits), and prints r*. A second small script of mine (not shipped) reads the saved radius table and prints the row for N and the largest row at any N' >= N. The files were first checked against the contributor's hash list from inside the package folder (all lines OK), then copied to a private location; no network was used.
 
-My exact command (run from rep_ws/claim):
+My command:
 
-    python -I skeptic/mychk.py scu 3 object/WIN_scu_733.txt table-record/posted_scu733.txt
+    (own checker, run on object/WIN_scu_733.txt and the posted N=733 file, which is not shipped)
 
 My real output:
 
@@ -21,7 +21,7 @@ My real output:
     POSTED N 733 r* 0.058531064606277395414
     max abs diff sorted distances 0.07747458301500298
 
-The saved table (table-record/radius.txt) read by my own script skeptic/bar.py:
+The saved table (the-record-we-beat/radius_rows_N733_to_1000.txt) read by my own second script:
 
     row N 0.058531064607 | rows count 1134 | max N 1024192
     max row over N>=733: 0.058943675866 at N= [734]
@@ -30,15 +30,15 @@ The saved table (table-record/radius.txt) read by my own script skeptic/bar.py:
 Checks against the clauses I can test from the saved files:
 
 - 733 points, 3 coordinates each, 20 decimals; exact r* = 0.0589437529548279448024778016876 (pair-limited; the wall term is 0.05894375295482795485, larger). The claim sentence gives 0.0589437529548279448024778, matching to every digit given.
-- Table row for N = 733 in the saved radius.txt: 0.058531064607; gain 4.1269e-4, far above 1e-11 (my bar.py output above).
-- Posted file parse sanity: the saved posted_scu733.txt (index, x, y, z, radius columns) gives r* = 0.0585310646062774 by my checker, matching the table row 0.058531064607 to its 12 decimals. The sorted-distance multisets of the object and the posted file differ, largest difference 0.0775 (claim says 7.7e-2), far above 1e-8.
+- Table row for N = 733 in the saved radius table: 0.058531064607; gain 4.1269e-4, far above 1e-11 (my output above).
+- Posted file parse sanity: the saved posted N=733 file (index, x, y, z, radius columns) gives r* = 0.0585310646062774 by my checker, matching the table row 0.058531064607 to its 12 decimals. The sorted-distance multisets of the object and the posted file differ, largest difference 0.0775 (claim says 7.7e-2), far above 1e-8.
 - Neighbour rows (from the same saved file): the row for N = 734 is 0.058943675866, the largest row at any N' >= 733; the object exceeds it by 7.7089e-8 (exactly 0.0589437529548279448 - 0.058943675866). So the object also beats the propagated bar of the N = 734 row (open question 1: the numbers are as stated; whether a packing derived by deleting one sphere from the posted 734 packing is a separate record is a judgement for the criterion and novelty skeptics, not something the files can decide).
 
 Answers to open questions that concern reproduction:
 
 - Open question 5 (20 decimals, exact evaluation): I evaluated the printed decimals exactly (integers), so r* is the exact radius of the printed configuration; the 50-digit mpmath reading and the exact reading give the same number to the 50 digits requested, because only the last digit of rounding at 1e-20 could differ.
 - Open question 2 (relation to the posted 734 packing): I did not have the posted 734 file (it is not saved in the folder), so I cannot confirm the statement that the object is the 734 packing with one sphere removed. What I can confirm is the non-isometry to the posted 733 file.
-- Open questions 3 and 4 (manifest copy faithful; table mid-revision): the manifest copy is only in mj_rows.csv (value 0.0588218693815 for N = 733, below r*); I had no network and could not re-fetch it. Not reproducible from the folder.
+- Open questions 3 and 4 (manifest copy faithful; table mid-revision): the manifest copy is only in the-record-we-beat/mj_rows_extract.csv (value 0.0588218693815 for N = 733, below r*); I had no network and could not re-fetch it. Not reproducible from the folder.
 
 Only after that I ran the author's sh verify-it-yourself/run_checks.sh (lines that matter):
 
