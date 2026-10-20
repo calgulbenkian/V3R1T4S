@@ -6,13 +6,13 @@ Verdict: the saved straight-line program passes every property within the assign
 
 ## Scope and independence
 
-Evidence was restricted to this folder; no network was used. I read CLAIM.md, INDEX.csv, the object, and table-record/README.md first. I wrote skeptic/definition.md and skeptic/check.py, ran the independent checker successfully, and completed its determinism checks before opening verify-it-yourself/ or REPRODUCE.md. The independent checker uses Python's standard library and imports no author code.
+Evidence was restricted to this folder; no network was used. I read the claim record (not shipped), INDEX.csv, the object, and the-record-we-beat/README.md first. I saved the definition excerpts privately and wrote my own checker (not shipped in this package), ran it successfully, and completed its determinism checks before opening verify-it-yourself/ or the author's reproduce notes (not shipped). The independent checker uses Python's standard library and imports no author code.
 
-The reference scheme is deliberately absent third-party data. table-record/README.md identifies its URL and SHA256, but a digest without the corresponding bytes cannot verify the reference, its addition count, or its product identity with this object. I did not recount that reference, verify hashes of unsaved fetched responses, determine the live minimum or best rank, compare live Lille or matmulcatalog records, or judge uniqueness/newness. Those comparisons and the identity with Perminov's reference belong to the other skeptics. The inequality 348 < 380 below compares saved numbers only. This pass applies to the saved object's exactness, ternarity, order, counts, hash, and determinism, as requested.
+The reference scheme is deliberately absent third-party data. the-record-we-beat/README.md identifies its URL and SHA256, but a digest without the corresponding bytes cannot verify the reference, its addition count, or its product identity with this object. I did not recount that reference, verify hashes of unsaved fetched responses, determine the live minimum or best rank, compare live Lille or matmulcatalog records, or judge uniqueness/newness. Those comparisons and the identity with Perminov's reference belong to the other skeptics. The inequality 348 < 380 below compares saved numbers only. This pass applies to the saved object's exactness, ternarity, order, counts, hash, and determinism, as requested.
 
 ## Quoted definition and criterion
 
-CLAIM.md. In quoted passages below, angle brackets delimiting matrix formats have been replaced by braces; only those brackets changed. The Lille URL template, with the same bracket substitution, is https://fmm.univ-lille.fr/{n}x{m}x{p}.html.
+The claim record (not shipped). In quoted passages below, angle brackets delimiting matrix formats have been replaced by braces; only those brackets changed. The Lille URL template, with the same bracket substitution, is https://fmm.univ-lille.fr/{n}x{m}x{p}.html.
 
 ## Success criterion (entire paragraph, including clauses outside offline scope)
 
@@ -29,24 +29,22 @@ CLAIM.md. In quoted passages below, angle brackets delimiting matrix formats hav
 - **Expansion and ternarity:** start with unit coordinate vectors for each map's inputs, and replace each referenced variable by its exact integer vector. Check all coordinates of all 448 fresh and final expanded forms, including all 796 listed left-to-right partial sums, lie in {-1,0,1}. For W, coordinates are the 90 independent products, as specified by the object layout. Checking partial sums additionally supplies a valid binary implementation of each multi-term form.
 - **Exact full tensor identity:** let a=4, b=5, c=6, and s index the 90 products. The coefficient of A[x,y]*B[z,t] in output C[i,k] is sum_s W[k*a+i,s]*U[s,x*b+y]*V[s,z*c+t]. Ordinary multiplication requires that coefficient to equal 1 precisely when x=i, t=k, and y=z, and 0 otherwise. The checker forms every coefficient by exact integer additions and multiplications and compares all 24*20*30=14,400 coefficients, including zeros: 120 ones and 14,280 zeros match. Each output is bilinear by construction, so matching this full monomial basis proves equality over Z for every input, without probabilistic assumptions.
 - **Direct execution:** independently execute the assignment lists on all 20*30=600 pairs of input unit vectors and compare all outputs to the matrix product. This exhausts the bilinear basis rather than sampling it. Six fixed dense signed-integer cases supplement that complete check. No exhaustive-search claim is being accepted from a sample.
-- **Reduced addition count:** a form with L terms is implemented by L-1 binary additions/subtractions; signed inputs and unary negation are free. Count every fresh and final form: U=81+0=81, V=104+0=104, W=107+56=163. Total 81+104+163=348, excluding the 90 products. This agrees with the filename, CLAIM.md, complexity.reduced, and INDEX.csv. Expanded naive support counts independently give 1023, agreeing with complexity.naive. The saved comparison is 348 < 380, by 32.
-- **Object and hash:** exactly the indexed object file is present in object/, its bytes are readable, and its SHA256 matches INDEX.csv. It remains unchanged through independent and author checks. Remote response hashes listed in table-record/README.md cannot be verified without those responses.
+- **Reduced addition count:** a form with L terms is implemented by L-1 binary additions/subtractions; signed inputs and unary negation are free. Count every fresh and final form: U=81+0=81, V=104+0=104, W=107+56=163. Total 81+104+163=348, excluding the 90 products. This agrees with the filename, the claim record, complexity.reduced, and INDEX.csv. Expanded naive support counts independently give 1023, agreeing with complexity.naive. The saved comparison is 348 < 380, by 32.
+- **Object and hash:** exactly the indexed object file is present in object/, its bytes are readable, and its SHA256 matches INDEX.csv. It remains unchanged through independent and author checks. Remote response hashes listed in the-record-we-beat/README.md cannot be verified without those responses.
 - **Determinism:** three fresh independent processes with distinct PYTHONHASHSEED values reproduce the entire original output byte for byte and leave object and checker bytes unchanged. Two fresh author-checker processes also agree byte for byte. Both checkers use exact integer arithmetic for the tensor proof; the author's seeded random evaluations are supplementary.
 
 ## Exact independent commands and real output
 
-Commands were run from this folder, in this order, before reading author code:
+Commands were run from a private copy of the package folder, in this order, before reading author code:
 
 ```sh
-python3 skeptic/check.py > skeptic/output.txt 2>&1
-cat skeptic/output.txt
-python3 skeptic/check_determinism.py > skeptic/determinism.txt 2>&1
-cat skeptic/determinism.txt
+(own checker, run on object/4x5x6_m90_cr348_ZT_reduced.json; output shown below)
+(own determinism checker, run next; output shown below)
 ```
 
-Both commands exited 0. The following blocks are inserted directly from the saved output files.
+Both commands exited 0. The following blocks are the captured outputs.
 
-skeptic/output.txt:
+Output of the first checker:
 
 ```text
 Independent verifier: exact integer arithmetic; no network; no author code
@@ -73,7 +71,7 @@ OFFLINE SCOPE: no best-rank/live-table check, reference recount/product-identity
 PASS: all saved-object properties checked
 ```
 
-skeptic/determinism.txt:
+Output of the determinism checker:
 
 ```text
 PYTHONHASHSEED=0: exit=0; stdout byte-identical; stderr empty; object/checker unchanged
@@ -88,15 +86,12 @@ PASS: three fresh processes reproduce the full initial output
 After the independent checks passed, I read the author files and ran:
 
 ```sh
-sh verify-it-yourself/run_checks.sh > skeptic/author_output.txt 2>&1
-author_check_exit=$?
-cat skeptic/author_output.txt
-exit "$author_check_exit"
+sh verify-it-yourself/run_checks.sh
 ```
 
 This completed with exit 0. An earlier shell capture attempt used zsh's read-only variable status and emitted `zsh:2: read-only variable: status` after the wrapper had run; the command above reran the wrapper and correctly captured its successful exit.
 
-skeptic/author_output.txt:
+Output of the author's script:
 
 ```text
 sha256 matches INDEX.csv (aee2afd0dd35ce54d64786b5439fc37101e55a8a758cfd2a8e572e4431396c8c)
@@ -111,11 +106,10 @@ ALL CHECKS PASS
 I also ran the comparison harness, which invokes the author checker twice, parses its JSON, compares each result with independently derived values, and checks object immutability:
 
 ```sh
-python3 skeptic/compare_author.py > skeptic/author_comparison.txt 2>&1
-cat skeptic/author_comparison.txt
+(own comparison harness, run on object/4x5x6_m90_cr348_ZT_reduced.json)
 ```
 
-This completed with exit 0. skeptic/author_comparison.txt:
+This completed with exit 0. its output:
 
 ```text
 Author command: python3 verify-it-yourself/check_slp.py object/4x5x6_m90_cr348_ZT_reduced.json

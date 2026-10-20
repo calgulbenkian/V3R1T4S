@@ -2,9 +2,9 @@
 
 context: Claude Code subagent (Opus 5.5), fresh context
 
-Claim folder read: CLAIM.md, INDEX.csv, table-record/README.md, object file name. All four hashes match claim.SHA256SUMS (CLAIM.md 58e37e5b..., INDEX.csv 6ef062b3..., object/4x5x6_m90_cr348_ZT_reduced.json aee2afd0..., table-record/README.md 5d94e361...).
+Claim folder read: the claim record, INDEX.csv, the table record, object file name. All four hashes match the claim folder's hash list (claim record 58e37e5b..., INDEX.csv 6ef062b3..., object/4x5x6_m90_cr348_ZT_reduced.json aee2afd0..., table record 5d94e361...). The claim record is not shipped; the-record-we-beat/README.md holds the table record's content.
 
-Every fetch below was one plain curl request, User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Pages saved under novelty_ws/.
+Every fetch below was one plain curl request, User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Saved copies of the pages are not shipped in this package.
 
 ## Primary sources
 
@@ -23,7 +23,7 @@ Every fetch below was one plain curl request, User-Agent 'V3R1T4S-research (hone
 | V3R1T4S known-knowns INDEX.csv | https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/known-knowns/faster-matrix-multiplication/INDEX.csv | 2026-10-15T23:55:04Z | 200 | 8e5b2a6c3c2b6a18dd3c2489f742b73890b9c81bb9d051f0628bab25101e83b7 | Rank records only (14x15x15, 13x14x14, ...). No 4x5x6. |
 | V3R1T4S repo tree | https://api.github.com/repos/elder-plinius/V3R1T4S/git/trees/main?recursive=1 | 2026-10-15T23:55:04Z | 200 | f63c3cc8f48202557b7290f117f14aefdebe4f42ed79cf2448cb318d24b229db | truncated=false. I fetched this once to name the objects in the merged packages. The addition-count packages merged 2026-10-15 cover 4x6x6 (cr373), 5x7x7 (cr699), 6x6x7 (cr695), 6x8x8 (cr993), 4x6x8 (cr476), 6x6x6 (cr588), 5x6x7 (cr582), 4x6x7 (cr469), 6x6x8 (cr719), 5x5x8 (cr556) and 5x6x6 (cr502), plus one 5x5x5 (cr358). No file anywhere in the repo names 4x5x6 or any permutation of it. No merged package covers this format. |
 
-Primary-source hashes for the tree, reduced_known.json, README, CHANGELOG, the Lille page, COVERAGE.md and fmm_sota.json are identical to those in the author's table-record. The sources have not changed since the author's fetches.
+Primary-source hashes for the tree, reduced_known.json, README, CHANGELOG, the Lille page, COVERAGE.md and fmm_sota.json are identical to those in the author's record (the-record-we-beat/README.md). The sources have not changed since the author's fetches.
 
 ## Literature (last 24 months)
 
@@ -89,6 +89,6 @@ unresolved: IACR ePrint 2026/849 PDF (HTTP 403 Cloudflare challenge) and the wer
 ## Verdicts
 
 - Full criterion: PASS, conditional on the unresolved item above. 348 is strictly below every comparable count I could read: Perminov's live minimum of 380, nothing on the Lille page, matmulcatalog's naive 775 (not comparable), and no V3R1T4S record, PR or package. No unread source is known to cover this format at rank 90.
-- Partial win p1, as the panel brief defines it (strictly fewer than Perminov's live count, same convention): PASS. 348 is below 380 under the reduced convention, and the bar is his repository alone, so the unresolved item does not affect this verdict. Note: the bank's enumerated p1 text is written for a rank-23 SLP for 3x3x3. Read literally, that p1 does not apply to this claim. This claim is a full-criterion claim for 4x5x6.
+- Partial win p1, as defined for this panel (strictly fewer than Perminov's live count, same convention): PASS. 348 is below 380 under the reduced convention, and the bar is his repository alone, so the unresolved item does not affect this verdict. Note: the bank's enumerated p1 text is written for a rank-23 SLP for 3x3x3. Read literally, that p1 does not apply to this claim. This claim is a full-criterion claim for 4x5x6.
 
 pass: true
