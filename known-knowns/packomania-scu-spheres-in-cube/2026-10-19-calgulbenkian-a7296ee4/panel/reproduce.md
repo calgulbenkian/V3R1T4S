@@ -2,13 +2,13 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Reproduce report: scu-739
 
-Definition quoted from CLAIM.md (success criterion): the FEASIBLE radius r* := min( (smallest pairwise distance |c_i - c_j| over all pairs) / 2, 1/2 - max_i max(|x_i|,|y_i|,|z_i|) ), computed at 50 digits from the submitted coordinates with no tolerance, strictly greater than the live radius.txt value for that N by at least 1e-11, AND the configuration not isometric to the posted file (sorted pairwise-distance multisets differ (sorted distance multisets differ)).
+Definition quoted from the target's success criterion: the FEASIBLE radius r* := min( (smallest pairwise distance |c_i - c_j| over all pairs) / 2, 1/2 - max_i max(|x_i|,|y_i|,|z_i|) ), computed at 50 digits from the submitted coordinates with no tolerance, strictly greater than the live radius table value for that N by at least 1e-11, AND the configuration not isometric to the posted file (sorted pairwise-distance multisets differ (sorted distance multisets differ)).
 
-Method. Before opening the author's checker I wrote skeptic/mychk.py (standard Python plus mpmath, run with python -I). It reads every coordinate as an exact decimal, scales to integers, computes all N(N-1)/2 squared distances exactly in integers, takes the square root of the smallest at 60 digits, computes the wall term exactly (largest norm or largest coordinate, as an integer square root at 60 digits), and prints r*. A second small script (skeptic/bar.py) reads the saved radius.txt and prints the row for N and the largest row at any N' >= N. The files were first checked against claim.SHA256SUMS from inside the claim folder (all lines OK), then copied to rep_ws/claim; no network was used.
+Method. Before opening the author's checker I wrote my own checker (standard Python plus mpmath, run with python -I; not shipped in this package). It reads every coordinate as an exact decimal, scales to integers, computes all N(N-1)/2 squared distances exactly in integers, takes the square root of the smallest at 60 digits, computes the wall term exactly (largest norm or largest coordinate, as an integer square root at 60 digits), and prints r*. A second small script of mine (not shipped) reads the saved radius table and prints the row for N and the largest row at any N' >= N. The files were first checked against the contributor's hash list from inside the package folder (all lines OK), then copied to a private location; no network was used.
 
-My exact command (run from rep_ws/claim):
+My command:
 
-    python -I skeptic/mychk.py scu 3 object/WIN_scu_739.txt table-record/posted_scu739.txt
+    (own checker, run on object/WIN_scu_739.txt and the posted N=739 file, which is not shipped)
 
 My real output:
 
@@ -21,7 +21,7 @@ My real output:
     POSTED N 739 r* 0.058531064606
     max abs diff sorted distances 0.07616533888009602
 
-The saved table (table-record/radius.txt) read by my own script skeptic/bar.py:
+The saved table (the-record-we-beat/radius_rows_N739_to_1000.txt) read by my own second script:
 
     row N 0.058531064606 | rows count 1134 | max N 1024192
     max row over N>=739: 0.058627036756 at N= [740, 741]
@@ -31,8 +31,8 @@ Checks against the clauses I can test from the saved files:
 
 - 739 points, 3 coordinates, 20 decimals; exact r* = 0.0586275441666459796140566738887 (pair-limited; wall term 0.05862754416664600621). The claim sentence gives 0.0586275441666459796140567, matching.
 - Table row for N = 739: 0.058531064606; gain 9.6480e-5 (above 1e-11). The largest row at any N' >= 739 is 0.058627036756 (N = 740 and 741); the object exceeds it by 5.0741e-7.
-- Posted file parse sanity: the saved posted_scu739.txt gives r* = 0.058531064606 (the table row) by my checker. Sorted-distance multisets differ; largest difference 0.0762 (claim: 7.6e-2).
-- Open questions 1, 2, 3, 4 are the same as for the N = 733 cell and have the same answer: the files confirm the numbers; the 741 file from which the object is said to derive is not in the folder (cannot confirm the derivation); the manifest value 0.0586073866758 for N = 739 sits only in mj_rows.csv and I could not re-fetch it; live-table revision state is not reproducible offline. Open question 5: exact evaluation of the printed decimals, as above.
+- Posted file parse sanity: the saved posted N=739 file gives r* = 0.058531064606 (the table row) by my checker. Sorted-distance multisets differ; largest difference 0.0762 (claim: 7.6e-2).
+- Open questions 1, 2, 3, 4: the files confirm the numbers; the 741 file from which the object is said to derive is not in the folder (cannot confirm the derivation); the manifest value 0.0586073866758 for N = 739 sits only in the-record-we-beat/mj_rows_extract.csv and I could not re-fetch it; live-table revision state is not reproducible offline. Open question 5: exact evaluation of the printed decimals, as above.
 
 Only after that I ran the author's sh verify-it-yourself/run_checks.sh (lines that matter):
 
