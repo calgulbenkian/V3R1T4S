@@ -5,7 +5,7 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 Cell: ub-35-14-14-837. Role: reproduce (exact rational re-check of a Delsarte LP upper-bound certificate). Scope: this report checks only that the saved certificate proves the stated bound; whether the table value is current or the result is new is for the other skeptics.
 
 ## Integrity
-All files in the claim folder matched claim.SHA256SUMS (shasum -a 256 -c, zero non-OK lines). The folder was copied to rep_ws/ and all work was done there; no network. Certificate file: object/cert_A35_14_14.json, sha256 5782329f280871cd24ca8c13d606212f37dbcfea2b382ca61b8c6ff9d6d6d7eb.
+All files in the package folder matched the contributor's hash list (shasum -a 256 -c, zero non-OK lines). The folder was copied to a private workspace and all work was done there; no network. Certificate file: object/cert_A35_14_14.json, sha256 5782329f280871cd24ca8c13d606212f37dbcfea2b382ca61b8c6ff9d6d6d7eb.
 
 ## Definition used (written before opening verify-it-yourself/)
 Independent exact Delsarte-bound checker for the Johnson scheme J(n,w).
@@ -27,8 +27,8 @@ Weak duality proof (re-derived): for a code with inner distribution a, 1 + sum_i
 4. Objective 1 + sum_k y_k m_k computed exactly; its floor must equal the claimed U.
 5. As a cross-check, my own exact simplex (Bland rule, Fractions) solves the primal LP for this cell; by LP duality its optimum must equal the dual objective if the certificate is optimal.
 
-## Checker validation on cells with known answers (shared scratch, run before the cell checks)
-Command: python -I skeptic_known.py (copy kept in rep_ws/skeptic/ as skeptic_delsarte.py, skeptic_cells.py; shared scratch GROUP/_rep_ub/)
+## Checker validation on cells with known answers (run before the cell checks)
+Command: (own checker, run on the known-answer cells; not shipped in this package)
 A(6,4,3) literature value 4; my exact LP optimum 4 (~4.0000), floor 4
 A(7,4,3) literature value 7; my exact LP optimum 7 (~7.0000), floor 7
 A(8,4,4) literature value 14; my exact LP optimum 14 (~14.0000), floor 14
@@ -45,8 +45,8 @@ neg control negative y: (False, ['negative y', 'dual constraint i=2 violated: 0.
 
 
 ## My checker on this cell
-Command (from rep_ws): python -I skeptic/skeptic_cells.py object/cert_A35_14_14.json skeptic
-Saved to rep_ws/skeptic/output.txt. Full output:
+Command: (own checker, run on object/cert_A35_14_14.json)
+Full output:
 ```
 orthogonality self-test J(35,14): ok
 cell A(35,14,14); claimed U=837; y indices [1, 2, 3, 4]
@@ -59,7 +59,7 @@ RESULT: PASS A(35,14,14) <= 837 (claimed 837)
 Second run output was identical to the first (determinism).
 
 ## Author's run_checks.sh (run only after my checker finished)
-Command (from rep_ws): sh verify-it-yourself/run_checks.sh ; exit code 0. Output tail:
+Command (from a private copy of the package): sh verify-it-yourself/run_checks.sh ; exit code 0. Output tail:
 ```
 PASS: A(31,12,10) <= 197
 == check_delsarte.py on object/cert_A35_14_14.json (exact dual feasibility, objective, floor)
@@ -79,8 +79,8 @@ ALL CHECKS PASS
 Comparison: author's checker and mine agree (same cell, same objective floor, both accept). The author's negative controls (claim one smaller, y scaled by 99/100, one negative y) were rejected as expected.
 
 ## Mismatches
-None found in the certificate. Minor observation, not affecting this check: the certificate's bookkeeping field table_upper_bound need not equal the table-implied bound in CLAIM.md; that is a matter for the novelty and criterion skeptics. Also, the bound obtained is a pure Delsarte LP bound: the exact LP optimum of this cell equals the certificate objective, so no better integer bound can come from this LP.
+None found in the certificate. Minor observation, not affecting this check: the certificate's bookkeeping field table_upper_bound need not equal the table-implied bound in README.md; that is a matter for the novelty and criterion skeptics. Also, the bound obtained is a pure Delsarte LP bound: the exact LP optimum of this cell equals the certificate objective, so no better integer bound can come from this LP.
 
-Conclusion: the certificate is dual feasible and its exact objective has floor equal to the claimed value, so A(n,d,w) <= claimed U is reproduced from the saved files, deterministically.
+Conclusion: the certificate is dual feasible and its exact objective has floor equal to the claimed value, so A(n,d,w) <= claimed U is reproduced from the shipped files, deterministically.
 
 pass: true
