@@ -2,22 +2,22 @@
 
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
-role: novelty (skeptic 1 of 3). Claim folder read: CLAIM.md, INDEX.csv, table-record/. I did not read or run the author's verifier scripts or receipts. Residual checks of the functional equations are for reproduce; this report compares the claimed digit counts with what is published.
+role: novelty (skeptic 1 of 3). Read: the claim statement, INDEX.csv and the record files. I did not read or run the author's verifier scripts or receipts. Residual checks of the functional equations are for reproduce; this report compares the claimed digit counts with what is published.
 
-## Sources fetched (one plain GET each; log in geom/novelty_ws/FETCHLOG.txt; 2026-10-19 UTC)
+## Sources fetched (one plain GET each; the log is not shipped in this package; 2026-10-19 UTC)
 | Source | URL | UTC | HTTP | sha256 |
 |---|---|---|---|---|
 | OEIS A195102 (json) | https://oeis.org/search?q=id:A195102&fmt=json | 05:37:36 | 200 | 5761a679e8ccdb464615f6a89348ca1701337e8f8c8c82fc27acba951931db13 |
 | OEIS search for further biquadratic Feigenbaum sequences | https://oeis.org/search?q=Feigenbaum+biquadratic&fmt=json | 05:39:34 | 200 | 5761a679e8ccdb464615f6a89348ca1701337e8f8c8c82fc27acba951931db13 (the only hit is A195102) |
 | OEIS A218453 (json) | https://oeis.org/search?q=id:A218453&fmt=json | 05:37:37 | 200 | d0efbfac17269e939d8d647f2315a3a499b0ad7bb1a63458b04ba10fe54be826 |
 | OEIS A098587 (json) | https://oeis.org/search?q=id:A098587&fmt=json | 05:37:37 | 200 | bb1c6ab4a933d3c1dd0fc8661da6ad26b2ef101ef09c560d917c1969092a325e |
-| arXiv API, query 3 (Feigenbaum with digits, precision or accumulation; newest first; 26 results) | export.arxiv.org api query (see FETCHLOG), https | 05:37:39 | 200 | 43b613e951685ee2484607881f7dde79c6e34c7875206a87b2102f5835a50813 |
+| arXiv API, query 3 (Feigenbaum with digits, precision or accumulation; newest first; 26 results) | export.arxiv.org api query, https | 05:37:39 | 200 | 43b613e951685ee2484607881f7dde79c6e34c7875206a87b2102f5835a50813 |
 | arXiv 2409.20457v2 (validated Chebyshev enclosures of renormalization fixed points), PDF | https://arxiv.org/pdf/2409.20457v2 | 05:39:13 | 200 | 41175a8dab0bcd5061c013318d94a571f1e7803aaf81e7135b9ab3ac4aae1bff |
 | arXiv 1602.02357v1 (Molteni, 10,000 digits), PDF | https://arxiv.org/pdf/1602.02357v1 | 05:39:47 | 200 | 1120a43d95c6c052a7bb2310af541476607bee8e529191cc904e9effd1a7fc05 |
 | TROPHY_CASE.md | https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | 05:37:22 | 200 | b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1 |
 | known-knowns listing | https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns | 05:37:22 | 200 | 8a2927f7995495ec01c3022b965eba5363a7831765ebd4a18a27a0e6ae36d011 |
 
-I did not refetch the Thurlby thesis PDF or Plouffe's page (triage fetched them; their values are in the claim folder); OEIS A195102 itself cites the thesis as "approx 330 digits on page 86". Pull requests: used the saved list of all V3R1T4S PRs (473 entries, highest 481, fetched 2026-10-19T04:30:31Z, sha256 0a1d00562d9b2af7d165703ebb9732af8e1bc3328848eba98c8cc3096dd5bb14) instead of the pulls pages. No PR title or body mentions Feigenbaum, period doubling or Myrberg; known-knowns has no Feigenbaum folder (20 folders); TROPHY_CASE.md has no Feigenbaum entry. The arXiv API request used https (no redirect).
+I did not refetch the Thurlby thesis PDF or Plouffe's page (triage fetched them; their values are in the package folder); OEIS A195102 itself cites the thesis as "approx 330 digits on page 86". Pull requests: used the saved list of all V3R1T4S PRs (473 entries, highest 481, fetched 2026-10-19T04:30:31Z, sha256 0a1d00562d9b2af7d165703ebb9732af8e1bc3328848eba98c8cc3096dd5bb14) instead of the pulls pages. No PR title or body mentions Feigenbaum, period doubling or Myrberg; known-knowns has no Feigenbaum folder (20 folders); the trophy-case file has no Feigenbaum entry. The arXiv API request used https (no redirect).
 
 ## Values read
 - OEIS A195102 (live, fetched 05:37:36Z, revision 15, last change 2026-05-19): data field has 49 digits, 1,6,9,0,3,0,2,9,7,1,4,0,5,2,4,4,8,5,3,3,4,3,7,8,0,1,5,0,3,2,4,1,6,1,3,4,8,2,2,8,2,7,8,0,5,9,7,0,9 (alpha_4 = 1.690302971405244853343780150324161348228278059709). Its link list cites Briggs, Quispel and Thompson (1991), Mathar (arXiv 1008.4608) and Thurlby's thesis ("Gives approx 330 digits on page 86"). No OEIS sequence for delta_4 exists (the search for biquadratic Feigenbaum sequences returned only A195102).

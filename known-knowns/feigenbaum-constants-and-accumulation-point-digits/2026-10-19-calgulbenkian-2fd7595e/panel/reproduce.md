@@ -4,16 +4,16 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 Claim under test (partial win p2): the z = 4 Feigenbaum-Cvitanovic fixed point g(x) = phi(x^4) and its eigenfunction, given as Chebyshev coefficients at 1070 and 1100 terms (2.80 percent apart), satisfy the fixed-point and eigen-equations to below 1e-1087 at 31 points (1300-digit arithmetic), and give alpha_4 = -1.6903029714... and delta_4 = 7.2846862170... agreeing between the two resolutions to 1085 decimals (alpha_4) and 1082 (delta_4; 1084 measured), against 49 digits in OEIS A195102 and 331 / 325 proven digits in Thurlby's thesis. Verification method quoted: evaluate the fixed-point residual and the eigen-equation residual at 30 points by Clenshaw summation at precision D + 50, require both below 10^-(D+5), and confirm a second certificate at a different resolution gives the same digits.
 
-Preparation. claim.SHA256SUMS verified from inside the claim folder (all OK); the six numbered parts reassemble (cat part01..part06) to a file whose sha256 is 2fd7595e5467256b137eb202bfcfe1ddbae3bc843bb6df1a8b601ea40ecd1ca6, equal to PARTS.sha256 and INDEX.csv. Work done in rep_ws/. No network.
+Preparation. The contributor's hash list verified from inside the package folder (all OK); the six numbered parts reassemble (cat part01..part06) to a file whose sha256 is 2fd7595e5467256b137eb202bfcfe1ddbae3bc843bb6df1a8b601ea40ecd1ca6, equal to PARTS.sha256 and INDEX.csv. Work was done on a private copy of the package. No network.
 
 ## My definitions (written down before opening the author's checker)
 
 - g even, g(0) = 1, g(x) = alpha g(g(x/alpha)), alpha = 1/g(1) (negative, so g(1) = 1/alpha < 0). With g(x) = phi(x^4) and u = x^4 this is phi(u) phi(1) = phi( phi(u phi(1)^4)^4 ) (using alpha^4 = 1/phi(1)^4).
 - Eigen-equation: the derivative of g -> alpha g(g(x/alpha)) at the fixed point with alpha held at its fixed-point value: (L psi)(u) = alpha [ phi'(B) 4 A^3 psi(w) + psi(B) ], w = u / alpha^4, A = phi(w), B = A^4, and L psi = delta psi.
 - Reading the JSON. The file does not say how the coefficient lists encode phi and psi. I found the convention by trial against the equations themselves: phi(u) = 1 + u S_c(2u - 1) and psi(u) = S_b(2u - 1), where S is the Chebyshev series sum c_k T_k (first coefficient not halved), Clenshaw evaluation. Two wrong guesses were rejected by the residuals (the first guess for phi gave phi(0) = -1.83; a guess psi(u) = u S_b(2u-1) or a linearisation that also varies alpha gave a non-constant ratio L psi / psi). With the convention above the residuals are 1e-1092 and a constant ratio, so the convention is confirmed by the data, not assumed. (That the fixed-alpha linearisation is the right operator for delta_4 is the standard one and is supported by the digits matching the thesis below.)
-- Checker: skeptic/zchk.py, mpmath at 1300 digits, Clenshaw for values, a Chebyshev derivative recurrence for phi', 31 test points u = 1/32 ... 31/32, both resolutions; alpha = 1/phi(1); delta from the file compared with the ratio (L psi)(u)/psi(u); agreement of the two resolutions measured numerically as -log10 of the difference, and as a common-prefix count.
+- Checker (my own script, not shipped in this package): mpmath at 1300 digits, Clenshaw for values, a Chebyshev derivative recurrence for phi', 31 test points u = 1/32 ... 31/32, both resolutions; alpha = 1/phi(1); delta from the file compared with the ratio (L psi)(u)/psi(u); agreement of the two resolutions measured numerically as -log10 of the difference, and as a common-prefix count.
 
-Command (from rep_ws): python -I skeptic/zchk.py   (it reads skeptic/whole.json, the reassembled object). Real output (also in skeptic/output.txt):
+Command: my own checker, run on the reassembled object (not shipped separately). Real output:
 
     N1 N = 1070  alpha = -1.69030297140524485334378015032416134822827805970956196668242
       max fixed-point residual over 31 points: 1.269e-1092
@@ -41,7 +41,7 @@ Command (from rep_ws): python -I skeptic/zchk.py   (it reads skeptic/whole.json,
 Reading of the numbers.
 - Fixed-point residual over 31 points: 1.27e-1092 (1070 terms) and 1.26e-1100 (1100 terms). Eigen-equation residual (L psi - delta psi) with delta taken from the file: 3.5e-1088 and 1.1e-1099. All below the claimed 1e-1087.
 - alpha_4 from phi(1): the two resolutions agree to -log10|difference| = 1085.98, i.e. 1085 decimals. delta_4: 1084.21, i.e. 1084 decimals measured (a pure string-prefix count gives 1082 because of a run of digits near the boundary, which is why the claim says 1082 claimed, 1084 measured). My own delta from the eigen-ratio at u = 1/2 agrees with the file's delta_4_N2 to 1e-1099.
-- Comparison with the thesis excerpt (table-record/thurlby_table_4_6_excerpt.txt, digits transcribed from the PDF text): all 330 transcribed decimals of alpha_4 match my value; the delta_4 block matches for its 324 transcribed decimals (the further characters my script read were the table caption). OEIS A195102: the 49 data digits equal the leading digits of |alpha_4| (author's checker prints the same).
+- Comparison with the thesis excerpt (the-record-we-beat/thurlby_table_4_6_excerpt.txt, digits transcribed from the PDF text): all 330 transcribed decimals of alpha_4 match my value; the delta_4 block matches for its 324 transcribed decimals (the further characters my script read were the table caption). OEIS A195102: the 49 data digits equal the leading digits of |alpha_4| (author's checker prints the same).
 - Resolution gap: (1100 - 1070) / 1070 = 2.80 percent, above the required 2 percent.
 
 ## Author's checker, run only afterwards
