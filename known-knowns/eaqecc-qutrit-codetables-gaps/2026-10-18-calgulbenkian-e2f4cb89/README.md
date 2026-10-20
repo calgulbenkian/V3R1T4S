@@ -32,6 +32,7 @@ The page footer reads "Last change: 10.07.2025". Metadata, HTTP status and the p
 
 - Only the cell named above. Nothing is claimed for other (n, k, c) cells, including cells that follow by propagation rules.
 - The distance is not shown to be optimal: the table's upper bound for this cell is 9.
+- The construction description is wrong as written: the curve y^3 + y = x^2 has only 15 affine points over GF(9), so C_L(D, 8 P_inf) on it has length at most 15, not 16 (see `HOW_WE_FOUND_IT.md`). The object file is unchanged; its parameters rest on the checks in `verify-it-yourself/`.
 - The construction cannot be rebuilt from this package (the construction script is missing from the contributor's snapshot; see `how-we-built-it/README.md`).
 - Not peer reviewed. The code was checked by a three-skeptic panel (`panel/`) and by the standalone checker shipped here.
 
@@ -39,6 +40,5 @@ The page footer reads "Last change: 10.07.2025". Metadata, HTTP status and the p
 
 - **Markus Grassl**, the entanglement-assisted quantum code tables at https://eaqecc.codetables.de/ (the live qutrit table is the comparison source) and the general tables at https://codetables.de/. Please credit him when using these codes.
 - **T. Brun, I. Devetak and M.-H. Hsieh**, *Correcting quantum errors with entanglement*, Science 314 (2006), the entanglement-assisted stabilizer formalism this code is stated in; and the Hermitian-hull reduction from classical codes over GF(9) that the preregistration cites (see arXiv:2207.05647, Luo, Ezerman, Grassl and Ling, https://arxiv.org/abs/2207.05647).
-- The authors of the algebraic-geometry and norm-trace code literature the scripts' construction field names (Goppa-style AG codes on curves over finite fields; Xing and Ling for the quadratic norm-trace code family). The exact papers are not listed in the snapshot; the construction text is the search agent's own description and is unverified.
 - The search was done by an AI agent (Gemini, called Argon) for the contributor `calgulbenkian`; the checks in `verify-it-yourself/` and `panel/` were written independently of it.
 - Contributor credit: `calgulbenkian`.
