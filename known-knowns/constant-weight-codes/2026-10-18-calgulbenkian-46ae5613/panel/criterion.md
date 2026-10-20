@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
-Role: criterion skeptic. Cell A(25,6,11), claim M = 8720. Read only the claim folder; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the folder's fetch, so the table is unchanged since the author's check). Hash list claim.SHA256SUMS: all 10 files verified OK.
+Role: criterion skeptic. Cell A(25,6,11), claim M = 8720. Read only the package; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the author's recorded fetch, so the table is unchanged since the author's check). The contributor's hash list: all 10 files verified OK.
 
 ## Criterion clauses, checked literally
 - Explicit list of M distinct binary vectors: met. Own script (fresh, not the author's) read the object file: 8720 non-empty lines, each a 0/1 string of length 25, all distinct (set of ints has size 8720).
@@ -16,7 +16,7 @@ Role: criterion skeptic. Cell A(25,6,11), claim M = 8720. Read only the claim fo
 - Hidden quantifiers or stretched definitions: none found. The object is a plain constant-weight code at the stated n, d, w; no padding, no weight change, no relabelling of the cell. Format requirement (explicit list) is met by the object file. Partial wins p1 and p2 are not used; this is the full criterion (new lower bound).
 - Caveat: the printed lower bound carries label Pl (a code from this project's own merged family), so the win is over the table as printed, which is what the criterion states.
 
-Own checker output (script crit.py, saved as crit_output.txt in criterion_ws_codes), line for this cell:
+Own checker output (script written from scratch, not shipped in this package), line for this cell:
 code-25-6-11-8720 lines 8720 M 8720 fmt/weight True distinct True mind 6 cell 8718Pl-24630 lb 8718 ub 24630 M>lb True M<=ub True neighbour-implied 8718 [((24, 6, 11), '5376BJLÖ-14682'), ((24, 6, 10), '4237-12186'), ((25, 8, 11), '1722E-3422S')]
 
 confirmed_scope: A word list of 8720 distinct binary words of length 25, weight exactly 11 and minimum pairwise distance 6 (>= 6, d even) was verified exactly, so A(25,6,11) >= 8720, strictly above the lower bound 8718 printed in that cell of Andw.html as fetched 2026-10-18T17:54:36Z (page sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, identical to the author's fetch) and below the printed upper bound 24630; the page has no mirror cell A(25,6,14); comparison with the arXiv papers rests on the author's stated lower values and was not re-checked here.
