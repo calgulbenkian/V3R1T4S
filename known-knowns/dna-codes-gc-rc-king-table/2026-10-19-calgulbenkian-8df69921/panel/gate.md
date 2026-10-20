@@ -7,5 +7,5 @@ confirmed_scope: The file object lists 62 distinct words of length 10 over ACGT,
 - Object: object/gc_rc_10_6_5.txt, sha256 8df699219eab7ea9d8fe1bc48ea9d63c1e17a246f509f8d9a36fefbad5fc8c9f.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the package folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
 - The Montemanni-Smith-Koul 2014 chapter was not readable (paywalled); the novelty skeptic passed this cell because its margin over every readable value (King table, Aboluion thesis, four arXiv papers) is at least 3 codewords.
