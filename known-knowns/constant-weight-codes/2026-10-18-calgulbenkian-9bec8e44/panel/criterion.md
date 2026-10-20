@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
-Role: criterion skeptic. Cell A(28,8,11), claim M = 3802. Read only the claim folder; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the folder's fetch, so the table is unchanged since the author's check). Hash list claim.SHA256SUMS: all 10 files verified OK.
+Role: criterion skeptic. Cell A(28,8,11), claim M = 3802. Read only the package; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the author's recorded fetch, so the table is unchanged since the author's check). The contributor's hash list: all 10 files verified OK.
 
 ## Criterion clauses, checked literally
 - Explicit list of M distinct binary vectors: met. Own script (fresh, not the author's) read the object file: 3802 non-empty lines, each a 0/1 string of length 28, all distinct (set of ints has size 3802).
@@ -16,7 +16,7 @@ Role: criterion skeptic. Cell A(28,8,11), claim M = 3802. Read only the claim fo
 - Hidden quantifiers or stretched definitions: none found. The object is a plain constant-weight code at the stated n, d, w; no padding, no weight change, no relabelling of the cell. Format requirement (explicit list) is met by the object file. Partial wins p1 and p2 are not used; this is the full criterion (new lower bound).
 - Caveat: the printed lower bound carries label Pl (a code from this project's own merged family), so the win is over the table as printed, which is what the criterion states.
 
-Own checker output (script crit.py, saved as crit_output.txt in criterion_ws_codes), line for this cell:
+Own checker output (script written from scratch, not shipped in this package), line for this cell:
 code-28-8-11-3802 lines 3802 M 3802 fmt/weight True distinct True mind 8 cell 3785Pl-11896KT lb 3785 ub 11896 M>lb True M<=ub True neighbour-implied 3785 [((27, 8, 11), '2421Pl-7754KT'), ((27, 8, 10), '1737Pl-4986'), ((28, 10, 11), '308g-1351KT')]
 
 confirmed_scope: A word list of 3802 distinct binary words of length 28, weight exactly 11 and minimum pairwise distance 8 (>= 8, d even) was verified exactly, so A(28,8,11) >= 3802, strictly above the lower bound 3785 printed in that cell of Andw.html as fetched 2026-10-18T17:54:36Z (page sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, identical to the author's fetch) and below the printed upper bound 11896; the page has no mirror cell A(28,8,17); comparison with the arXiv papers rests on the author's stated lower values and was not re-checked here.
