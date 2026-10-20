@@ -1,17 +1,17 @@
 context: Claude Code subagent, fresh context [Claude Sonnet 5.5]
 # Reproduce report, mixed-z2-r9-g6-n294
 
-Folder integrity: ran the hash list from inside the claim folder (the paths in claim.SHA256SUMS are relative to claim/); every listed file reported OK. I then copied claim/ to rep_ws/claim/ and worked only there. No network was used.
+Folder integrity: ran the hash list from inside the package folder (the paths in that list are relative to the package folder); every listed file reported OK. I then worked only on a private copy of the package. No network was used.
 
 ## Definition (quoted)
 Claim: "object/mixed_z2_r9_g6_N294.json describes a [2,9;6]-mixed graph on 294 vertices (every vertex has 2 in-arcs, 2 out-arcs and 9 edges), with no cycle of length 2, 3, 4 or 5 when cycles follow edges in either direction and arcs only forward (the forward-arc cycle convention), which is below the upper bound 320 listed for [2,9;6] in Table 1 of arXiv:2506.20003."
-Source paper definitions (table-record/paper_excerpt.txt, quoted): "We represent walks, paths, and cycles as sequences of the form (v_0, v_1, ..., v_n), where each consecutive pair v_i and v_{i+1} is either edge- or arc-adjacent. The girth of the graph is defined as the length of its shortest cycle. ... A mixed graph is called regular if each vertex has exactly z incoming arcs, z outgoing arcs, and r undirected edges."
+Source paper definitions (the-record-we-beat/paper_excerpt.txt, quoted): "We represent walks, paths, and cycles as sequences of the form (v_0, v_1, ..., v_n), where each consecutive pair v_i and v_{i+1} is either edge- or arc-adjacent. The girth of the graph is defined as the length of its shortest cycle. ... A mixed graph is called regular if each vertex has exactly z incoming arcs, z outgoing arcs, and r undirected edges."
 The excerpt does not say outright whether an arc may be traversed against its direction. The cell's claim states the forward-arc convention (an edge in either direction, an arc only from tail to head).
 
 ## My checker (written before opening verify-it-yourself/)
-- skeptic/mymixed.py: loads the stored edge list and arc list only (it does not rebuild from generators), checks indices in range, no loops, no repeated edge or arc, each vertex has exactly r edges, z=2 in-arcs and 2 out-arcs, no vertex pair joined twice (edge plus arc, or two arcs), and computes the direction-blind girth (every edge and arc as one undirected link, BFS from every vertex).
-- skeptic/fcyc.c (C, compiled with cc -O2; input made by skeptic/dump.py): exhaustive depth-first search from every vertex over the forward digraph (each edge usable both ways, each arc only tail to head), counting every simple closed walk of length 2 to 6, excluding only the trivial use of the same edge back and forth. Counts for lengths 2..5 must be zero; length 6 must be positive.
-Real output (skeptic/output.txt):
+- My own checker (written from scratch, not shipped in this package): loads the stored edge list and arc list only (it does not rebuild from generators), checks indices in range, no loops, no repeated edge or arc, each vertex has exactly r edges, z=2 in-arcs and 2 out-arcs, no vertex pair joined twice (edge plus arc, or two arcs), and computes the direction-blind girth (every edge and arc as one undirected link, BFS from every vertex).
+- A second program in C (compiled with cc -O2; its input made by a small dump script; neither is shipped in this package): exhaustive depth-first search from every vertex over the forward digraph (each edge usable both ways, each arc only tail to head), counting every simple closed walk of length 2 to 6, excluding only the trivial use of the same edge back and forth. Counts for lengths 2..5 must be zero; length 6 must be positive.
+Real output of these two programs:
 == mixed-z2-r9-g6-n294
 N 294 edges 1323 arcs 588
 no loops True
