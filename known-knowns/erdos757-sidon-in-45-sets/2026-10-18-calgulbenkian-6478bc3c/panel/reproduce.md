@@ -3,16 +3,16 @@
 context: Claude Code subagent, fresh context
 role: reproduce
 
-Step 1: shasum -a 256 -c ../claim.SHA256SUMS run inside the claim folder: every listed file reported OK (0 failures). The claim folder was then copied to rep_ws/ and all work was done there; no network was used.
+Step 1: shasum -a 256 -c on the contributor's hash list run inside the package folder: every listed file reported OK (0 failures). All work was then done on a private copy of the package folder; no network was used.
 
-## Definition (quoted from CLAIM.md)
+## Definition (quoted from the target's success criterion and the claim record, which is not shipped)
 "(4,5)-set A of reals (every 4-element subset determines at least five distinct values among its six pairwise absolute differences)". Success criterion items checked here: "(1) Every 4-subset has at least 5 distinct absolute differences, checked exhaustively. (2) The exact maximum Sidon subset size s(A) is certified by two independent exact methods (bitmask branch-and-bound and an ILP that forbids every a+b=c+d, including a=b, i.e. 3-APs) ... (4) s/|A| >= 9/17 ... (6) The checker reproduces s=8 on the Ma-Tang 14-set as a calibration test." Sidon set as used: all sums a+b (a <= b, a=b allowed) pairwise distinct, i.e. no a+b=c+d with {a,b} different from {c,d}, 3-APs included. The claim is the partial win p1: n=21 (not a multiple of 14), s=12, ratio 4/7 equal to (not below) the listed 4/7.
 
 ## My checker (written before reading verify-it-yourself/ code; only the calibration JSON was read as input)
-skeptic/mye757.py: (a) all C(n,4) 4-subsets, count of distinct absolute differences, must be >= 5; (b) the minimal conflict sets (index sets of size 3 or 4 realising a+b=c+d) are derived from all pair sums, and then three exact methods give s(A): (i) exhaustive over all 2^n subsets by superset-closure of the conflict sets in numpy with a popcount maximum; (ii) my own depth-first branch-and-bound with incremental sum sets; (iii) my own ILP (pulp/CBC, one constraint per minimal conflict set, formulated by me). Each returned witness subset is re-checked Sidon by direct pair sums. (c) The ratio is a fractions.Fraction compared with 4/7 and 9/17. (d) Calibration on the Ma-Tang 14-set. (e) A control (the progression 0..4) that must be rejected as (4,5).
+My own checker (not shipped in this package): (a) all C(n,4) 4-subsets, count of distinct absolute differences, must be >= 5; (b) the minimal conflict sets (index sets of size 3 or 4 realising a+b=c+d) are derived from all pair sums, and then three exact methods give s(A): (i) exhaustive over all 2^n subsets by superset-closure of the conflict sets in numpy with a popcount maximum; (ii) my own depth-first branch-and-bound with incremental sum sets; (iii) my own ILP (pulp/CBC, one constraint per minimal conflict set, formulated by me). Each returned witness subset is re-checked Sidon by direct pair sums. (c) The ratio is a fractions.Fraction compared with 4/7 and 9/17. (d) Calibration on the Ma-Tang 14-set. (e) A control (the progression 0..4) that must be rejected as (4,5).
 
 ## Command and real output
-From rep_ws: python -I skeptic/mye757.py object/witness_n21_s12.json verify-it-yourself/calibration_ma_tang.json (saved in rep_ws/skeptic/output.txt):
+Own checker, run on object/witness_n21_s12.json and verify-it-yourself/calibration_ma_tang.json (its output is shown below):
 
 ```
 calibration set [0, 136, 200, 243, 246, 249, 272, 286, 298, 323, 400, 528, 596, 1056]

@@ -11,8 +11,8 @@ Claim (partial win p1): a (4,5)-set with 21 elements (not a multiple of 14), exa
 - arXiv 2602.23282, abstract page 14:25:06Z, HTTP 200, sha256 e28d7f4e587488ce7d6748db3448109e60937f944b7f6860c2df13472a705155; HTML (https://arxiv.org/html/2602.23282, v2 of 6 Mar 2026) 14:27:27Z, sha256 d1aace4ca6e952deda0f2dbad7336e7e539b74c2e83eaef5a1954c2c1bd6bc29. The paper proves "c* = lim f(n)/n = inf f(n)/n" (Theorem 1.5) and gets 4/7 from n = 14 only. Its only explicit witnesses are the 14-point set and an earlier 12-point example giving 7/12. No 21-element or other non-multiple-of-14 witness at 4/7 appears.
 - arXiv query (Sidon AND Erdos AND (4,5)), 14:26:18Z, HTTP 200 (sent over https after an http 301), sha256 e8f7624ed4f1b78210a438a1cc690bd6b1c8fb8ecb8a39f13a5f19cdab4f878d: one hit, 2602.23282 itself. No newer arXiv work on (4,5)-sets found.
 
-## Repository sources (fetched once for the whole group, files in novelty_ws/)
-- TROPHY_CASE.md: https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md, 2026-10-18T14:23:15Z, HTTP 200, sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1. It lists no entry for this target family (no EAQECC, covering-design, Erdos 757 or minimizer row).
+## Repository sources (fetched once)
+- TROPHY_CASE.md: https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md, 2026-10-18T14:23:15Z, HTTP 200, sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1. It lists no entry for this target family (no Erdos 757 row).
 - Pull requests, pages 1 to 5: https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=1 to 5, 2026-10-18T14:23:15Z to 14:23:21Z, HTTP 200 each; page sha256 values cca876cd..., 176c41b2..., 20ec05c4..., f5d26a78..., and page 5 is an empty list (2ba33ca0...). 392 pull requests read by title.
 - known-knowns folder listing: https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns, 2026-10-18T14:23:22Z, HTTP 200, sha256 8a2927f7995495ec01c3022b965eba5363a7831765ebd4a18a27a0e6ae36d011. Twenty folders; none belongs to this target.
 

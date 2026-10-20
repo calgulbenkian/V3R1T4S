@@ -1,9 +1,9 @@
 # Criterion skeptic report: e757-n21 (partial win p1 only)
 context: Claude Code subagent, fresh context
 
-Target: erdos757-sidon-in-45-sets. Claimed: partial win p1 only (not the full criterion). Object: object/witness_n21_s12.json, 21 integers. Hashes in claim.SHA256SUMS were checked from inside the claim folder: all OK.
+Target: erdos757-sidon-in-45-sets. Claimed: partial win p1 only (not the full criterion). Object: object/witness_n21_s12.json, 21 integers. Hashes in the contributor's hash list were checked from inside the package folder: all OK.
 
-## My own checks (output in out/crit_check_output.txt)
+## My own checks (output not shipped in this package)
 Own script, definitions written from the criterion text:
 - distinct integers: 21 distinct, all integers.
 - (4,5)-property: all C(21,4) = 5985 four-subsets have at least 5 distinct absolute differences: True.
