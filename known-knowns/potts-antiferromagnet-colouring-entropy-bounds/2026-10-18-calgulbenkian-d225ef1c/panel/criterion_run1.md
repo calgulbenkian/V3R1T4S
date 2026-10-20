@@ -2,7 +2,7 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # criterion report, potts-wsq5-ub (W_sq(5) upper bound from the C_14 cylinder)
 
-Scope read: the claim folder only (hash list checked from claim/: all lines OK), plus two single live fetches saved under criterion_ws/ (see Fetches).
+Scope read: the package folder only (hash list checked from inside the package folder: all lines OK), plus two single live fetches (see Fetches).
 
 ## Clause by clause (success criterion, verbatim parts)
 1. "a rigorous bound strictly improving one of the eight published bounds": the claimed cell is the W_sq(5) upper bound; published value in the bank text is 3.250407145038276. Claimed 3.25040520587854968506. Direction (smaller upper bound): met. Strictly below: met.
@@ -12,7 +12,7 @@ Scope read: the claim folder only (hash list checked from claim/: all lines OK),
 5. Last clause (arXiv/Google Scholar search finding no bound at least as good): not part of this role; left to the novelty skeptic. The folder records that no search was done in it.
 6. Hidden quantifiers or stretched definitions: none found beyond item 4. The bound is for a single colour count and one direction, as stated. No null model applies. The comparison value is the bank text, not a live fetch of the table (the paper table could not be read), so "published value" is cannot-decide beyond the bank text.
 
-## Fetches (criterion_ws/)
+## Fetches
 - 2026-10-18 18:23:18Z, arXiv API query (graph homomorphisms, transfer matrices, author Lundow), HTTP 200, sha256 9e5259ed284ce2d408c1375e17a6660f24fef844b32f9bec761910b73bfebc19, no entries.
 - 2026-10-18 18:23:22Z, publisher page (the Status source URL), HTTP 200, sha256 bfae6e0fcd3cfffd5a50fb59e6816eac58203cb3f4fbb9ea07d99c06685e81ac, abstract and references only.
 (A first http arXiv request returned 301 with an empty body; not retried at that URL.)
