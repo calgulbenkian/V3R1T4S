@@ -1,17 +1,17 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 cell: qecc-n23-k9-d5   role: reproduce
 
-claim.SHA256SUMS: 12 files listed, 0 not OK (checked from inside the claim folder).
+The contributor's hash list: 12 files listed, 0 not OK (checked from inside the package folder).
 
 ## Definition (quoted)
 Claim: "a qubit stabilizer code [[23,9,5]] (23 - 9 = 14 independent, mutually commuting Pauli generators on 23 qubits, given as X and Z rows) whose exact minimum distance is 5, strictly greater than the lower bound 4 (upper bound 6) shown for [[23,9]] in the live codetables.de quantum table". Criterion p1 (verbatim): "A quantum-code record: an explicit stabilizer code [[n,k,d]] (symplectic self-orthogonality checked exactly, minimum distance computed exactly) whose d is strictly greater than the lower bound in the live codetables.de quantum-code table for that (n,k)."
 Definition used: generators g_i = (x_i | z_i) in F2^(2n); mutually commuting iff x_i.z_j + z_i.x_j = 0 mod 2 for all i, j; independent iff GF(2) rank = n - k = 14; d = minimum weight of an element of N(S) minus S, N(S) = all Paulis commuting with every generator (d is the minimum weight of N(S)\S, which covers degenerate codes).
 
 ## My checker (written before opening verify-it-yourself/)
-rep_ws/skeptic/qchk.py: checks entries are bits and shapes are 14 x 23; all 14 x 14 symplectic products; GF(2) rank of the 14 generators; then enumerates EVERY Pauli of weight 1, 2, 3, 4 (positions and the 3 non-identity types per position, using single-qubit syndrome vectors XORed together), keeps those with zero syndrome (in N(S)) and tests membership in S by reduction against the GF(2) basis; for weight 5 it searches until it finds one element of N(S)\S (upper bound d at most 5). Sanity test on the [[5,1,3]] code (generators XZZXI cyclic): it reports 0 elements at weights 1, 2 and 4 and 30 at weight 3, matching the known B_j - A_j = (0,0,30,0,18).
+My checker (written from scratch, not shipped in this package): checks entries are bits and shapes are 14 x 23; all 14 x 14 symplectic products; GF(2) rank of the 14 generators; then enumerates EVERY Pauli of weight 1, 2, 3, 4 (positions and the 3 non-identity types per position, using single-qubit syndrome vectors XORed together), keeps those with zero syndrome (in N(S)) and tests membership in S by reduction against the GF(2) basis; for weight 5 it searches until it finds one element of N(S)\S (upper bound d at most 5). Sanity test on the [[5,1,3]] code (generators XZZXI cyclic): it reports 0 elements at weights 1, 2 and 4 and 30 at weight 3, matching the known B_j - A_j = (0,0,30,0,18).
 
 ## Command and real output
-    python3 -I skeptic/qchk.py ../claim/object/qecc_p1_n23_k9_d5.json
+    (own checker, run on object/qecc_p1_n23_k9_d5.json)
 n,k,rows: 23 9 14 r==n-k: True
 noncommuting pairs: 0
 GF(2) rank of generators: 14
@@ -22,7 +22,7 @@ weight 4 : elements of N(S)\S found: 0
 weight 5: element of N(S)\S exists: True [((0, 1, 2, 7, 14), (1, 2, 3, 1, 3))]
 RESULT: valid stabilizer [[23,9]] with exact distance 5
 
-So: the generators commute (0 anticommuting pairs), rank 14 = 23 - 9, no element of N(S) outside S has weight 1 to 4 (exhaustive), and a weight-5 element of N(S) outside S exists. Exact minimum distance 5. Live bounds in table-record/: lower 4, upper 6: 5 is strictly above 4 and within 6.
+So: the generators commute (0 anticommuting pairs), rank 14 = 23 - 9, no element of N(S) outside S has weight 1 to 4 (exhaustive), and a weight-5 element of N(S) outside S exists. Exact minimum distance 5. Live bounds in the-record-we-beat/: lower 4, upper 6: 5 is strictly above 4 and within 6.
 
 ## Author's checker, run only after mine
 == qecc_check.py (exact stabilizer-code check, d = 5, comparison with live bounds and neighbours)
