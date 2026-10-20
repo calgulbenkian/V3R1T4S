@@ -7,4 +7,4 @@ confirmed_scope: The object is a 109 x 109 matrix with all entries +1 or -1 whos
 - Object: object/M109_2162897555231082049798834993796033279114137960386362436200469570917630303164899.txt, sha256 fe44093142381fa403c5bc471d6639775c6a3d4f5150f3ee70519e646ed1425e.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the package folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
