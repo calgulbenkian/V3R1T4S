@@ -8,7 +8,7 @@ Role: reproduce. Group phys, cell saw-482-k34p. Files are named relative to the 
 The theorem is PROVED (details below), all seven review fixes are present in the text and the checker, my own independent program reproduces the state count, the kept and pruned move counts and the exact maximum ratio, and the shipped run_checks.sh ends with ALL CHECKS PASS.
 
 ## 0. Integrity
-- Verified claim.SHA256SUMS from inside claim/: every line OK (CLAIM.md, INDEX.csv, object/*, REPRODUCE.md, table-record/*, verify-it-yourself/*).
+- Verified the contributor's hash list from inside the package folder: every line OK (README.md, INDEX.csv, object/*, RUN_IT_YOURSELF.md, the-record-we-beat/*, verify-it-yourself/*).
 - Reassembled vector: 13,312,188 bytes, sha256 13118758b86bc0f0daef592d3e85d353851556e54dcd07ad93b6a1c52fc26e54 (matches SHA256_PARTS.txt). Decompressed: N = 16,873,086, version 1, mantissa high byte 128 to 255 (16-bit normalised), exponents 1 to 25, no zero mantissa. So every entry is a positive integer below 2^41 and all arithmetic fits in 64-bit integers exactly.
 
 ## 1. Is THEOREM.md proved? Yes. Re-derivation
@@ -34,7 +34,7 @@ Residual remarks (none affect the verdict):
 - P is a bound for bridges only, and the text says so.
 
 ## 2. The seven review fixes
-Read against THEOREM.md, AUTOMATON.md, CLAIM.md and the checker.
+Read against THEOREM.md, AUTOMATON.md, README.md and the checker.
 1. Second-pass limit: AUTOMATON.md now states "NO limit" and the checker minimises over all present second-pass candidates; the text and the code agree. (Also numerically inert: 0 present in the state set. I confirmed this independently, see below.)
 2. Lemma B: cites Theorem 4.3 and Proposition 4.2 with each hypothesis checked (I rechecked against the paper).
 3. Lemma R wording: now "the ray avoids F after its initial vertex", and test 1 uses the actual removed set V(S). Present.
@@ -44,7 +44,7 @@ Read against THEOREM.md, AUTOMATON.md, CLAIM.md and the checker.
 7. Diagnostic renamed: the output line reads "second-pass candidates present in the state set (all enter the minimum): 0; of these, strictly lowering the running minimum: 0". Present.
 
 ## 3. My own independent program
-Written from AUTOMATON.md before I read the shipped checker (in C: rep_ws/mine/saw.c, plus Python drivers prep.py, exact.py, bridgesim.py in the same folder). Single thread, under nice. What it does:
+Written from AUTOMATON.md before I read the shipped checker (in C, plus Python drivers for preparation, the exact ratio and a bridge simulation; none of these are shipped in this package). Single thread, under nice. What it does:
 - Regenerates the states by BFS from the two seeds, using its own lattice tables, its own distance table (BFS on the lattice by vertex type), its own canonicaliser (all 8 symmetries, lexicographic from the head), and a hash set of keys.
 - Pocket tests exactly as defined: test 1 removed set V(S) with tested vertex A; test 2 removed set ex[1..] with tested vertex ex[0]. Method: a monotone-ray proof of infinity in four directions where it succeeds, else the full breadth-first search with the enlarged box and no cap. On every 97th move both tests are also run by the full search alone and compared (no mismatch).
 - Candidates: plain pruned suffix first, then chord shortcuts in recursion pre-order (depth below 3, minimum a carried), distinct list capped at 64, second-pass suffixes added only if present in the final state set (counted).
@@ -62,12 +62,12 @@ Results (my run, about 2.7 minutes):
 - 252,708 states have ratio within 1e-6 of the maximum, so the vector is nearly tight, as expected from a Collatz-Wielandt vector.
 - The maximum state has two kept moves with single candidates (indices 8961053 and 8961054); I recomputed the sum from the vector in Python.
 
-Extra empirical test of Lemma P (bridgesim.py): 210 random bridges, 16,537 steps, where the state is an actual ordered subsequence chosen at random among the pruned suffix and chord candidates; both pocket tests passed at every step, as Lemma P says (the test is a sanity check on the proof, not a substitute for it).
+Extra empirical test of Lemma P (my bridge-simulation driver): 210 random bridges, 16,537 steps, where the state is an actual ordered subsequence chosen at random among the pruned suffix and chord candidates; both pocket tests passed at every step, as Lemma P says (the test is a sanity check on the proof, not a substitute for it).
 
 ## 4. Shipped run_checks.sh
-Run from a copy of claim/ with 3 workers, under nice. All steps passed, including the two negative controls (vector entry set to 1 rejected, set to 0 rejected). The checker printed states found 16873086, moves kept 26331184, pruned by test 1 2507806, by test 2 1217699, zero cap hits, zero non-canonical states, zero ordered-invariant failures, exact max 169287/92732 at state 6930368, elapsed 2550 s, peak 7.6 GB. Last line of run_checks.sh: `ALL CHECKS PASS` (the checker's own last line: `PASS`).
+Run from a private copy of the package with 3 workers, under nice. All steps passed, including the two negative controls (vector entry set to 1 rejected, set to 0 rejected). The checker printed states found 16873086, moves kept 26331184, pruned by test 1 2507806, by test 2 1217699, zero cap hits, zero non-canonical states, zero ordered-invariant failures, exact max 169287/92732 at state 6930368, elapsed 2550 s, peak 7.6 GB. Last line of run_checks.sh: `ALL CHECKS PASS` (the checker's own last line: `PASS`).
 
-## 5. Open questions in CLAIM.md
+## 5. Open questions in the claim record (not shipped)
 1. Is the pruning theorem correct and complete? Yes. Lemma P and the induction in section 4 have no gap (section 1 above). The ordered form is needed for test 2 and is supplied.
 2. Is the Grimmett-Li application right, in particular a free action by translations with four orbits? Yes. Quasi-transitive means finitely many orbits; a free action is unimodular by (3.1). All hypotheses of Definition 3.1, Proposition 4.2 and Theorem 4.3 are met, checked against the paper text.
 3. Is the pocket test exactly the mathematical test? Yes. The box rule and the "finite only when exhausted" rule are exact. A cap overflow could only answer "infinite" for a finite component, which keeps a move and keeps lambda an upper bound. The cap is unreachable anyway (largest search in my run: 68 vertices; checker reports 0 cap hits).
