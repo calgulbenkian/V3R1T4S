@@ -3,16 +3,16 @@
 context: Claude Code subagent, fresh context
 role: reproduce
 
-Step 1: shasum -a 256 -c ../claim.SHA256SUMS run inside the claim folder: every listed file reported OK (0 failures). The claim folder was then copied to rep_ws/ and all work was done there; no network was used.
+Step 1: shasum -a 256 -c on the contributor's hash list run inside the package folder: every listed file reported OK (0 failures). All work was then done on a private copy of the package folder; no network was used.
 
-## Definition (quoted from CLAIM.md)
+## Definition (quoted from the claim record, not shipped)
 "A (v,k,t) covering design is a collection of k-subsets (blocks) of a v-set such that every t-subset lies in at least one block." Criterion: "b blocks, each a k-subset of a v-set (no repeated points), covering every t-subset (checked exhaustively) ... Parameters must be within v <= 99, k <= 25, t <= 8, and b must be at least the Schonheim bound L(v,k,t); going below it means a bug. Same-day claim only if C(v,t) <= 5e9." Here v=57, k=14, t=3, b=108, C(57,3) = 29260 <= 5e9.
 
 ## My checker (written before reading verify-it-yourself/)
-skeptic/mycover.py: parses the JSON, asserts each block has exactly 14 distinct integers in 1..57, checks that the blocks are pairwise distinct, then checks coverage of all 29260 3-subsets by two methods (a Python set of all triples of all blocks compared with every triple of {1..57}; and a combinadic-rank count array of size C(57,3) giving the multiplicity of every triple), computes the Schonheim bound recursively L(v,k,t) = ceil(v/k * L(v-1,k-1,t-1)), L(.,.,0) = 1, and runs a negative control (drop one block).
+My own checker (written from scratch, not shipped in this package): parses the JSON, asserts each block has exactly 14 distinct integers in 1..57, checks that the blocks are pairwise distinct, then checks coverage of all 29260 3-subsets by two methods (a Python set of all triples of all blocks compared with every triple of {1..57}; and a combinadic-rank count array of size C(57,3) giving the multiplicity of every triple), computes the Schonheim bound recursively L(v,k,t) = ceil(v/k * L(v-1,k-1,t-1)), L(.,.,0) = 1, and runs a negative control (drop one block).
 
 ## Command and real output
-From rep_ws: python -I skeptic/mycover.py object/C_57_14_3_b108.json (saved in rep_ws/skeptic/output.txt):
+Own checker, run on object/C_57_14_3_b108.json; its output is shown below:
 
 ```
 sha256 f133e94dd68370e1e8001f34d0f021032948f2380962a71e8a4d80b15bee0803
