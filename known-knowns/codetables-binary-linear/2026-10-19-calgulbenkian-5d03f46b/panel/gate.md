@@ -9,5 +9,5 @@ confirmed_scope: The object file's entry n=49, k=38 is a qubit stabilizer code [
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
 - Partial win p1 (a quantum code beating the live codetables.de QECC lower bound): distance exactly 4 against the live cell's lower bound 3; 4 equals the cell's upper bound, so the code is optimal for its parameters.
-- The six codes [[37,26,4]] to [[49,38,4]] come from one construction (an extension of a [[64,53,4]] code with 11 parity checks); each cell is judged separately and none follows from another or from a neighbouring live cell.
+- This code comes from one construction (an extension of a [[64,53,4]] code with 11 parity checks); this cell is judged on its own and does not follow from a neighbouring live cell.
 - The object file credits the [[64,53,4]] base code to 'Dastbasteh et al.'; the novelty skeptic believes it is the Bierbrauer-Edel quantum twisted code and could not confirm the attribution, so no credit is given for it beyond codetables.de.
