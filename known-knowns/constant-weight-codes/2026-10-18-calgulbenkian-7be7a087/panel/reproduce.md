@@ -5,27 +5,26 @@ context: Claude Code subagent, fresh context
 Role: reproduce skeptic. Scope: only this cell. Currency of the table value and novelty are not judged here.
 
 ## Folder integrity
-The claim folder was checked with shasum -a 256 -c against claim.SHA256SUMS from inside claim/: every listed file reported OK (0 failures). The folder was then copied to rep_ws/ and all work was done there.
+The package folder was checked with shasum -a 256 -c against the contributor's hash list from inside the package folder: every listed file reported OK (0 failures). The folder was then copied to a private workspace and all work was done there.
 
-## Definition (quoted from CLAIM.md, bank statement and success criterion)
+## Definition (quoted from the bank statement and the target's success criterion)
 "A(n,d,w) is the maximum number of binary words of length n and weight w with pairwise Hamming distance >= d."
 "Success means an explicit list of M distinct binary vectors of length n, each with Hamming weight exactly w, with all pairwise distances >= d (d even), where M is STRICTLY GREATER (direction: max) than the lower bound shown at verification time in the (n,d,w) cell ... M must not exceed the tabulated upper bound; exceeding it means a bug."
 Verification method (quoted): "assert popcount == w for each, all distinct, and popcount(x ^ y) >= d for all pairs".
 
 Cell claimed: n=53, d=8, w=7, M=3992.
 
-## Properties checked from the saved files (own checker, written before looking at verify-it-yourself/)
+## Properties checked from the shipped files (own checker, written before looking at verify-it-yourself/)
 1. Format: every line of object/A53_8_7_3992.txt is a 0/1 string of exactly 53 characters; line count equals 3992.
 2. Distinctness: all 3992 words are pairwise different as integers.
 3. Weight: every word has exactly 7 ones (checked by bit counting on the integer value).
 4. Distance: all 7966036 unordered pairs were computed (XOR then byte-table popcount, numpy, blocks of 512 words); the minimum distance must be at least 8 and the violation count must be zero.
 5. Object identity: sha256 of the object file is 7be7a08730ebb932aa2700285fab3cfcd0cd464759ca72013f3a238ee3a60a29; INDEX.csv lists 7be7a08730ebb932aa2700285fab3cfcd0cd464759ca72013f3a238ee3a60a29; equal.
-6. Table comparison from the saved excerpt only (no network): excerpt cell reads "3987^Pl^-8003" (superscripts between carets; lower bound first, then the printed upper bound 8003). INDEX.csv table_value is 3987. 3992 > 3987: True. 3992 <= upper bound 8003: True.
+6. Table comparison from the recorded excerpt only (no network): excerpt cell reads "3987^Pl^-8003" (superscripts between carets; lower bound first, then the printed upper bound 8003). INDEX.csv table_value is 3987. 3992 > 3987: True. 3992 <= upper bound 8003: True.
 
 ## Command and real output (own checker, run before the author's script)
-Command, from rep_ws/skeptic/ (the checker script lives in the shared scratch folder _rep_codes/, outside the claim copy):
-python3 -I skcheck.py ../object/A53_8_7_3992.txt 53 8 7 3992
-Full output (saved as rep_ws/skeptic/output.txt):
+Command: (own checker, not shipped in this package; run on object/A53_8_7_3992.txt with parameters 53 8 7 3992)
+Full output:
 ```
 lines: 3992 expected M: 3992
 malformed lines (wrong length or non-01 chars): 0
@@ -37,7 +36,7 @@ RESULT: PASS
 ```
 
 ## Author's run_checks.sh (run only after my own checker)
-Command: sh verify-it-yourself/run_checks.sh (from rep_ws/). Output:
+Command: sh verify-it-yourself/run_checks.sh (from a private copy of the package). Output:
 ```
 sha256 matches INDEX.csv (7be7a08730ebb932aa2700285fab3cfcd0cd464759ca72013f3a238ee3a60a29)
 == check_cw.py on object/A53_8_7_3992.txt (count, distinct, weight, all pairwise distances)
