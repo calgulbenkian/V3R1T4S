@@ -3,7 +3,7 @@
 context: Claude Code subagent, fresh context
 role: criterion skeptic. Judged only this cell (target fmm-ternary-integer-ring-upgrade).
 
-Live values: one fetch each (curl, honest client, no retries) at 2026-10-18T14:21Z, HTTP 200 for all four, saved under criterion_ws/ of the group folder. Their sha256 equal the ones recorded in the claim folder table-record/README.md (Perminov README 7b0761ec..., Perminov tree 71f2669d..., MerlijnW70 tree f25a290f..., fmm_sota.json d0da2c36...), so the folder values are the current live values. The claim folder hashes were checked against claim.SHA256SUMS: all files OK.
+Live values: one fetch each (curl, honest client, no retries) at 2026-10-18T14:21Z, HTTP 200 for all four. Their sha256 equal the ones recorded in the claim folder's the-record-we-beat/README.md (Perminov README 7b0761ec..., Perminov tree 71f2669d..., MerlijnW70 tree f25a290f..., fmm_sota.json d0da2c36...), so the folder values are the current live values. The claim folder hashes were checked against the contributor's hash list: all files OK.
 
 ## Object
 - File object/9x11x14_m889_Z.json; n = [9, 11, 14]; stored m = 889; terms = 889; terms with all three factors nonzero = 889.
