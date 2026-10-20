@@ -1,17 +1,17 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 cell: lpub-q5-n66-k11-d44   role: reproduce
 
-claim.SHA256SUMS: 12 files listed, 0 not OK (checked from inside the claim folder).
+The contributor's hash list: 12 files listed, 0 not OK (checked from inside the package folder).
 
 ## Definition (quoted)
 Claim text: "the object gives an exact rational Delsarte linear-programming dual certificate that no [66,11,45]_5 code exists ... lowering the live codetables.de upper bound 45 ... by 1, to 44." Criterion p2 (verbatim): "An improved upper bound: a re-checkable certificate (exact rational LP dual certificate, or an exhaustive non-existence classification ...) proving that no [n,k,d] code over GF(q) exists for d equal to the live codetables.de upper bound, thereby lowering it."
 Delsarte LP, as I use it (Hamming scheme H(n,q)): if f(x) = sum_{j=0}^m f_j K_j(x) with f_0 > 0, f_j >= 0 for j >= 1, and f(i) <= 0 for every integer i in [d, n], then every code with minimum distance at least d has at most f(0)/f_0 words; K_j(x) = sum_s (-1)^s (q-1)^(j-s) C(x,s) C(n-x,j-s). A linear [n,k] code has q^k words, so f(0)/f_0 < q^k excludes it. Here f_0 = 1 and the object's rational y_j are the f_j.
 
 ## My checker (written before opening verify-it-yourself/)
-rep_ws/skeptic/lpchk.py: exact Fractions and integer Krawtchouk. It self-tests K_j (orthogonality sums and K_j(0)), takes the excluded distance from the command line (not from the object), requires every y_j >= 0, evaluates f(0) and f(w) for all integer w in [45, 66] exactly, and compares with the object's stated P_at_0 and max values. Weights are integers, so only integer w are tested (as in the Delsarte theorem).
+My checker (written from scratch, not shipped in this package): exact Fractions and integer Krawtchouk. It self-tests K_j (orthogonality sums and K_j(0)), takes the excluded distance from the command line (not from the object), requires every y_j >= 0, evaluates f(0) and f(w) for all integer w in [45, 66] exactly, and compares with the object's stated P_at_0 and max values. Weights are integers, so only integer w are tested (as in the Delsarte theorem).
 
 ## Command and real output
-    python3 -I skeptic/lpchk.py ../claim/object/*.json 45
+    (own checker, run on object/*.json with the excluded distance 45 on the command line)
 krawtchouk self-test OK
 n,q,k = 66 5 11 excluded d = 45 degree m = 7
 f(0) = 780563323041959590575285019658599/18052872647294449094322360
@@ -24,13 +24,13 @@ Negative control (same object, excluded distance lowered by one to 44; must be r
 matches object P_at_0: True ; matches object max: False ; q^k matches: True
 CERT INVALID
 
-## Propagation closure (own script closure.py on the four neighbour rows in table-record/neighbours.csv; each row is the live neighbour cell plus the rule's offset)
+## Propagation closure (own script, not shipped in this package, on the four neighbour rows in the-record-we-beat/neighbours.csv; each row is the live neighbour cell plus the rule's offset)
 shorten 65 10 live ub 45 offset 0 -> implied 45
 puncture 65 11 live ub 44 offset 1 -> implied 45
 subcode 66 10 live ub 45 offset 0 -> implied 45
 pad with a zero column 67 11 live ub 45 offset 0 -> implied 45
 live ub 45 neighbour closure 45 claimed 44 strictly below closure: True
-Open PR values were not consulted by this role (they belong to the novelty skeptic); the closure above is the four live neighbours only. Other cells of this batch cannot lower this one: padding goes the wrong way (a bound at a longer length does not bound a shorter one below its own live value), and shortening or puncturing a longer claimed cell only gives bounds at least as large as the live values listed.
+Open PR values were not consulted by this role (they belong to the novelty skeptic); the closure above is the four live neighbours only.
 
 ## Author's checker, run only after mine
 == lp_delsarte_check.py (exact Fractions, excluded distance D = live upper bound 45) and neighbour propagation
