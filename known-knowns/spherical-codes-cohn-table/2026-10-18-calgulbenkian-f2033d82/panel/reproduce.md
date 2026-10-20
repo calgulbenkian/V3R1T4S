@@ -1,13 +1,13 @@
 # reproduce report: sc-p2-d7-batch24
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
-Hash check: shasum -a 256 -c claim.SHA256SUMS run inside claim/ printed no failure (all listed files OK). Claim folder copied to rep_ws/; all work done there. No network used.
+Hash check: shasum -a 256 -c on the contributor's hash list run inside the package folder printed no failure (all listed files OK). The package folder was copied to a private workspace; all work done there. No network used.
 
-Definition (quoted from CLAIM.md): "after normalizing each vector to unit length in mpmath at 50 digits the maximum pairwise inner product c* (cosine of the minimal angle) is STRICTLY LOWER (direction: min) than the table's 12-decimal cosine for (d, N) ... by at least 1e-10, AND ... the (d, N) row has NO '&ast;' (proven optimal) mark AND does NOT contain the text 'needs more optimization'" (for the p2 batch: the rows must instead carry that text; partial win p2 = "A batch of at least 20 certified improvements (margin 1e-10 each) to rows labeled 'needs more optimization' in one dimension d in 4..32").
+Definition (quoted from the target's success criterion): "after normalizing each vector to unit length in mpmath at 50 digits the maximum pairwise inner product c* (cosine of the minimal angle) is STRICTLY LOWER (direction: min) than the table's 12-decimal cosine for (d, N) ... by at least 1e-10, AND ... the (d, N) row has NO '&ast;' (proven optimal) mark AND does NOT contain the text 'needs more optimization'" (for the p2 batch: the rows must instead carry that text; partial win p2 = "A batch of at least 20 certified improvements (margin 1e-10 each) to rows labeled 'needs more optimization' in one dimension d in 4..32").
 
-My checker (written before opening verify-it-yourself/): rep_ws/skeptic/ (script kept outside the claim copy; output saved as rep_ws/skeptic/output.txt). It checks per object file: line count equals N; every line has exactly d comma-separated coordinates; coordinates have at least 20 significant digits; each vector normalised with mpmath at dps=50; ALL N(N-1)/2 pairwise inner products computed in mpmath (no sampling), c* = max; gain = (12-decimal /plain cosine) minus c* >= 1e-10; the plain_rows.csv cosine, the index_rows.html cosine and the cosine in CLAIM.md "Cells compared" agree as strings; the index row has no &ast; star; the row does contain "needs more optimization"; the kissing-number exclusion (9<=d<=23 and c*<=0.5) does not apply.
+My checker (written before opening verify-it-yourself/): my own script, not shipped in this package, kept outside the package copy; its output is shown below. It checks per object file: line count equals N; every line has exactly d comma-separated coordinates; coordinates have at least 20 significant digits; each vector normalised with mpmath at dps=50; ALL N(N-1)/2 pairwise inner products computed in mpmath (no sampling), c* = max; gain = (12-decimal /plain cosine) minus c* >= 1e-10; the plain_rows.csv cosine, the index_rows.html cosine and the cosine in README.md agree as strings; the index row has no &ast; star; the row does contain "needs more optimization"; the kissing-number exclusion (9<=d<=23 and c*<=0.5) does not apply.
 
-Command: python3 -I mychk.py rep_ws   (interpreter: the V3R1T4S venv python). Real output (saved in rep_ws/skeptic/output.txt):
+Command: (own checker, run on the private copy of the package; interpreter: the V3R1T4S venv python). Real output (shown below):
 ```
 (d=7,N=177) lines=177 dim_ok=True min_sigdigits~27 c*=0.5700514664903816802551292 angle_deg=55.2461852536696 table=0.570051592256 gain=1.2576562e-7 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
 (d=7,N=178) lines=178 dim_ok=True min_sigdigits~28 c*=0.5702282703724720414760652 angle_deg=55.2338547255814 table=0.570228301539 gain=3.1166528e-8 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
@@ -36,7 +36,7 @@ Command: python3 -I mychk.py rep_ws   (interpreter: the V3R1T4S venv python). Re
 rows_ok 24 of 24
 ```
 
-Then the author's checker: PYTHON=venv-python sh verify-it-yourself/run_checks.sh (run in rep_ws; output saved as rep_ws/skeptic/author_run.txt). Last line: ALL CHECKS PASS. Its sha256 lines: 24 ok, 0 mismatch. Its c* values agree with mine to 20 digits for 24 of 24 rows; mismatches: none.
+Then the author's checker: PYTHON=venv-python sh verify-it-yourself/run_checks.sh (run in the private copy). Last line: ALL CHECKS PASS. Its sha256 lines: 24 ok, 0 mismatch. Its c* values agree with mine to 20 digits for 24 of 24 rows; mismatches: none.
 
 Rows passing every checkable condition: 24 of 24 (threshold for p2 is at least 20). Largest improvement reported by my run: see the gain column above.
 Not judged here: whether the table value is current, and novelty (other skeptics).
