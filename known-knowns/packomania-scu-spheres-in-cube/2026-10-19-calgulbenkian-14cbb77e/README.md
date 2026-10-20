@@ -40,6 +40,7 @@ Value of this package: r* = 0.0589437529548279448024778, above the live row for 
 
 ## Credits
 
-- **Eckard Specht** and the Packomania site (https://packomania.com): the table of best known radii for equal spheres in the cube and the posted coordinate files, including the posted N = 734 packing the object was derived from; the bank text names Specht among the table's authors.
+- **Eckard Specht** and the Packomania site (https://packomania.com): the table of best known radii for equal spheres in the cube and the posted coordinate files; the bank text names Specht among the table's authors.
+- **Vidit Patankar**: the posted N = 734 packing the object was derived from (credited to him in Packomania's scu/txt/author.txt, fetched 2026-10-19T22:52:53Z). This package improves on his packing by about 7.7e-8. Credit added after an independent reviewer (DmitrL-dev) pointed out the omission on this pull request.
 - **Moki and Julio**: the v2.7 packing collection on Zenodo (record 22986800, https://zenodo.org/api/records/22986800) whose manifest was compared against.
 - Contributor credit: `calgulbenkian`. The configuration was found by an AI search agent (Gemini) working for the contributor.
