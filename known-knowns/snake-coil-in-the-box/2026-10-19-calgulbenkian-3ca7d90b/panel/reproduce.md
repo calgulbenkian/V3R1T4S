@@ -1,17 +1,17 @@
 context: Claude Code subagent, fresh context [Claude Sonnet 5.5]
 # Reproduce report, snake-q11-coil-740-p3
 
-Folder integrity: ran the hash list from inside the claim folder (the paths in claim.SHA256SUMS are relative to claim/); every listed file reported OK. I then copied claim/ to rep_ws/claim/ and worked only there. No network was used.
+Folder integrity: ran the hash list from inside the package folder (the paths in that list are relative to it); every listed file reported OK. I then worked only on a private copy of the package. No network was used.
 
 ## Definition (quoted)
 Claim: "object/p3_co11_drifted_r0_Q11_740.txt is a transition sequence in the hypercube Q11 (one base-36 digit per step, starting at the vertex 0) that describes an induced cycle (a coil) of length 740, which equals the live record length for this dimension and type."
-Success criterion clauses I can check mechanically (quoted): "verified exhaustively (single-bit steps, distinct vertices, popcount(v_i ^ v_j) >= 2 for non-consecutive pairs, closing edge induced for coils)" and "The verifier's checker must reproduce the exact length of at least one downloaded record file of the same n and type (length-convention calibration)". Length convention (CLAIM.md): number of transitions; for a coil it equals the number of vertices.
+Success criterion clauses I can check mechanically (quoted): "verified exhaustively (single-bit steps, distinct vertices, popcount(v_i ^ v_j) >= 2 for non-consecutive pairs, closing edge induced for coils)" and "The verifier's checker must reproduce the exact length of at least one downloaded record file of the same n and type (length-convention calibration)". Length convention (the claim record, not shipped): number of transitions; for a coil it equals the number of vertices.
 
 
-## My checker (skeptic/mysnake.py, written before opening verify-it-yourself/)
+## My checker (written from scratch before opening verify-it-yourself/, not shipped in this package)
 Parses the base-36 digit string as transitions (each digit is a coordinate below 11), starts at vertex 0, builds all vertices, checks distinctness, then the literal all-pairs condition with numpy: for every pair of vertices at positions i, j, popcount(v_i xor v_j) is 1 for consecutive positions (and, for a coil, for the closing pair) and at least 2 for every other pair. A coil must close (the XOR of all transitions is zero). The calibration step runs the same checker on the saved published sample record(s) of the same type and compares the length with the saved table length. Canonical class: first-appearance relabelling of coordinates, minimised over reversal (and over all rotations for a coil), hashed with sha256 (first 16 hex digits).
-Command (from rep_ws/): python -I skeptic/mysnake.py claim/object/FILE coil 11 740 claim/table-record/published.json
-Real output (skeptic/output.txt):
+Command: (own checker, run on object/<file> for a coil, with the-record-we-beat/published.json)
+Real output (its output, shown below):
 == calibration (my checker on the saved published sample record)
   minortriad sample co11 valid: True length (transitions): 740 table_length: 740 match: True
 == object
