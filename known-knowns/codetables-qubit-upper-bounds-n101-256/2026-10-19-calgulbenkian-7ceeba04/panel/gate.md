@@ -7,4 +7,4 @@ confirmed_scope: Exact integer Farkas certificate (quantum weight-enumerator LP 
 - Object: object/cert_104_2_35_sh.json, sha256 7ceeba0422a356f681c95ebbfa42905b949d248d2e1501f991d14bf8e3440d03.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the package folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
