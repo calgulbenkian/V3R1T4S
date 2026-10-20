@@ -1,30 +1,30 @@
 context: Claude Code subagent, fresh context [Claude Sonnet 5.5]
 # Reproduce report, maxdet-105
 
-Folder integrity: ran the hash list from inside the claim folder (the paths in claim.SHA256SUMS are relative to claim/); every listed file reported OK. I then copied claim/ to rep_ws/claim/ and worked only there. No network was used.
+Folder integrity: ran the hash list from inside the package folder (the paths in that list are relative to it); every listed file reported OK. I then worked only in a private copy of the package. No network was used.
 
-## Definition (quoted from CLAIM.md)
+## Definition (quoted from the claim record, not shipped)
 Claim: "object/M105_403757419044975201959422423846994970270257858463738130848861743562151165952.txt is a 105 x 105 matrix with every entry +1 or -1 whose exact normalised determinant |det| / 2^104 is 277 * 26^51 = 403757419044975201959422423846994970270257858463738130848861743562151165952, which is larger than the Orrick archive value 3.847437473E74 for order 105 and is below the Barba bound for n = 1 mod 4."
 Verification method (bank, quoted): "Compute |det| with fraction-free Bareiss elimination on Python ints (exact), cross-checked with sympy Matrix(...).det(method='bareiss'). Note that det is divisible by 2^(n-1), so report |det|/2^(n-1) as an integer and compare it exactly to the record value. Confirm all entries are +-1. Also compute the bound for the residue class and confirm det <= bound."
 Barba bound used (n = 1 mod 4): |det| <= sqrt(2n-1) * (n-1)^((n-1)/2); I test it exactly as the integer inequality det^2 <= (2n-1)(n-1)^(n-1).
 
 ## My checker (written from the definition before opening verify-it-yourself/)
-skeptic/mychk.py reads the file, asserts the n x n shape and that every entry is the text +1 or -1, computes the determinant by my own fraction-free Bareiss on Python ints, cross-checks it with an independent exact integer determinant from python-flint (fmpz_mat; sympy was not needed, flint is a separate exact implementation), tests divisibility by 2^(n-1), compares the normalised value with the claimed integer, and tests the Barba bound exactly.
-Command (from rep_ws/): python -I skeptic/mychk.py claim/object/FILE 105 CLAIMED_INTEGER
-Real output (skeptic/output.txt):
+My own checker (not shipped in this package) reads the file, asserts the n x n shape and that every entry is the text +1 or -1, computes the determinant by my own fraction-free Bareiss on Python ints, cross-checks it with an independent exact integer determinant from python-flint (fmpz_mat; sympy was not needed, flint is a separate exact implementation), tests divisibility by 2^(n-1), compares the normalised value with the claimed integer, and tests the Barba bound exactly.
+Command: (own checker, run on the object file with arguments 105 and the claimed integer)
+Real output (shown below):
 n 105 all entries +-1: True; python-int Bareiss == flint exact det: True
 divisible by 2^(n-1): True
 normalised |det|/2^(n-1) = 403757419044975201959422423846994970270257858463738130848861743562151165952
 equals claimed value: True
 n mod 4 = 1
 within Barba bound sqrt(2n-1)(n-1)^((n-1)/2) (exact integer test of squares): True ratio 0.7369419480419335
-$P -I $s/rep_ws/skeptic/mychk.py $f $n $c  0.17s user 0.02s system 39% cpu 0.488 total
+time: 0.17s user 0.02s system 39% cpu 0.488 total
 
-## Comparison with the saved records (table-record/records.json; I did not judge whether they are current)
+## Comparison with the saved records (the-record-we-beat/records.json; I did not judge whether they are current)
   object D = 4.037574190e+74 (exact integer in the file name and checked below) vs Orrick archive value 3.847437473E74: D > Orrick = True
 
 ## Author's checker (run only after mine)
-sh verify-it-yourself/run_checks.sh, saved in skeptic/author_run_checks.txt:
+sh verify-it-yourself/run_checks.sh, its output as follows:
 sha256 matches INDEX.csv (dd1e1520b87d97fe404bf0857235652e04d819a08484c85fd3e024fb1346d28b)
 checker verdict: PASS (D=403757419044975201959422423846994970270257858463738130848861743562151165952, larger than all listed records=True)
 == negative control: one entry negated must NOT give the claimed determinant
