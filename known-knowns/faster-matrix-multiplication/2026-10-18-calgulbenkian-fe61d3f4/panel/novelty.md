@@ -4,7 +4,7 @@ context: Claude Code subagent (Sonnet 5.5, as the skeptic itself reported), fres
 
 Target: fmm-ternary-integer-ring-upgrade. Claim: format 12x13x16, class Z, rank 1516.
 
-## Sources read (all fetched once for the whole group, 2026-10-18; saved under novelty_ws/ at the group level)
+## Sources read (all fetched once, 2026-10-18; the saved copies are not shipped in this package)
 
 | Source | UTC | HTTP | sha256 |
 |---|---|---|---|
@@ -25,12 +25,12 @@ Target: fmm-ternary-integer-ring-upgrade. Claim: format 12x13x16, class Z, rank 
 | https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns | 2026-10-18T14:21:06Z | 200 | 8a2927f7995495ec01c3022b965eba5363a7831765ebd4a18a27a0e6ae36d011 |
 | https://api.github.com/repos/elder-plinius/V3R1T4S/contents/known-knowns/fmm-ternary-integer-ring-upgrade | 2026-10-18T14:21:07Z | 404 | 0f74c8b9c1f03a2b9d2da1ebe4f7c027ecb616202d539401c259562157c5a216 |
 
-Literature (arXiv export API, status 200, saved under novelty_ws/lit/; log in novelty_ws/litlog.txt):
-- a2603.02398.xml | 2026-10-18T14:21:57Z | 200 | 269e9070c3b848412cc16ee8a1fabfcac028d5df66eca8770e5e5ddf18a6f8b5
-- q1.xml | 2026-10-18T14:21:57Z | 200 | cda4e25fe75437d8fafc31df938c8eb8f02a36c5152e667569fed7f16bc991dc
-- q2.xml | 2026-10-18T14:21:58Z | 200 | cf69166539d14deec1ae692665d06b2a211d8d3a4231feac02aeaea23b6627b2
-- q3.xml | 2026-10-18T14:21:59Z | 200 | 128b8bc7f62d55d574549c37d9ca9b2170e6623f7922e344c60c509a1ac78efe
-- q4.xml | 2026-10-18T14:21:59Z | 200 | e38161d2c2eebe14e3cf84cd6d241fe62723c54e970599fa1d2bb434fe7208e6
+Literature (arXiv export API, status 200; saved copies not shipped):
+- id_list 2603.02398 | 2026-10-18T14:21:57Z | 200 | 269e9070c3b848412cc16ee8a1fabfcac028d5df66eca8770e5e5ddf18a6f8b5
+- search query 1 | 2026-10-18T14:21:57Z | 200 | cda4e25fe75437d8fafc31df938c8eb8f02a36c5152e667569fed7f16bc991dc
+- search query 2 | 2026-10-18T14:21:58Z | 200 | cf69166539d14deec1ae692665d06b2a211d8d3a4231feac02aeaea23b6627b2
+- search query 3 | 2026-10-18T14:21:59Z | 200 | 128b8bc7f62d55d574549c37d9ca9b2170e6623f7922e344c60c509a1ac78efe
+- search query 4 | 2026-10-18T14:21:59Z | 200 | e38161d2c2eebe14e3cf84cd6d241fe62723c54e970599fa1d2bb434fe7208e6
 
 ## Live values read
 
@@ -38,7 +38,7 @@ Primary table, Perminov README (header `Format | ZT rank | Z rank | Q rank`), fe
 
     | `12x13x16` |  1548 (?)   |   1544 (?)   | 1509 (1556)  | **2.807000642** |
 
-Live ZT = 1548, Z = 1544, Q = 1509. The README sha256 equals the one the claim folder recorded at 13:47:52Z, so the table did not change between the two fetches.
+Live ZT = 1548, Z = 1544, Q = 1509. The README sha256 equals the one recorded in the-record-we-beat/README.md at 13:47:52Z, so the table did not change between the two fetches.
 fmm_sota.json rank for this format: 1509.
 Claimed Z rank 1516 against the live Z column 1544: strictly below (margin 28). Condition (2): 1516 is at least min(ZT,Z,Q) = 1509 and at least the fmm_sota rank 1509: yes.
 
