@@ -7,6 +7,6 @@ confirmed_scope: A valid induced snake of length 750 in Q11, equal to the live r
 - Object: object/p3_sn11_drifted_r0_Q11_750.txt, sha256 13f82b2e8ef05882c7d78fe1511df710fa3754f9debec76c2ac83aa3ecd60c54.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim package; the object's builder (Gemini, Argon) is a different model family from every skeptic.
 - Refile of the contributor's PR #87, closed unmerged on 2026-10-14 in the bulk close of about thirty early PRs during a handoff, not for a defect.
 - Partial win p3: an equal-record witness inequivalent to the published records the panel could read (minortriad sample, Caltech record files); the Caltech Snakepits folder, EinsteinArena and Zenodo were not read.
