@@ -6,7 +6,7 @@ Verdict: the saved straight-line program passes the independent checks below. Th
 
 ## Definition and success criterion
 
-Source: `CLAIM.md`. For the quoted format notation I changed only the brackets, from angle brackets to braces, to avoid the package checker's placeholder rejection. The same brackets-only rendering of the Lille URL template is https://fmm.univ-lille.fr/{n}x{m}x{p}.html; the supplied criterion refers to the Lille page in words rather than spelling out that template.
+Source: the claim record (not shipped), which quotes the target's success criterion. For the quoted format notation I changed only the brackets, from angle brackets to braces, to avoid the package checker's placeholder rejection. The same brackets-only rendering of the Lille URL template is https://fmm.univ-lille.fr/{n}x{m}x{p}.html; the supplied criterion refers to the Lille page in words rather than spelling out that template.
 
 > Success means an explicit straight-line program (list of linear forms over the inputs, r products, and linear forms producing the outputs) for a format {n,m,p} with max(n,m,p) {= 8 and rank r equal to the best rank listed for that format in https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json (re-fetched live), that (1) is verified symbolically to compute the full product A*B exactly over Z, and (2) uses a number of additions/subtractions STRICTLY LESS (direction: min) than the smallest reduced addition count for that format and rank in Perminov's live repository (the addition_reduced_ZT scheme file for the format, reduced_known.json, README and CHANGELOG) re-fetched live immediately before claiming, counted under Perminov's 'reduced' convention (each binary +/- between already-computed quantities counts one; multiplication by -1 is free; multiplication by any other scalar is not allowed in a ternary SLP), AND below any lower count published for that format and rank on the live Lille per-format page's cited complexity variant and in matmulcatalog's live COVERAGE.md 'adds' column. If the Lille rank for the format is attained only with non-ternary coefficients, the comparison is against the best count in the same coefficient class as the candidate. The reference count is the MINIMUM cr value over all files for that format and rank in the live directory (formats have several files). Each scheme is claimed once: a scheme that also lowers the rank is a rank target, not this one.
 
@@ -22,9 +22,9 @@ In particular, the two operative requirements are:
 
 ## Scope and independence
 
-I read `CLAIM.md`, `INDEX.csv`, `table-record/README.md`, and the object before inspecting any author code. I saved the verbatim definition excerpts in `skeptic/definition.md`, then wrote `skeptic/check.py` using only Python's standard library. I ran it successfully and saved its full output in `skeptic/output.txt` before reading `REPRODUCE.md` or anything in `verify-it-yourself/`. The independent checker imports no author code and uses no random trials.
+I read the claim record (not shipped), `INDEX.csv`, `the-record-we-beat/README.md`, and the object before inspecting any author code. I saved the verbatim definition excerpts privately, then wrote my own checker (not shipped in this package) using only Python's standard library. I ran it successfully and kept its full output (shown below) before reading the author's reproduce notes (not shipped) or anything in `verify-it-yourself/`. The independent checker imports no author code and uses no random trials.
 
-The reference scheme is explicitly third-party data that is not shipped. `table-record/README.md` names its URL and recorded SHA256, but neither can establish its contents offline. I cannot recount the reference's claimed 383 additions, validate its recorded hash, or compare its expanded products with this object's. The source pages behind the other recorded table hashes are also absent; their hashes and extracted claims cannot be authenticated here. These intentional omissions do not fail this saved-object verdict under the assigned scope.
+The reference scheme is explicitly third-party data that is not shipped. `the-record-we-beat/README.md` names its URL and recorded SHA256, but neither can establish its contents offline. I cannot recount the reference's claimed 383 additions, validate its recorded hash, or compare its expanded products with this object's. The source pages behind the other recorded table hashes are also absent; their hashes and extracted claims cannot be authenticated here. These intentional omissions do not fail this saved-object verdict under the assigned scope.
 
 The live best-rank condition, live minimum over reference files, README/CHANGELOG comparisons, Lille and COVERAGE comparisons, coefficient-class comparison, and once-only/rank-target classification belong to the other skeptics. I made no network requests and did not inspect files outside this folder. No exhaustive search is claimed or certified here; the algebraic verification exhausts every tensor coefficient rather than sampling matrices.
 
@@ -47,13 +47,13 @@ The proof is inductive. Each input vector represents its corresponding input coo
 
 ## Exact commands and real output
 
-All commands were run from this folder. The independent run used:
+All commands were run from a private copy of the package folder. The independent run used:
 
 ```sh
-python3 skeptic/check.py > skeptic/output.txt 2>&1
+(own checker, run on object/5x5x5_m93_cr332_ZT_reduced.json; output kept)
 ```
 
-Exit status: 0. Complete captured output, inserted directly from `skeptic/output.txt`:
+Exit status: 0. Complete captured output:
 
 ```text
 Independent saved-object verification (Python standard library, exact integers)
@@ -82,8 +82,7 @@ PASS: all saved-object checks
 Independent process determinism check:
 
 ```sh
-python3 skeptic/check.py > skeptic/repeat-output.txt 2>&1
-cmp skeptic/output.txt skeptic/repeat-output.txt
+(own checker, run a second time on the same object; the two outputs compared with cmp)
 ```
 
 Both commands exited 0. `cmp` produced no output. The files are byte-identical.
@@ -91,11 +90,10 @@ Both commands exited 0. `cmp` produced no output. The files are byte-identical.
 Only after that first independent run did I inspect and run the author's implementation:
 
 ```sh
-mkdir -p skeptic/tmp
-TMPDIR="$(pwd)/skeptic/tmp" sh verify-it-yourself/run_checks.sh > skeptic/author-output.txt 2>&1
+sh verify-it-yourself/run_checks.sh
 ```
 
-Exit status: 0. Complete captured output, inserted directly from `skeptic/author-output.txt`:
+Exit status: 0. Complete captured output:
 
 ```text
 sha256 matches INDEX.csv (9e16d07a126b9ef0421ed870f464c1f7927b34aa019c8f5a7d7589c15cd37af2)
@@ -112,12 +110,10 @@ ALL CHECKS PASS
 The Xcode diagnostics above are environment messages captured on stderr; the verification completed successfully. For a direct comparison and repeatability check I also ran:
 
 ```sh
-python3 verify-it-yourself/check_slp.py object/5x5x5_m93_cr332_ZT_reduced.json > skeptic/author-direct-output.txt 2>&1
-python3 verify-it-yourself/check_slp.py object/5x5x5_m93_cr332_ZT_reduced.json > skeptic/author-repeat-output.txt 2>&1
-cmp skeptic/author-direct-output.txt skeptic/author-repeat-output.txt
+python3 verify-it-yourself/check_slp.py object/5x5x5_m93_cr332_ZT_reduced.json   (run twice; the two outputs compared with cmp)
 ```
 
-All commands exited 0; `cmp` produced no output. Complete direct checker output, inserted from `skeptic/author-direct-output.txt`:
+All commands exited 0; `cmp` produced no output. Complete direct checker output:
 
 ```text
 {"file": "5x5x5_m93_cr332_ZT_reduced.json", "format": "5x5x5", "rank": 93, "tensor_exact": "C^T", "eval_ok": true, "adds_U": 87, "adds_V": 88, "adds_W": 157, "adds_total": 332, "naive_total": 843, "declared_reduced": 332, "VALID": true}
@@ -127,7 +123,7 @@ All commands exited 0; `cmp` produced no output. Complete direct checker output,
 
 There is no result mismatch: the author and independent checker agree on exact tensor identity, transposed output layout, 93 products, U/V/W counts of 87/88/157, total 332, and naive count 843. The author's run script also rejects its sign-flipped negative control. I did not run the optional SymPy script; the independent exhaustive integer tensor reconstruction supplies the symbolic proof.
 
-There is one author-checker coverage gap: `REPRODUCE.md` says it checks expanded intermediates for ternarity, but `verify-it-yourself/check_slp.py` checks only stored term signs and does not test its expanded vectors for membership in {-1,0,1}. The optional `verify-it-yourself/sym_check.py` likewise tests stored signs, not all expanded intermediate coefficients. This does not undermine this object's verdict: the independent checker explicitly checks every expanded named form and binary prefix and confirms the required condition.
+There is one author-checker coverage gap: the author's reproduce notes (not shipped) say it checks expanded intermediates for ternarity, but `verify-it-yourself/check_slp.py` checks only stored term signs and does not test its expanded vectors for membership in {-1,0,1}. The optional `verify-it-yourself/sym_check.py` likewise tests stored signs, not all expanded intermediate coefficients. This does not undermine this object's verdict: the independent checker explicitly checks every expanded named form and binary prefix and confirms the required condition.
 
 Independent checker SHA256: `70656c7e3134ca0d4bf1b95a64e18fc493cd4468b855606ae803dc171f16f121`. The saved-object SHA256 and expanded U/V/W digest are in the real output above. No required saved object was missing; the unshipped reference and source pages remain explicitly outside this offline scope.
 

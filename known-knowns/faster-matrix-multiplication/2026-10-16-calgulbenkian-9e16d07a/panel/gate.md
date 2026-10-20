@@ -11,5 +11,5 @@ confirmed_scope: The file claim/object/5x5x5_m93_cr332_ZT_reduced.json (sha256 9
 - The novelty skeptic fetched every primary page once (all HTTP 200, hashes equal to the author's record), found the live minimum 383, rank 93 equal to the best known rank, no count on the Lille page or a comparable one in COVERAGE.md, and listed IACR ePrint 2026/849 as unread; the author then read it from a hand-downloaded copy: lowest count listed for 555-93: 387 over Z (Table 3.3); 384 over Z2 (Table 3.6, not comparable); author's reading of a hand-downloaded PDF
 - An open pull request on this repository claims 358 for the same cell; 332 is strictly below it, and the table value compared against is Perminov's 383.
 - Full success criterion met, not a partial win. The bank's enumerated partial win p1 concerns 3x3x3 and is not claimed.
-- One cell per claim. Other formats from the same sweep are separate packages.
+- One cell per claim.
 - No downgrade triggers found (no hedging panelist, no mismatch, value strictly better than every comparable count, scope no wider than reproduced).

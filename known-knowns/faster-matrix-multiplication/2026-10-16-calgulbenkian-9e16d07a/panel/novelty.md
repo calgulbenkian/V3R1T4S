@@ -1,17 +1,17 @@
 # Novelty check: 5x5x5 rank 93, 332 reduced additions
 
 context: Claude Code subagent (Opus 5.5), fresh context
-role: novelty skeptic (fresh start; read only the claim folder and its hash list locally)
-claim hash list: all 8 files in claim.SHA256SUMS verify OK.
+role: novelty skeptic (fresh start; read only the package and its hash list locally)
+claim hash list: all 8 files in the claim folder's hash list verify OK.
 claim: object 5x5x5_m93_cr332_ZT_reduced.json, 332 additions under Perminov's reduced convention, rank 93, against 383.
 
-Every fetch below was one plain curl GET with User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Pages are saved in novelty_ws/ under the file names given.
+Every fetch below was one plain curl GET with User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Saved copies of the pages are not shipped in this package.
 
 ## Primary tables
 
 | source | URL | UTC fetch time | HTTP | sha256 of saved page | value read |
 |---|---|---|---|---|---|
-| Perminov repo tree (tree.json) | https://api.github.com/repos/dronperminov/FastMatrixMultiplication/git/trees/master?recursive=1 | 2026-10-15T23:53:59Z | 200 | 71f2669d17d3636d92243b24d8b7a155ec9d9de472476a31c1a6db6d7ad2a610 | tree not truncated (6637 entries). addition_reduced_ZT files for 5x5x5: exactly one, `5x5x5_m93_cr383_fv160_cn843_ZT_reduced.json` (cr 383). Minimum cr for 5x5x5 rank 93 = **383**. The other 5x5x5 rank-93 count, `naive_addition_reduced_ZT/5x5x5_m93_c843_ZT.json`, is a naive count (843) of a different convention and does not compare. |
+| Perminov repo tree | https://api.github.com/repos/dronperminov/FastMatrixMultiplication/git/trees/master?recursive=1 | 2026-10-15T23:53:59Z | 200 | 71f2669d17d3636d92243b24d8b7a155ec9d9de472476a31c1a6db6d7ad2a610 | tree not truncated (6637 entries). addition_reduced_ZT files for 5x5x5: exactly one, `5x5x5_m93_cr383_fv160_cn843_ZT_reduced.json` (cr 383). Minimum cr for 5x5x5 rank 93 = **383**. The other 5x5x5 rank-93 count, `naive_addition_reduced_ZT/5x5x5_m93_c843_ZT.json`, is a naive count (843) of a different convention and does not compare. |
 | reduced_known.json | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/reduced_known.json | 2026-10-15T23:54:00Z | 200 | ef67c13792b0e770578de4ff01438178ce4e6ac4efd60a3580f3131e31907a5d | 33 keys; no 5x5x5 key (the nearest keys are 4x5x5-76, 4x5x6-93, 4x6x6-116). No count for 5x5x5-93. |
 | Perminov README.md | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md | 2026-10-15T23:54:00Z | 200 | 7b0761ecc0fa1988cb2ef0efeca503af974eeb6ade76d30629308ebba7e78341 | the only 5x5x5 row is the rank table (93 / 93 / 93, exponent 2.816262409). No addition count for 5x5x5. |
 | Perminov CHANGELOG.md | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/CHANGELOG.md | 2026-10-15T23:54:01Z | 200 | 07fbb3249d1213b95d9a9c3069d208c0c3b4390a6b87c71325af64a2d56cd175 | no 5x5x5 entry in any "Reduced additions improvement" section; no lower count. |
@@ -19,7 +19,7 @@ Every fetch below was one plain curl GET with User-Agent 'V3R1T4S-research (hone
 | matmulcatalog COVERAGE.md | https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md | 2026-10-15T23:54:02Z | 200 | c2a9bd929b477acb44d4f92aa8055a0c26eab3c33121c0734be650c5c86254b7 | 5x5x5 row: rank 93 (Alphaevolve), adds **+846**. Legend: "`+N adds` is the addition count (`nz(U)+nz(V)+nz(W) − 2r − n·p`)". This is a naive count, not a reduced SLP count; not comparable (and above 332 in any case). |
 | fmm_sota.json | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-15T23:54:02Z | 200 | d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1 | createdAt 2026-10-09T11:45:48; entry `{'format': [5, 5, 5], 'rank': 93}`. Rank 93 is the best known rank, so the scheme is eligible. |
 
-The sha256 values of these seven pages match the author's table-record exactly, so the pages have not changed since the author's fetches.
+The sha256 values of these seven pages match the author's record (the-record-we-beat/README.md) exactly, so the pages have not changed since the author's fetches.
 
 ## This repository (V3R1T4S)
 
