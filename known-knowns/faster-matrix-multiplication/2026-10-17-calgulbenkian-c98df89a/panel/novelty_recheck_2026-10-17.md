@@ -2,7 +2,7 @@
 
 context: Claude Code subagent (Opus 5.5), fresh context
 
-All fetches: one plain curl GET, User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Saved pages are under novelty_ws/. Times are UTC, 2026-10-17.
+All fetches: one plain curl GET, User-Agent 'V3R1T4S-research (honest client; curl)', no retries. Saved copies of the pages are not shipped in this package. Times are UTC, 2026-10-17.
 
 ## Primary table and status pages
 

@@ -4,7 +4,7 @@ context: subagent
 context: subagent (fable)
 date_utc: 2026-10-14T03:50:35Z
 target_id: fmm-additive-complexity-records
-claimed_object: claim/2x4x7_m45_cr164_fv50_cn282_ZT_reduced.json (SHA-256: c98df89a60c52bfd65c3266489f3cbef4a28715305d200e2a3f01334d1076429)
+claimed_object: object/2x4x7_m45_cr164_fv50_cn282_ZT_reduced.json (SHA-256: c98df89a60c52bfd65c3266489f3cbef4a28715305d200e2a3f01334d1076429)
 claimed_bound: format (2, 4, 7) rank m = 45 ternary straight-line program with cr = 164 reduced additions (fv = 50, cn = 282) over Z
 
 ## 1. Honest Single-GET Live Fetch of Primary Scoreboards
@@ -52,9 +52,9 @@ Each primary scoreboard, directory listing, and status page was fetched once via
 
 Minimum reduced addition count across all external sources for format `2x4x7` at best rank `m = 45`: **174**.
 
-## 2. Audit of `repo/TROPHY_CASE.md` and Open Pull Requests
+## 2. Audit of the Repository Trophy-Case Listing and Open Pull Requests
 
-- **`repo/TROPHY_CASE.md`**: Audited all 53 rows of `repo/TROPHY_CASE.md` (rows 44–48 cover `fast-matrix-multiplication` rank bounds for 13x14x14, 14x14x15, 13x14x15, 14x15x15, and 15x16x16). There are **zero entries** for `fmm-additive-complexity-records` or format `2x4x7` in `repo/TROPHY_CASE.md`.
+- **The repository trophy-case listing**: Audited all 53 rows of the repository trophy-case listing (rows 44–48 cover `fast-matrix-multiplication` rank bounds for 13x14x14, 14x14x15, 13x14x15, 14x15x15, and 15x16x16). There are **zero entries** for `fmm-additive-complexity-records` or format `2x4x7` in the repository trophy-case listing.
 - **Open Pull Requests**: Fetched `https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open&per_page=100` at `2026-10-14T03:50:17Z` (HTTP `200`, 139,901 bytes, SHA-256 prefix `b1fd986a852cfd4d`). Exactly 8 open PRs exist (#1–#8: PR #1 control-count fix, PRs #2–#7 `fmm-catalogue-small-format-rank` rank claims on formats 13x15x15, 13x13x14, 13x14x15, 13x14x14, 14x14x15, 14x16x16, and PR #8 constant-weight code review). **No open PR** touches `fmm-additive-complexity-records` or format `2x4x7`.
 
 ## 3. Literature Search (2024–2026)
@@ -69,6 +69,6 @@ No paper, preprint, or repository reports a reduced addition count below **174**
 
 ## 4. Verdict
 
-The claimed ternary straight-line program `claim/2x4x7_m45_cr164_fv50_cn282_ZT_reduced.json` (documented in `claim/CLAIM.md`, `claim/target.md`, and `claim/REPRODUCE.md`) for format `(2, 4, 7)` at best-known rank `m = 45` achieves `cr = 164` reduced additions over `Z`, which is **strictly less** than the minimum known count `174` across `addition_reduced_ZT`, `reduced_known.json`, `README.md`, `CHANGELOG.md`, `matmulcatalog` `COVERAGE.md`, `fmm.univ-lille.fr/2x4x7.html`, `repo/TROPHY_CASE.md`, open pull requests, and the 2024–2026 literature (improvement margin `-10` additions).
+The claimed ternary straight-line program `object/2x4x7_m45_cr164_fv50_cn282_ZT_reduced.json` (documented in `README.md` and `RUN_IT_YOURSELF.md`, against the target's success criterion) for format `(2, 4, 7)` at best-known rank `m = 45` achieves `cr = 164` reduced additions over `Z`, which is **strictly less** than the minimum known count `174` across `addition_reduced_ZT`, `reduced_known.json`, `README.md`, `CHANGELOG.md`, `matmulcatalog` `COVERAGE.md`, `fmm.univ-lille.fr/2x4x7.html`, the repository trophy-case listing, open pull requests, and the 2024–2026 literature (improvement margin `-10` additions).
 
 pass: true
