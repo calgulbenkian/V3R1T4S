@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context [Claude Sonnet 5.5]
 
-Role: criterion. I read only the claim folder. I fetched nothing for this cell.
+Role: criterion. I read only the package. I fetched nothing for this cell.
 
 ## What the partial win p1 says, clause by clause
 
@@ -11,11 +11,11 @@ Role: criterion. I read only the claim folder. I fetched nothing for this cell.
 3. "improving Friedland-Peled's 8 certified decimals": MET against the quoted comparator (8 decimals). Whether a better certified value exists elsewhere is the novelty skeptic's question.
 4. "making Kong's bracket rigorous or not": MET in the "or not" sense. The enclosure lies strictly inside Kong's bracket and supersedes it; the claim does not prove Kong's ends, and says so.
 5. "Friedland-Peled transfer-matrix inequalities evaluated in exact or interval arithmetic": MET. Ratios are exact integer fractions; logarithms are 70-digit Decimal with an outward margin of 1e-55, far above the rounding error. The inequalities are the two periodic-cylinder inequalities, derived from the definitions and stated to agree with the Friedland-Peled forms.
-6. "with published certificate vectors": MET. Five parts, hashes in object/MANIFEST.txt, all hashes in claim.SHA256SUMS verified.
+6. "with published certificate vectors": MET. Five parts, hashes in object/MANIFEST.txt, all hashes in the contributor's hash list verified.
 
 ## My own checks
 
-- Own small test (criterion_ws_md/small.py): built P_m from the definition for m = 4 to 12 with numpy; every upper bound ln beta(M)/M (M = 4,6,...,12) is above 0.6627989728337 and every lower bound (ln beta(2q+p) - ln beta(2q))/p tested (2q = 4,6,8,10; p = 1,2) is below it. This is a consistency check of the theorems, not of the width 22 and 24 result.
+- Own small test (a small script of mine, not shipped in this package): built P_m from the definition for m = 4 to 12 with numpy; every upper bound ln beta(M)/M (M = 4,6,...,12) is above 0.6627989728337 and every lower bound (ln beta(2q+p) - ln beta(2q))/p tested (2q = 4,6,8,10; p = 1,2) is below it. This is a consistency check of the theorems, not of the width 22 and 24 result.
 - I ran the shipped check_p1.py on a copy of object/ and the checker, with python -I. Output: hashes verified; m=22 96909 orbits, m=24 352698 orbits; min and max ratios as in RECEIPTS.md; ENCLOSURE 0.6627989728337138109756 <= h2 <= 0.6627989728337490653104; 13 common decimals; CERTIFIED. This is a rerun of the author's checker, not an independent matrix build at m = 22 and 24; the independent reproduction is the reproduce skeptic's role.
 
 ## Hidden quantifiers and stretched definitions
