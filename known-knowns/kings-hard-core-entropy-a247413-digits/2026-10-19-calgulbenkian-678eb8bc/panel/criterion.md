@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context
 
-Read only the claim folder. Claim hashes checked against claim.SHA256SUMS (no mismatch). One live fetch, made once with the honest curl client and logged in criterion_ws/FETCHLOG.txt: the OEIS A247413 json search, 2026-10-19T01:45Z (UTC), HTTP 200, sha256 12c0e725...da40ef8 (identical to the author's hash), DATA = 1,3,4,2,6,4,3,9,5,1,1,2,4,6,0,1,2,9 = 18 terms, revision 30. So the bar is D >= 22; the claim's D = 33 clears it.
+Read only the package folder. Claim hashes checked against the contributor's hash list (no mismatch). One live fetch, made once with the honest curl client and logged (the log is not shipped in this package): the OEIS A247413 json search, 2026-10-19T01:45Z (UTC), HTTP 200, sha256 12c0e725...da40ef8 (identical to the author's hash), DATA = 1,3,4,2,6,4,3,9,5,1,1,2,4,6,0,1,2,9 = 18 terms, revision 30. So the bar is D >= 22; the claim's D = 33 clears it.
 
 Own recount (small script, from the saved tables, not the author's checker):
 - Method A, chi = 70, 80, 90, 100: 36 common decimals; chi = 80, 90, 100: 38.
