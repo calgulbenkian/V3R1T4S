@@ -7,5 +7,5 @@ confirmed_scope: A standard-form network on 58 channels with 469 comparators and
 - Object: object/N58_S469_D20.txt, sha256 f9d89cde03cfc8905aecdd3fb1d2096f67c5490f666e2645791b86fdb524b350.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim package; the object's builder (Gemini, Argon) is a different model family from every skeptic.
 - The propagation test (removing wires from listed networks) covered top and bottom wire fixings, any-wire fixings for up to two deletions, and removal of inactive comparators; deeper reductions were not tried.
