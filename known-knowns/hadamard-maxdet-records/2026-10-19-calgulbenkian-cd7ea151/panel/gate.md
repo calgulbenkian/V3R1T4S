@@ -7,5 +7,5 @@ confirmed_scope: This is an enumerated partial win p2 only: a frozen Gram target
 - Object: object/G49_p2.json, sha256 cd7ea151cb23cea573fc617f983c2ce21a340dda94ec30baf82c4180c170e347.
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
-- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the package folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
 - Refile of the contributor's PR #68, closed unmerged on 2026-10-14 in the bulk close of about thirty early PRs during a handoff, not for a defect.
