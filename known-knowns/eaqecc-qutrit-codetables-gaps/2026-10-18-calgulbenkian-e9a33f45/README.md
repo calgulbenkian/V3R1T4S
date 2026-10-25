@@ -26,7 +26,7 @@ The object `object/eaqecc_34_2_24_24.json` has sha256 e9a33f45c7580adc5579489d79
 |---|---|---|---|---|---|
 | Grassl, entanglement-assisted qutrit table | [[34,2,23-32;24]]_3 | d_lower = 23, d_upper = 32 | **d = 24** | https://eaqecc.codetables.de/qutrit.php | 2026-10-18T14:23:13Z |
 
-The page footer reads "Last change: 10.07.2025". Metadata, HTTP status and the page sha256: `the-record-we-beat/README.md`. The panel's novelty skeptic also read the newest literature on qutrit entanglement-assisted codes; its report is `panel/novelty.md`.
+The page footer reads "Last change: 10.07.2025". Metadata, HTTP status and the page sha256: `the-record-we-beat/README.md`. The panel's novelty skeptic also ran four arXiv searches and read one recent paper (arXiv:2607.02170, which covers lengths n <= 25); several newer works it cites were not read. Its report is `panel/novelty.md`.
 
 ## Not claimed
 
