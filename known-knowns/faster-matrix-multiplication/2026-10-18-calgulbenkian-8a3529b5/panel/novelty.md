@@ -1,6 +1,6 @@
 # Novelty report: ring-11x14x16-ZT-r1547
 
-context: Claude Code subagent (Sonnet 5.5, as the skeptic itself reported), fresh context
+context: Claude Code subagent, fresh context
 
 Target: fmm-ternary-integer-ring-upgrade. Claim: format 11x14x16, class ZT, rank 1547.
 

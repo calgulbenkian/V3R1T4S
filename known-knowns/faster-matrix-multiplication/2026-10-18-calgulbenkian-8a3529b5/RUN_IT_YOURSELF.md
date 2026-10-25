@@ -29,4 +29,10 @@ The dense output is the original's exact bytes (the conversion writes compact JS
 
 ## 2. Rebuild the object
 
-`how-we-built-it/README.md` names the parent file (URL and sha256), the base schemes and the script. The construction was not rerun while packaging, no run log exists and the agent's verifier is not included, so a rebuild is a reconstruction, not a recorded recipe.
+From the rank-1540 integer composition shipped in `how-we-built-it/start/`, rerun the ternary split and the flip reduction:
+
+```sh
+sh how-we-built-it/rebuild.sh            # needs python3 and a C compiler; writes to ./rebuild-out
+```
+
+The last line should be `SAME: n=[11, 14, 16] m=1547, 857038 entries compared, 0 differ`. `HOW_WE_FOUND_IT.md` shows a full run. The block substitution that produced the start file (step 1) is described, with its parent and base files named and hashed, in `how-we-built-it/README.md`; it is the composition the maintainer reproduced for #410.

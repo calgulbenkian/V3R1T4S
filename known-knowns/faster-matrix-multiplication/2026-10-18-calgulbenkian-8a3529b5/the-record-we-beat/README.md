@@ -1,15 +1,28 @@
 # Live table values for 11x14x16 (metadata and short excerpts only)
 
-Each row is one honest GET (curl, User-Agent naming V3R1T4S, no retries) made by the orchestrator. No whole third-party page is copied here.
+Each row is one honest GET (curl, User-Agent naming V3R1T4S, no retries) made for the contributor. No whole third-party page is copied here.
 
 | Source | URL | UTC fetch time | HTTP | sha256 |
 |---|---|---|---|---|
-| Perminov README | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md | 2026-10-18T13:47:52Z | 200 | 7b0761ecc0fa1988cb2ef0efeca503af974eeb6ade76d30629308ebba7e78341 |
+| Perminov `docs/ranks.md` (live rank table) | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/docs/ranks.md | 2026-10-25T16:50:23Z | 200 | 77203a718e82fec693578d193c9ccbb2332edcf41f086088a8405cd403666c5a |
+| Perminov README (dated note, 2026-10-18) | https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md | 2026-10-18T13:47:52Z | 200 | 7b0761ecc0fa1988cb2ef0efeca503af974eeb6ade76d30629308ebba7e78341 |
 | Perminov repository tree | https://api.github.com/repos/dronperminov/FastMatrixMultiplication/git/trees/master?recursive=1 | 2026-10-18T13:48:17Z | 200 | 71f2669d17d3636d92243b24d8b7a155ec9d9de472476a31c1a6db6d7ad2a610 |
 | MerlijnW70/fmm-schemes tree | https://api.github.com/repos/MerlijnW70/fmm-schemes/git/trees/HEAD?recursive=1 | 2026-10-18T13:48:19Z | 200 | f25a290fcb035c0a0b1df06f5baccbd99653698ed38b1abcc49807da335e8c37 |
 | fmm_sota.json | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-18T14:15:41Z | 200 | d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1 |
 
-## Perminov README, table headed `Format | ZT rank | Z rank | Q rank` (verbatim header and row)
+## Perminov `docs/ranks.md`, fetched 2026-10-25T16:50:23Z (verbatim header and row)
+
+```
+|   Format   |  `ZT` rank  |   `Z` rank   |   `Q` rank   |        ω        |
+|:----------:|:-----------:|:------------:|:------------:|:---------------:|
+| `11x14x16` |  1550 (?)   |   1550 (?)   | 1520 (1571)  |   2.814428649   |
+```
+
+This is the live comparator. The page says the best ranks of previously known schemes are given in brackets; `(?)` means none is listed. The claim is in the ZT column, current value 1550; the claimed rank is 1547.
+
+## Dated note: Perminov README on 2026-10-18, table headed `Format | ZT rank | Z rank | Q rank` (verbatim header and row)
+
+On 2026-10-18 the table was in the README. It has since moved to `docs/ranks.md`; the row is unchanged.
 
 ```
 |   Format   |  `ZT` rank  |   `Z` rank   |   `Q` rank   |        ω        |
