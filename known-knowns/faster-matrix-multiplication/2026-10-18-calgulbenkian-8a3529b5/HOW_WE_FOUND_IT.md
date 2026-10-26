@@ -8,7 +8,7 @@ The rank-1547 ternary scheme is the composition from #410 plus two further steps
 2. **Ternary split (mechanical).** A vector with entries of size 2 is the sum of two ternary vectors. Each of the 8 terms that have a coefficient of 2 therefore splits into two ternary terms. That gives a valid ternary scheme of rank 1548. This step is not claimed either.
 3. **Ternary flip-graph reduction (the search step).** `how-we-built-it/tools/zt_flip_reduce.c`, run for 100,000 steps with seed 1337 and coefficients kept in {-1, 0, 1}, takes 1548 to 1547. The flips also rewrite many terms without changing the rank, so only 1230 of the 1547 terms match the #410 scheme exactly.
 
-So composition plus splitting gives 1548, and the search saves one more term. The live ZT value is 1550.
+So composition plus splitting gives 1548, and the search saves one more term. The live ZT value is 1550. Perminov published his own rank-1540 integer scheme for this format on 25/10/2026; 13 of its terms have a coefficient of 2, so the same split of it gives 1553.
 
 ## Reproduce it
 
