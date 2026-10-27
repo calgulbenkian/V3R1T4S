@@ -2,7 +2,9 @@
 
 ## What
 
-For the single row (d=30, N=62) the saved object has maximum normalised inner product 0.031273183363, which is lower than the saved live /plain cosine 0.031273236170 by 5.28062e-8, at least 1e-10, on an index row with no ast mark and no 'needs more optimization' text and outside the kissing-number range, as fetched 2026-10-18T17:39Z.
+For the single row (d=30, N=62) the saved object has maximum normalised inner product 0.031273183364, which is lower than the saved live /plain cosine 0.031273236170 by 5.28062e-8, at least 1e-10, on an index row with no ast mark and no 'needs more optimization' text and outside the kissing-number range, as fetched 2026-10-18T17:39Z.
+
+The object is a re-optimisation of Ilmari Vahteristo's posted code at https://spherical-codes.org/data/30/62, which was its seed: it keeps the same point order, and each point (after normalising) moved by 0.010 to 0.020 in Euclidean distance (posted file fetched 2026-10-27T13:29:42Z, sha256 d73e88783048800f1c59819a11a853eabd08cf9d10d7ca854554942d684d2cfd).
 
 ## Check it yourself
 
@@ -45,7 +47,7 @@ New filing. No earlier pull request carries this object. The contributor's earli
 ## Credits
 
 - **Henry Cohn**, *Table of spherical codes* (https://spherical-codes.org/): the table, its /plain file and the posted coordinate files this claim is compared against.
-- **Ilmari Vahteristo**: the live row for d=30, N=62 is credited to them, and our object improves on that posted code.
+- **Ilmari Vahteristo**: the live row for d=30, N=62 is credited to them. The object was re-optimised from their posted code at https://spherical-codes.org/data/30/62, which was its seed (same point order; see `HOW_WE_FOUND_IT.md`).
 - **Ilmari Vahteristo**, *New spherical codes by tuning an annealing solver*, arXiv:2610.19988 (https://arxiv.org/abs/2610.19988; code https://github.com/ilmari99/Spherical-code-solver): the live table cites it for many rows; it is the closest published work.
 - **mpmath** (https://mpmath.org/) and **NumPy** (https://numpy.org/): used by the panel's independent checks; the shipped checker needs only the Python standard library.
 - Search tool: the solver `sc_opt.c` in `how-we-built-it/` was written by the contributor's AI search agent (Gemini, "Argon") for the contributor `calgulbenkian`; it is a Riemannian L-BFGS with a log-sum-exp objective and basin hopping, a standard technique with no third-party code in it.

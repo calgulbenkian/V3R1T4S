@@ -1,6 +1,6 @@
 # The record we beat
 
-Each source was fetched once with a plain GET (curl, User-Agent naming V3R1T4S, no retries) by the orchestrator on 2026-10-18; the log line is in the orchestrator's FETCHLOG.txt.
+Each source was fetched once with a plain GET (curl, User-Agent naming V3R1T4S, no retries) on 2026-10-18.
 
 | Source | URL | UTC fetch time | HTTP | sha256 of the full page | Bytes |
 |---|---|---|---|---|---|

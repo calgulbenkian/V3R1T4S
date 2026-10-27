@@ -1,9 +1,8 @@
 # Run it yourself
 
-Needs python3 (3.8 or later), standard library only. In a fresh shell:
+Needs python3 (3.8 or later), standard library only. From this package folder:
 
 ```sh
-cd {WORKDIR}/2026-10-18-calgulbenkian-b2aaa05c
 sh verify-it-yourself/run_checks.sh
 ```
 
