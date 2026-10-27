@@ -8,4 +8,6 @@ The search agent (an AI, Gemini) wrote a preregistration first (`how-we-built-it
 
 What worked: sharpening the smoothing to very large beta and polishing gave gains from 3e-9 to 1.4e-4 on rows whose posted codes had not fully converged. What was not recorded: the seeds, restart counts and exact commands per row (see `how-we-built-it/README.md`).
 
-The object was then checked by the orchestrator's own checker and by the three-skeptic panel (`panel/`); the checker in `verify-it-yourself/` was written from the definition and does not use the search code.
+The object is a re-optimisation of Ilmari Vahteristo's posted code at https://spherical-codes.org/data/29/60, which was its seed: it keeps the same point order, and each point (after normalising) moved by 0.013 to 0.021 in Euclidean distance (posted file fetched 2026-10-27T13:29:41Z, sha256 b9e25a805af617afdc86e27bc8ceee7b1b778b0ed53f9f0cc8755363667e0d29).
+
+The object was then checked by the three-skeptic panel (`panel/`); the checker in `verify-it-yourself/` was written from the definition and does not use the search code.

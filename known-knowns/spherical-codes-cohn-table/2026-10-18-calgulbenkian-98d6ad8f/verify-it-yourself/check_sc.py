@@ -1,8 +1,9 @@
-"""Spherical-code checker against saved rows of Henry Cohn's table (spherical-codes.org). Standard library only.
-Usage: python3 -I check_sc.py index_rows.html plain_rows.csv FILE...
+"""Spherical-code checker against Henry Cohn's table (spherical-codes.org). Standard library only.
+Usage: python3 -I check_sc.py INDEX PLAIN FILE...
+INDEX and PLAIN are your own fetches of https://spherical-codes.org/ and https://spherical-codes.org/plain .
 FILE is named {d}x{N}.txt: N lines, d comma-separated coordinates each.
 For every FILE: normalise each vector to unit length at 50 significant digits (decimal module), compute the maximum
-pairwise inner product c* over ALL N(N-1)/2 pairs, compare with the 12-decimal /plain cosine, and read the saved index
+pairwise inner product c* over ALL N(N-1)/2 pairs, compare with the 12-decimal /plain cosine, and read the index
 row for a proven-optimal mark and for the text 'needs more optimization'."""
 import re, sys, os
 from decimal import Decimal, getcontext

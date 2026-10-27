@@ -4,15 +4,19 @@
 
 For the single row (d=29, N=60) the saved object has maximum normalised inner product 0.032282689322, which is lower than the saved live /plain cosine 0.032282791684 by 1.02362e-7, at least 1e-10, on an index row with no ast mark and no 'needs more optimization' text and outside the kissing-number range, as fetched 2026-10-18T17:39Z.
 
+The object is a re-optimisation of Ilmari Vahteristo's posted code at https://spherical-codes.org/data/29/60, which was its seed: it keeps the same point order, and each point (after normalising) moved by 0.013 to 0.021 in Euclidean distance (posted file fetched 2026-10-27T13:29:41Z, sha256 b9e25a805af617afdc86e27bc8ceee7b1b778b0ed53f9f0cc8755363667e0d29).
+
 ## Check it yourself
 
-From this package folder, run:
+From this package folder, fetch the two table pages yourself and run the checks against them:
 
 ```sh
-sh verify-it-yourself/run_checks.sh
+curl -s -o plain.csv https://spherical-codes.org/plain
+curl -s -o index.html https://spherical-codes.org/
+sh verify-it-yourself/run_checks.sh plain.csv index.html
 ```
 
-- **Requirements**: `python3` 3.8 or later, standard library only (the panel's own checks used mpmath at 50 digits and agree).
+- **Requirements**: `python3` 3.8 or later, standard library only, and curl (the panel's own checks used mpmath at 50 digits and agree).
 - **Rough laptop time**: under ten seconds.
 - **Expected last line**: `ALL CHECKS PASS`
 
@@ -45,7 +49,7 @@ New filing. No earlier pull request carries this object. The contributor's earli
 ## Credits
 
 - **Henry Cohn**, *Table of spherical codes* (https://spherical-codes.org/): the table, its /plain file and the posted coordinate files this claim is compared against.
-- **Ilmari Vahteristo**: the live row for d=29, N=60 is credited to them, and our object improves on that posted code.
+- **Ilmari Vahteristo**: the live row for d=29, N=60 is credited to them. The object was re-optimised from their posted code at https://spherical-codes.org/data/29/60, which was its seed (same point order; see `HOW_WE_FOUND_IT.md`).
 - **Ilmari Vahteristo**, *New spherical codes by tuning an annealing solver*, arXiv:2610.19988 (https://arxiv.org/abs/2610.19988; code https://github.com/ilmari99/Spherical-code-solver): the live table cites it for many rows; it is the closest published work.
 - **mpmath** (https://mpmath.org/) and **NumPy** (https://numpy.org/): used by the panel's independent checks; the shipped checker needs only the Python standard library.
 - Search tool: the solver `sc_opt.c` in `how-we-built-it/` was written by the contributor's AI search agent (Gemini, "Argon") for the contributor `calgulbenkian`; it is a Riemannian L-BFGS with a log-sum-exp objective and basin hopping, a standard technique with no third-party code in it.

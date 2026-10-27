@@ -4,7 +4,7 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 Criterion (verbatim from the target's success criterion, split into clauses), checked literally.
 
-Own check: my own checker (written from scratch, not shipped in this package; independent of the author's check_sc.py): parses the-record-we-beat/plain_rows.csv and the-record-we-beat/index_rows.html with its own regex, reads object/29x60.txt, normalises every vector at mp.dps=50, takes the exact maximum over ALL 1770 pairs (no float prefilter). Output (verbatim):
+Own check: my own checker (written from scratch, not shipped in this package; independent of the author's check_sc.py): parses the saved /plain row and index row with its own regex [edit, 2026-10-27: these rows were then shipped as plain_rows.csv and index_rows.html; they were removed at the maintainer's request, see the-record-we-beat/README.md], reads object/29x60.txt, normalises every vector at mp.dps=50, takes the exact maximum over ALL 1770 pairs (no float prefilter). Output (verbatim):
 
     d=29 N=60 shape=True mindigits=28 c*=0.032282689322403249986 table=0.032282791684 gain=1.02362e-7 star=False needs=False idxcos_eq_plain=True ref=[Ilmari Vahteristo, New spherical codes by tuning an annealing solver, preprint, 2026, arXiv:2610.19988.] gain_ok=True
 
